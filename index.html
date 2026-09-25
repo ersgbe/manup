@@ -1,0 +1,3706 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Мужайся! — программа трансформации для мужчин</title>
+<meta name="description" content="Мужайся! — закрытая система трансформации для мужчин от Рамзеса Кубинского, №1 дейтинг-коуча в СНГ. 6 месяцев, 6 модулей: уверенность, знакомства, свидания и внутренний стержень. Бесплатный разбор ситуации — 20 минут, без продажи.">
+<meta property="og:title" content="Мужайся! — программа трансформации для мужчин">
+<meta property="og:description" content="6 месяцев, 6 модулей, закрытая система подготовки. Автор — Рамзес Кубинский. Запишись на бесплатный разбор ситуации.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpolygon points='20,3 36,11.5 36,28.5 20,37 4,28.5 4,11.5' fill='none' stroke='%23ff2438' stroke-width='2'/%3E%3Cpolygon points='20,12 28,16.5 28,23.5 20,28 12,23.5 12,16.5' fill='none' stroke='%23ff2438' stroke-width='1.4' opacity='.7'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Noto+Serif+JP:wght@700;900&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Noto+Serif+JP:wght@700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Noto+Serif+JP:wght@700;900&display=swap" rel="stylesheet"></noscript>
+<style>
+:root{
+--bg:#07070a;
+--bg-panel:#0c0d10;
+--bg-panel-2:#111318;
+--steel:#1b1d22;
+--line:#26282f;
+--line-soft:rgba(255,255,255,.07);
+--white:#f1f2f5;
+--gray:#8b8e97;
+--gray-dim:#54565e;
+--red:#ff2438;
+--red-2:#c8101f;
+--red-glow:rgba(255,36,56,.45);
+--red-glow-soft:rgba(255,36,56,.16);
+--text-body:16px;
+--text-lead:18px;
+--text-small:14px;
+--text-label:13px;
+--text-mobile-body:14px;
+--text-mobile-lead:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth; scrollbar-color:#ff2438 #0a0a0c; scrollbar-width:thin; overflow-x:hidden; max-width:100%;}
+@media (min-width: 861px) {
+html { zoom: 0.9; }
+}
+::-webkit-scrollbar{width:10px;height:10px;}
+::-webkit-scrollbar-track{background:#0a0a0c;}
+::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#ff2438,#8a0f1c);border-radius:0;border:1px solid #050506;}
+::-webkit-scrollbar-thumb:hover{background:#ff2438;}
+body{
+background:var(--bg);
+color:var(--white);
+font-family:'Inter',sans-serif;
+font-size:var(--text-body);
+line-height:1.65;
+position:relative;
+overflow-x:hidden;
+max-width:100%;
+}
+body::before{
+content:'';
+position:fixed;inset:0;z-index:0;pointer-events:none;
+background-image:
+linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+background-size:42px 42px;
+mask-image:radial-gradient(ellipse 90% 70% at 50% 0%, black 0%, transparent 75%);
+}
+@media (min-width:961px){
+body::after{
+content:'';
+position:fixed;inset:0;z-index:0;pointer-events:none;
+background:linear-gradient(rgba(7,7,10,.58),rgba(7,7,10,.7)),url('images/9.png') center/cover no-repeat;
+opacity:.25;
+}
+section,.closer,.final{background-color:rgba(7,7,10,.86);}
+}
+h1,h2,h3{
+font-family:'Oswald',sans-serif;
+font-weight:700;
+letter-spacing:0.01em;
+text-transform:uppercase;
+}
+.mono{
+font-family:'JetBrains Mono',monospace;
+font-size:14px;
+letter-spacing:0.14em;
+text-transform:uppercase;
+color:var(--red);
+}
+.wrap{max-width:1240px;margin:0 auto;padding:0 28px;position:relative;z-index:1;overflow:hidden;}
+a{color:inherit;text-decoration:none;}
+::selection{background:var(--red);color:#000;}
+.hex-icon{display:inline-block;position:relative;}
+.hex-badge{
+width:34px;height:34px;
+clip-path:polygon(25% 3%, 75% 3%, 100% 50%, 75% 97%, 25% 97%, 0% 50%);
+background:linear-gradient(160deg,var(--steel),#0a0a0c);
+border:1px solid var(--line);
+display:flex;align-items:center;justify-content:center;
+font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--red);
+flex-shrink:0;
+}
+.hexgrid-bg{
+position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.5;
+background-image:
+radial-gradient(circle at 18% 20%, rgba(255,36,56,.06), transparent 40%),
+repeating-linear-gradient(60deg, rgba(255,255,255,.028) 0 1px, transparent 1px 62px),
+repeating-linear-gradient(-60deg, rgba(255,255,255,.028) 0 1px, transparent 1px 62px),
+repeating-linear-gradient(0deg, rgba(255,255,255,.028) 0 1px, transparent 1px 62px);
+}
+@keyframes scan{
+0%{transform:translateY(-100%);}
+100%{transform:translateY(100%);}
+}
+@keyframes spin-slow{ to{ transform:rotate(360deg); } }
+@keyframes spin-slow-rev{ to{ transform:rotate(-360deg); } }
+@keyframes pulse-red{
+0%,100%{opacity:.35;}
+50%{opacity:.9;}
+}
+@keyframes blink{0%,49%{opacity:1;}50%,100%{opacity:0;}}
+.cursor{display:inline-block;animation:blink 1s steps(1) infinite;color:var(--red);}
+@keyframes glitch-a{
+0%,100%{clip-path:inset(0 0 92% 0);transform:translate(0,0);}
+10%{clip-path:inset(10% 0 60% 0);transform:translate(-2px,0);}
+20%{clip-path:inset(70% 0 5% 0);transform:translate(2px,0);}
+30%{clip-path:inset(40% 0 40% 0);transform:translate(-1px,0);}
+40%{clip-path:inset(0 0 92% 0);transform:translate(0,0);}
+100%{clip-path:inset(0 0 92% 0);transform:translate(0,0);}
+}
+@keyframes glitch-b{
+0%,100%{clip-path:inset(85% 0 0 0);transform:translate(0,0);}
+15%{clip-path:inset(20% 0 65% 0);transform:translate(2px,0);}
+25%{clip-path:inset(55% 0 20% 0);transform:translate(-2px,0);}
+45%{clip-path:inset(85% 0 0 0);transform:translate(0,0);}
+100%{clip-path:inset(85% 0 0 0);transform:translate(0,0);}
+}
+.glitch-wrap{position:relative;display:inline-block;}
+.glitch-wrap::before,.glitch-wrap::after{
+content:attr(data-text);
+position:absolute;left:0;top:0;width:100%;
+overflow:hidden;color:var(--red);
+opacity:.75;pointer-events:none;
+white-space:pre-line;}
+
+.glitch-wrap::before{animation:glitch-a 5.4s infinite steps(1,end);transform:translate(-2px,0);}
+.glitch-wrap::after{animation:glitch-b 6.2s infinite steps(1,end);color:#fff;opacity:.5;transform:translate(2px,0);}
+@keyframes fade-up{
+from{opacity:0;transform:translateY(18px);}
+to{opacity:1;transform:translateY(0);}
+}
+.reveal{animation:fade-up .7s cubic-bezier(.2,.7,.3,1) both;}
+.hud{
+position:relative;
+}
+.hud::before,.hud::after,.hud .br,.hud .bl{
+content:'';position:absolute;width:14px;height:14px;
+border-color:var(--red);pointer-events:none;
+}
+.hud::before{top:-1px;left:-1px;border-top:1.5px solid var(--red);border-left:1.5px solid var(--red);}
+.hud::after{top:-1px;right:-1px;border-top:1.5px solid var(--red);border-right:1.5px solid var(--red);}
+.hud .bl{bottom:-1px;left:-1px;border-bottom:1.5px solid var(--red);border-left:1.5px solid var(--red);}
+.hud .br{bottom:-1px;right:-1px;border-bottom:1.5px solid var(--red);border-right:1.5px solid var(--red);}
+header{
+position:sticky;top:0;z-index:50;
+background:rgba(7,7,10,.86);
+backdrop-filter:blur(10px);
+border-bottom:1px solid var(--line-soft);
+}
+.navbar{
+display:flex;align-items:center;justify-content:space-between;
+padding:16px 24px;max-width:1120px;margin:0 auto;
+}
+.logo{
+display:flex;align-items:center;gap:12px;
+font-family:'Oswald',sans-serif;font-weight:700;font-size:23px;
+letter-spacing:0.08em;text-transform:uppercase;color:var(--white);
+}
+.logo svg{width:32px;height:32px;flex-shrink:0;}
+.navbar .cta{
+border:1px solid var(--red);
+color:var(--red);
+padding:13px 24px;
+font-size:14px;
+font-family:'JetBrains Mono',monospace;
+text-transform:uppercase;
+letter-spacing:0.08em;
+transition:background .15s,color .15s,box-shadow .2s;
+clip-path:polygon(10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%,0 10px);
+}
+.navbar .cta:hover{background:var(--red);color:#050505;box-shadow:0 0 24px var(--red-glow);}
+.nav-links{display:flex;gap:32px;font-family:'JetBrains Mono',monospace;font-size:13px;text-transform:uppercase;letter-spacing:0.08em;}
+.nav-links a{color:var(--gray);position:relative;padding-bottom:2px;}
+.nav-links a:hover{color:var(--white);}
+.nav-links a::before{content:'/ ';color:var(--red);}
+.navbar-right{display:flex;align-items:center;gap:16px;}
+.nav-toggle{
+display:none;flex-direction:column;justify-content:center;gap:5px;
+width:38px;height:38px;background:transparent;border:1px solid var(--line);
+cursor:pointer;flex-shrink:0;padding:0;
+}
+.nav-toggle span{width:18px;height:2px;background:var(--red);margin:0 auto;transition:transform .25s ease, opacity .2s ease;}
+.nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.nav-toggle.open span:nth-child(2){opacity:0;}
+.nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.mobile-nav{
+display:none;flex-direction:column;gap:2px;
+background:var(--bg-panel);border-top:1px solid var(--line-soft);
+padding:10px 24px 20px;
+}
+.mobile-nav a{
+padding:16px 4px;font-family:'JetBrains Mono',monospace;font-size:15px;text-transform:uppercase;
+letter-spacing:.06em;color:var(--gray);border-bottom:1px solid var(--line-soft);
+}
+.mobile-nav a:last-child{border-bottom:none;}
+.mobile-nav.open{display:flex;}
+@media(max-width:860px){
+.nav-links{display:none;}
+.nav-toggle{display:flex;}
+}
+@media(max-width:520px){
+.navbar-right .cta{display:none;}
+}
+section{padding:116px 0;position:relative;background:var(--bg);overflow:hidden;}
+section:last-of-type{border-bottom:none;}
+.eyebrow{margin-bottom:20px;display:flex;align-items:center;gap:10px;}
+.eyebrow::before{content:'';width:24px;height:1px;background:var(--red);display:inline-block;}
+.hero{padding-top:52px;padding-bottom:96px;}
+.hero-frame{
+border:1px solid var(--line);
+background:
+radial-gradient(ellipse 70% 60% at 75% 10%, var(--red-glow-soft), transparent 60%),
+linear-gradient(180deg,#0b0b0e,#050506);
+color:var(--white);
+padding:72px 58px;
+display:flex;flex-direction:column;
+min-height:725px;justify-content:center;
+position:relative;
+overflow:hidden;
+}
+.hero-frame .hexgrid-bg{opacity:.7;}
+.hero-frame .scanline{
+position:absolute;left:0;right:0;height:120px;z-index:1;pointer-events:none;
+background:linear-gradient(180deg, transparent, rgba(255,36,56,.10), transparent);
+animation:scan 7s linear infinite;
+}
+.hero-frame .big-hex{
+position:absolute;right:-60px;top:50%;transform:translateY(-50%);
+width:420px;height:420px;opacity:.5;pointer-events:none;
+}
+.hero-frame .big-hex svg{width:100%;height:100%;}
+.hero-frame .spin1{animation:spin-slow 34s linear infinite;transform-origin:center;}
+.hero-frame .spin2{animation:spin-slow-rev 24s linear infinite;transform-origin:center;}
+.hero-frame > *{position:relative;z-index:2;}
+.hero-frame .photo-tag{
+position:absolute;top:22px;right:26px;
+font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--gray-dim);
+z-index:2;letter-spacing:.1em;text-transform:uppercase;
+}
+.hero-photo-frame{
+position:absolute;right:64px;top:50%;transform:translateY(-50%);
+width:400px;height:850px;z-index:1;
+background:linear-gradient(180deg,#0d0d10,#050506);
+border:1px solid var(--line);
+overflow:hidden;
+mask-image:radial-gradient(ellipse 62% 68% at 50% 45%, black 40%, transparent 92%);
+-webkit-mask-image:radial-gradient(ellipse 62% 68% at 50% 45%, black 40%, transparent 92%);
+}
+.hero-photo-frame img{
+width:100%;height:100%;object-fit:cover;display:block;
+filter:brightness(.85) saturate(.9);
+}
+@media(max-width:1140px){.hero-photo-frame{right:24px;width:220px;height:320px;opacity:.5;}}
+@media(max-width:860px){
+.hero-photo-frame{
+position:relative; right:auto; top:auto; transform:none;
+width:100%; max-width:230px; height:190px; margin:0 auto 26px;
+opacity:.9; mask-image:radial-gradient(ellipse 72% 78% at 50% 45%, black 45%, transparent 94%);
+-webkit-mask-image:radial-gradient(ellipse 72% 78% at 50% 45%, black 45%, transparent 94%);
+}
+}
+.hero-brand{font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--red);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:18px;display:flex;align-items:center;gap:12px;}
+.hero-brand::before{content:'';width:8px;height:8px;background:var(--red);border-radius:50%;box-shadow:0 0 10px var(--red);animation:pulse-red 2s ease-in-out infinite;}
+.hero-tagline{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--gray);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:28px;}
+.hero h1{font-size:74px;line-height:1.05;margin-bottom:30px;max-width:760px;color:var(--white);}
+.hero p.lead{font-size:var(--text-lead);max-width:560px;color:var(--gray);margin-top:32px;font-family:'Inter',sans-serif;letter-spacing:0.01em;}
+.btn-row{display:flex;gap:18px;flex-wrap:wrap;align-items:center;}
+.btn{
+display:inline-block;
+background:var(--red);color:#08080a;
+padding:20px 40px;
+font-family:'JetBrains Mono',monospace;font-size:15px;font-weight:600;
+text-transform:uppercase;letter-spacing:0.08em;
+border:1px solid var(--red);
+transition:box-shadow .2s, transform .15s, background .2s;
+cursor:pointer;
+clip-path:polygon(14px 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%,0 14px);
+}
+.btn:hover{box-shadow:0 0 30px var(--red-glow);transform:translateY(-1px);}
+.btn-outline{
+background:transparent;color:var(--white);border:1px solid var(--line);
+}
+.btn-outline:hover{border-color:var(--red);color:var(--red);box-shadow:0 0 20px var(--red-glow-soft);}
+.hint{font-size:var(--text-small);color:var(--gray);font-family:'JetBrains Mono',monospace;letter-spacing:.03em;}
+
+/* CTA рядом с подсказкой после блока диагностики */
+.diagnostic-cta-row{
+  margin-top:26px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  padding:16px 18px 16px 20px;
+  border:1px solid var(--line);
+  background:linear-gradient(90deg,rgba(255,255,255,.025),rgba(255,36,56,.055));
+  position:relative;
+}
+.diagnostic-cta-row::before{
+  content:'>';
+  position:absolute;
+  left:-1px;
+  top:0;
+  bottom:0;
+  width:3px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--red);
+  background:var(--red);
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;
+}
+.diagnostic-cta{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:48px;
+  padding:13px 24px;
+  flex-shrink:0;
+  background:var(--red);
+  color:#08080a;
+  border:1px solid var(--red);
+  font-family:'JetBrains Mono',monospace;
+  font-size:13px;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  clip-path:polygon(10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%,0 10px);
+  transition:transform .15s,box-shadow .2s,background .2s;
+}
+.diagnostic-cta::after{
+  content:'→';
+  margin-left:12px;
+  font-size:16px;
+}
+.diagnostic-cta:hover{
+  transform:translateY(-1px);
+  box-shadow:0 0 28px var(--red-glow);
+  background:#ff3b4d;
+}
+@media(max-width:600px){
+  .diagnostic-cta-row{
+    flex-direction:column;
+    align-items:stretch;
+    gap:14px;
+    padding:16px;
+  }
+  .diagnostic-cta{width:100%;}
+}
+.sec-head{margin-bottom:56px;max-width:760px;}
+.sec-head h2{font-size:46px;margin-bottom:16px;position:relative;display:inline-block;}
+.sec-head h2::before{content:'[';color:var(--red);opacity:.5;margin-right:10px;font-weight:400;}
+.sec-head h2::after{content:']';color:var(--red);opacity:.5;margin-left:10px;font-weight:400;}
+.sec-head p{color:var(--gray);font-size:var(--text-lead);font-family:'Inter';}
+.tier .tname{position:relative;}
+.tier .tname::before{content:'[ ';color:var(--red);opacity:.3375;}
+.tier .tname::after{content:' ]';color:var(--red);opacity:.3375;}
+.grid-cards{
+display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+background:var(--line);border:1px solid var(--line);
+}
+.card{
+background:var(--bg-panel);padding:34px 28px;min-height:200px;
+display:flex;flex-direction:column;justify-content:space-between;
+cursor:default;transition:background .25s, box-shadow .25s;
+position:relative;border:1px solid rgba(255,36,56,.22);
+}
+.card h3{font-size:19px;margin-bottom:12px;text-transform:none;letter-spacing:0;}
+.card p{font-size:var(--text-body);color:var(--gray);font-family:'Inter';}
+.card .tag{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--red);text-transform:uppercase;letter-spacing:.08em;}
+.ab-card .tag{display:inline-block;margin-bottom:8px;}
+.card.ab-card{cursor:default;align-items:stretch;}
+.card.ab-card > div{display:flex;flex-direction:column;width:100%;}
+.ab-card h3{line-height:1.25;min-height:2.5em;}
+.ab-block{margin-top:16px;}
+.ab-block:first-of-type{margin-top:14px;}
+.ab-label{
+display:flex;align-items:center;gap:8px;
+font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.1em;
+margin-bottom:8px;
+}
+.ab-label .dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
+.ab-now .ab-label{color:var(--gray-dim);}
+.ab-now .ab-label .dot{background:var(--gray-dim);}
+.ab-now{min-height:6.1em;}
+.ab-now p{color:var(--gray);font-size:var(--text-body);font-family:'Inter';line-height:1.55;}
+.ab-divider{
+display:flex;align-items:center;gap:8px;margin:14px 0;
+color:var(--red);font-family:'JetBrains Mono',monospace;font-size:13px;line-height:1;
+}
+.ab-divider::before{content:'';flex:1;height:1px;background:var(--line-soft);}
+.ab-divider .arrow{flex-shrink:0;}
+.ab-result{
+background:linear-gradient(160deg,#1c070b,#100405);
+border:1px solid rgba(255,36,56,.35);
+padding:14px 16px;
+min-height:180px;
+box-shadow:0 0 22px var(--red-glow-soft) inset;
+}
+.ab-result .ab-label{color:var(--red);margin-bottom:6px;}
+.ab-result .ab-label .dot{background:var(--red);box-shadow:0 0 8px var(--red);}
+.ab-result p{color:#f2f0f1;font-size:var(--text-body);font-family:'Inter';font-weight:500;line-height:1.5;}
+.promise-text{font-size:22px;font-family:'Inter',sans-serif;font-weight:500;line-height:1.4;max-width:760px;}
+.win-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:16px;}
+.win{background:var(--bg-panel);padding:24px;text-align:center;font-size:var(--text-body);font-weight:500;font-family:'Inter';color:var(--white);position:relative;border:1px solid rgba(255,36,56,.22);}
+.cost-compare{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:16px;}
+.cost-col{background:var(--bg-panel);padding:34px;border:1px solid rgba(255,36,56,.22);}
+.cost-col h4{font-family:'JetBrains Mono',sans-serif;font-size:14px;margin-bottom:20px;text-transform:uppercase;letter-spacing:.1em;color:var(--gray);}
+.cost-col ul{list-style:none;font-size:var(--text-body);color:var(--white);font-family:'Inter';}
+.cost-col li{padding:12px 0;border-top:1px solid var(--line-soft);}
+.cost-col li:first-of-type{border-top:none;}
+.cost-col.negative h4{color:var(--gray-dim);}
+.cost-col.negative li{color:var(--gray-dim);}
+.cost-col:not(.negative) h4{color:var(--red);}
+.cost-col:not(.negative) li::before{content:'▸ ';color:var(--red);}
+.author-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;align-items:stretch;}
+.photo-frame{
+border:1px solid rgba(255,36,56,.3);height:100%;min-height:520px;
+position:relative;
+background:linear-gradient(180deg,#0b0b0e,#050506);
+overflow:hidden;
+}
+.photo-frame img{
+width:100%;height:100%;object-fit:cover;display:block;
+filter:brightness(.9) saturate(.95);
+mask-image:radial-gradient(ellipse 62% 68% at 50% 45%, black 40%, transparent 92%);
+-webkit-mask-image:radial-gradient(ellipse 62% 68% at 50% 45%, black 40%, transparent 92%);
+}
+.photo-frame .hexgrid-bg{opacity:.6;}
+.photo-frame .scanline{
+position:absolute;left:0;right:0;height:90px;
+background:linear-gradient(180deg, transparent, rgba(255,36,56,.14), transparent);
+animation:scan 6s linear infinite;
+}
+.photo-frame span{position:relative;z-index:2;}
+.author-badge{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--red);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:18px;}
+.author-copy p{font-size:var(--text-lead);color:var(--gray);margin-bottom:18px;font-family:'Inter';}
+.author-quote{
+border-left:2px solid var(--red);padding:10px 0 10px 22px;margin:24px 0;
+font-family:'Inter',sans-serif;font-style:italic;font-size:var(--text-lead);color:var(--white);
+}
+.stats-row{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:32px 0;}
+.stat{background:var(--bg-panel);padding:26px;border:1px solid rgba(255,36,56,.22);}
+.stat .num{font-family:'Oswald',sans-serif;font-size:32px;font-weight:700;line-height:1.2;color:var(--red);}
+.stat .lbl{font-family:'Inter',sans-serif;font-size:var(--text-small);color:var(--gray);margin-top:8px;}
+.outcomes{list-style:none;max-width:740px;}
+.outcomes li{
+display:flex;gap:24px;align-items:center;padding:26px 0;border-top:1px solid var(--line-soft);font-size:21px;font-family:'Inter';
+min-width:0;
+}
+.outcomes li > span:last-child{min-width:0;overflow-wrap:break-word;}
+.outcomes li:last-child{border-bottom:1px solid var(--line-soft);}
+.outcomes .idx{font-family:'JetBrains Mono',monospace;color:var(--red);font-size:15px;min-width:34px;}
+.modules{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+.modules-hex-wrap{position:relative;padding:30px 0 10px;}
+.hex-outline{
+position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+width:min(980px,92%);height:auto;opacity:.5;pointer-events:none;z-index:0;
+}
+.hex-outline .spin-outline{animation:spin-slow 90s linear infinite;transform-origin:center;}
+.modules-hex{display:flex;justify-content:center;align-items:flex-start;position:relative;z-index:1;}
+.hex-col{display:flex;flex-direction:column;gap:8px;position:relative;}
+.hex-col + .hex-col{margin-left:-72px;}
+.hex-col.offset{margin-top:172px;}
+.hex-crown{position:relative;display:flex;justify-content:center;margin-bottom:-172px;z-index:2;pointer-events:none;}
+.hex-crown .hex-module{pointer-events:auto;}
+.hex-module.module.crown{
+background:linear-gradient(160deg,#2a0a10,#150507) !important;
+background:var(--red) !important;
+border:none !important;
+box-shadow:0 0 46px var(--red-glow-soft);
+cursor:default;
+}
+.hex-module.module::before{
+content:'';
+position:absolute;
+inset:1px;
+clip-path:inherit;
+background:var(--bg-panel);
+pointer-events:none;
+z-index:0;
+}
+.hex-module.module.crown::before{
+background:linear-gradient(160deg,#2a0a10,#150507);
+}
+.hex-module.module > *{position:relative;z-index:1;}
+.hex-module.module.crown:hover{box-shadow:0 0 60px var(--red-glow);}
+.hex-module.module.crown .mnum{color:#fff;}
+.hex-module.module.crown h3{color:var(--red);}
+.hex-module.module.crown p{color:#cfd0d6;}
+.hex-module.module{
+width:380px;height:338px;min-height:0;
+clip-path:polygon(25% 2%, 75% 2%, 100% 50%, 75% 98%, 25% 98%, 0% 50%);
+background:var(--bg-panel);
+background:var(--red);
+border:none;
+filter:drop-shadow(0 0 0 var(--red));
+display:flex;flex-direction:column;justify-content:center;align-items:center;
+text-align:center;
+padding:52px 74px 52px;
+cursor:pointer;
+transition:box-shadow .25s, background .25s, border-color .25s, filter .25s;
+}
+.hex-module.module:not(.crown):hover{
+box-shadow:0 0 34px var(--red-glow) inset;
+background:var(--red);
+filter:drop-shadow(0 0 5px var(--red-glow));
+}
+.hex-module.module:not(.crown):hover::before{
+background:linear-gradient(160deg,#2a0a10,#150507);
+}
+
+/* Наведение на весь шестиугольник также подсвечивает его кнопку */
+.hex-module.module:not(.crown):hover .hex-more{
+background:var(--red);
+color:#08080a;
+border-color:var(--red);
+box-shadow:0 0 22px var(--red-glow);
+}
+.hex-module.module:not(.crown):hover .mnum{color:#fff;}
+.hex-module.module:not(.crown):hover h3{color:var(--red);}
+.hex-module.module:not(.crown):hover p{color:#efd3d5;}
+.hex-module.module .mnum{margin-bottom:8px;transition:color .25s;}
+.hex-module.module h3{margin:12px 0 8px;transition:color .25s;}
+.hex-module.module p{transition:color .25s;}
+/* Номер модуля: слово остаётся компактным, номер становится главным акцентом */
+.hex-module.module .mnum{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+gap:0;
+line-height:1;
+margin-bottom:8px;
+}
+.hex-module.module .mnum .mlabel{
+font-size:13px;
+letter-spacing:.08em;
+text-transform:uppercase;
+color:var(--red);
+font-weight:400;
+}
+.hex-module.module .mnum .mnumber{
+font-family:'Oswald',sans-serif;
+font-size:53px;
+font-weight:700;
+line-height:.92;
+letter-spacing:.01em;
+color:var(--red);
+transition:color .25s, text-shadow .25s;
+}
+.hex-module.module:not(.crown) p{
+margin-bottom:52px;
+}
+.hex-module.module:not(.crown) .hex-more{
+position:absolute;
+left:18px;
+right:18px;
+bottom:8px;
+height:48px;
+border:none;
+background:var(--red);
+color:#08080a;
+font-family:'JetBrains Mono',monospace;
+font-size:12px;
+font-weight:600;
+letter-spacing:.08em;
+text-transform:uppercase;
+cursor:pointer;
+clip-path:polygon(12px 0,calc(100% - 12px) 0,100% 100%,0 100%);
+transition:background .2s,color .2s,border-color .2s,box-shadow .2s,transform .2s;
+z-index:5;
+}
+.hex-module.module:not(.crown) .hex-more::before{
+content:'';
+position:absolute;
+inset:1px;
+clip-path:inherit;
+background:var(--red);
+pointer-events:none;
+z-index:-1;
+transition:background .2s;
+}
+.hex-module.module:not(.crown) .hex-more:hover{
+background:#ff5261;
+color:#08080a;
+border-color:var(--red);
+box-shadow:0 0 22px var(--red-glow);
+transform:translateY(-1px);
+}
+.hex-module.module:not(.crown) .hex-more:hover::before{background:#ff5261;}
+.hex-module.module:not(.crown):hover .mnum .mnumber{
+color:#fff;
+text-shadow:0 0 14px var(--red-glow);
+}
+
+/* Десктопная перестановка; мобильная раскладка ниже остаётся прежней. */
+@media(min-width:1001px){
+.hex-module.module .mnum{gap:7px;}
+.hex-module.module{z-index:4;}
+.hex-module.module.m1{transform:translate(315px,-174px) !important;}
+.hex-module.module.m2{transform:translate(315px,-168px) !important;}
+.hex-module.module.m3{transform:translate(7px,360px) !important;}
+.hex-module.module.m4{transform:translate(315px,192px) !important;}
+.hex-module.module.m5{transform:translate(-301px,-158px) !important;}
+.hex-module.module.m6{transform:translate(-609px,-342px) !important;}
+.hex-module.module.crown{transform:translate(-7px,346px) !important;opacity:0 !important;pointer-events:none;}
+}
+
+@media(max-width:1140px){
+.hex-module.module{width:320px;height:288px;padding:38px 62px;}
+.hex-col + .hex-col{margin-left:-58px;}
+.hex-col.offset{margin-top:148px;}
+.hex-crown{margin-bottom:-148px;}
+.hex-module.module:not(.crown)::after{bottom:14px;width:20px;height:20px;background-size:10px 2px,2px 10px;}
+}
+@media(min-width:1001px) and (max-width:1140px){
+.hex-module.module.m1{transform:translate(269px,-148px) !important;}
+.hex-module.module.m2{transform:translate(269px,-142px) !important;}
+.hex-module.module.m3{transform:translate(7px,310px) !important;}
+.hex-module.module.m4{transform:translate(269px,168px) !important;}
+.hex-module.module.m5{transform:translate(-255px,-134px) !important;}
+.hex-module.module.m6{transform:translate(-517px,-290px) !important;}
+.hex-module.module.crown{transform:translate(-6px,296px) !important;pointer-events:none;}
+}
+@media(max-width:1000px){
+.hex-outline{display:none;}
+.modules-hex-wrap{padding:0;}
+.modules-hex{display:block;}
+.hex-col{display:contents;}
+.hex-module.module{
+width:100%;height:auto;clip-path:none;
+padding:34px 26px;text-align:left;align-items:flex-start;
+background:var(--red);border:none;
+}
+.hex-module.module:first-child{border-top:none;}
+.hex-module.module.crown{
+background:linear-gradient(160deg,#2a0a10,#150507) !important;
+border:1px solid var(--red) !important;
+}
+/* На мобильных шестиугольники становятся карточками, поэтому CTA остаётся внизу */
+.hex-module.module .mnum{
+align-items:flex-start;
+}
+.hex-module.module .mnum .mnumber{
+font-size:42px;
+}
+.hex-module.module:not(.crown) .hex-more{
+position:relative;
+left:auto;
+right:auto;
+bottom:auto;
+width:100%;
+margin-top:auto;
+height:46px;
+min-height:46px;
+clip-path:none;
+}
+.hex-module.module:not(.crown){
+min-height:300px;
+justify-content:flex-start;
+}
+}
+.module{
+background:var(--bg-panel);padding:38px 28px;min-height:270px;border:1px solid rgba(255,36,56,.22);
+display:flex;flex-direction:column;justify-content:space-between;
+transition:background .25s;position:relative;
+}
+.module .mnum{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--red);letter-spacing:.08em;text-transform:uppercase;}
+.module h3{font-size:21px;margin:18px 0 14px;line-height:1.25;text-transform:none;letter-spacing:0;}
+.module p{font-size:var(--text-body);color:var(--gray);font-family:'Inter';}
+.format-lead{font-size:22px;font-family:'Inter',sans-serif;font-weight:500;max-width:760px;margin-bottom:40px;line-height:1.4;color:var(--white);}
+.format-cards{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(5,auto);gap:1px;background:radial-gradient(ellipse at left center,rgba(255,36,56,.24),transparent 34%),radial-gradient(ellipse at right center,rgba(255,36,56,.24),transparent 34%),linear-gradient(180deg,rgba(255,36,56,.12),transparent 42%,rgba(255,36,56,.08));border:1px solid rgba(255,36,56,.5);align-items:stretch;position:relative;box-shadow:0 0 0 1px rgba(255,36,56,.12),0 0 28px var(--red-glow-soft),inset 0 0 26px rgba(255,36,56,.05);}
+.format-cards::before,.format-cards::after{content:'';position:absolute;top:18px;bottom:18px;width:1px;background:var(--red);box-shadow:0 0 10px var(--red),0 0 24px var(--red-glow);pointer-events:none;z-index:2;}
+.format-cards::before{left:-1px;}
+.format-cards::after{right:-1px;}
+.fcard{background:linear-gradient(145deg,rgba(255,36,56,.12),transparent 34%),linear-gradient(180deg,var(--bg-panel-2),var(--bg-panel));padding:52px 24px 28px;min-height:300px;display:grid;grid-template-rows:subgrid;grid-row:span 5;border:1px solid rgba(255,36,56,.16);position:relative;overflow:visible;}
+.fcard::before{content:'';position:absolute;top:-18px;left:50%;width:1px;height:19px;background:var(--red);box-shadow:0 0 8px var(--red-glow);z-index:1;}
+.fcard-icon{position:absolute;top:-45px;left:50%;width:84px;height:76px;transform:translateX(-50%);display:flex;align-items:center;justify-content:center;background:var(--red);clip-path:polygon(25% 2%,75% 2%,100% 50%,75% 98%,25% 98%,0 50%);filter:drop-shadow(0 0 7px var(--red-glow)) drop-shadow(0 0 18px var(--red-glow-soft));z-index:3;}
+.fcard-icon::after{content:'';position:absolute;inset:2px;background:linear-gradient(145deg,#160b0d,#050506 68%);clip-path:polygon(25% 2%,75% 2%,100% 50%,75% 98%,25% 98%,0 50%);}
+.fcard-icon svg{position:relative;z-index:1;width:34px;height:34px;color:var(--white);stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 5px rgba(255,255,255,.25));}
+.fcard .fnum{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--red);text-transform:uppercase;letter-spacing:.08em;}
+.fcard h4{font-family:'Oswald';font-weight:600;font-size:19px;margin:12px 0 10px;text-transform:none;letter-spacing:0;}
+.fcard p{font-size:var(--text-body);color:var(--gray);font-family:'Inter';padding:16px 0;border-top:1px solid var(--line-soft);display:flex;align-items:flex-start;gap:12px;}
+.fcard p .fitem{display:flex;flex-direction:column;gap:3px;}
+.fcard p .fitem strong{color:var(--white);font-weight:600;font-size:15px;line-height:1.35;}
+.fcard p .fitem span{font-size:var(--text-body);color:var(--gray);line-height:1.55;}
+.fcard .ficon{width:18px;height:18px;flex:0 0 18px;color:var(--red);margin-top:2px;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
+.fcard p:first-of-type{margin-top:8px;}
+.format-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:1px;}
+.fstat{background:#050506;color:var(--white);padding:32px 20px;text-align:center;position:relative;border:1px solid rgba(255,36,56,.24);}
+.fstat::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:40px;height:2px;background:var(--red);}
+.fstat .num{font-family:'Oswald',sans-serif;font-size:34px;font-weight:700;color:var(--red);}
+.fstat .lbl{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--gray);text-transform:uppercase;margin-top:10px;letter-spacing:.06em;}
+.tiers-lead{font-size:var(--text-lead);color:var(--gray);max-width:680px;margin-bottom:40px;}
+.tiers{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+.tier{
+background:var(--bg-panel);padding:28px 20px;display:flex;flex-direction:column;justify-content:space-between;min-height:340px;position:relative;min-width:0;
+border:1px solid rgba(255,36,56,.22);
+transition:background .3s, border-color .3s, box-shadow .3s;
+}
+.tier ul li{overflow-wrap:break-word;}
+.tier .tname{font-family:'Oswald',sans-serif;font-weight:600;font-size:18px;margin-bottom:6px;text-transform:uppercase;letter-spacing:.02em;min-height:46px;display:flex;align-items:flex-start;}
+.tier .tseats{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--red);margin-bottom:12px;letter-spacing:.05em;min-height:18px;}
+.tier .trequest{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gray);margin-bottom:4px;letter-spacing:.05em;line-height:1.3;}
+.tier .tpitch{font-size:var(--text-small);color:var(--gray);margin-bottom:20px;line-height:1.5;font-family:'Inter';transition:color .3s;}
+.tier ul{list-style:none;font-size:var(--text-small);flex-grow:1;margin-bottom:20px;font-family:'Inter';}
+.tier ul li{padding:9px 0;border-top:1px solid var(--line-soft);color:var(--gray);transition:color .3s, border-color .3s;}
+.tier ul li:first-child{border-top:none;}
+.tier-cta{
+border:1px solid var(--line);padding:13px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:13px;text-transform:uppercase;letter-spacing:0.05em;color:var(--gray);
+transition:border-color .2s, color .2s, box-shadow .2s;
+}
+/* All tariff cards share the same neutral state; only :hover (or .featured on hover)
+   switches to the red "highlighted" look — including the middle/featured tariff. */
+.tier:hover,
+.tier.featured:hover{
+background:linear-gradient(180deg,#120608,#050506);
+border-color:var(--red-2);
+box-shadow:0 0 40px var(--red-glow-soft) inset, 0 20px 40px rgba(0,0,0,.4);
+}
+.tier:hover .tseats,
+.tier.featured:hover .tseats{color:var(--red);}
+.tier:hover .tpitch,
+.tier.featured:hover .tpitch{color:#c9a3a7;}
+.tier:hover ul li,
+.tier.featured:hover ul li{border-top:1px solid rgba(255,36,56,.2);color:#d8d2d3;}
+.tier:hover ul li:first-child,
+.tier.featured:hover ul li:first-child{border-top:none;}
+.tier:hover .tier-cta,
+.tier.featured:hover .tier-cta{border-color:var(--red);color:var(--red);}
+.tier:hover .tier-cta:hover,
+.tier.featured:hover .tier-cta:hover{background:var(--red);color:#080808;}
+.tier-cta:hover{border-color:var(--red);color:var(--red);box-shadow:0 0 16px var(--red-glow-soft);}
+
+/* Desktop: full tariff breakdown. Mobile keeps the original compact card content. */
+.tier-index{display:flex;align-items:center;margin:0 0 12px;}
+.tier-number{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.04em;color:var(--red)!important;}
+.tier-details-desktop{display:none;}
+@media(min-width:861px){
+  .tier-index{margin-bottom:12px;}
+  .tier>div>ul:not(.tier-details-desktop){display:none;}
+  /* На ПК синхронизируем вертикальные строки тарифов: места, заголовки
+     разделов и соответствующие пункты стоят на одной высоте во всех карточках. */
+  .tier > div > .tname{height:46px;min-height:46px;}
+  .tier > div > .tseats{height:18px;min-height:18px;margin-bottom:12px;}
+  .tier > div > .tpitch{height:45px;min-height:45px;margin-bottom:20px;}
+  .tier-details-desktop{
+    display:grid;
+    grid-template-rows:repeat(17, auto);
+    align-content:start;
+    list-style:none!important;
+    margin:0 0 20px!important;
+    padding:0;
+    font-size:12px;
+    line-height:1.45;
+  }
+  .tier-details-desktop li{
+    min-width:0;
+    min-height:0;
+    height:auto!important;
+    padding:12px 0 16px!important;
+    border-top:1px solid var(--line-soft);
+    color:#d2d2d6;
+    overflow-wrap:anywhere;
+    overflow:visible!important;
+    line-height:1.55;
+  }
+  /* Длинные пункты с несколькими строками не обрезаем и даём им
+     дополнительный воздух снизу. */
+  .tier-details-desktop li:nth-child(7),
+  .tier-details-desktop li:nth-child(18){
+    padding-bottom:24px!important;
+  }
+  .tier-details-desktop li:first-child{border-top:0;}
+  .tier-details-desktop li.marked{color:var(--red);}
+  .tier-details-desktop li.unlimited-access{color:var(--red)!important;}
+  .tier-details-desktop li.muted-item{color:#d2d2d6;}
+  .tier-details-desktop li.common-item::before{content:'✓';position:absolute;left:5px;top:9px;color:#eee;font-size:12px;}
+  .tier-details-desktop li.detail-heading{padding:12px 0 10px!important;color:var(--white);font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.06em;font-size:10px;font-weight:600;border-top:1px solid rgba(255,36,56,.3);}
+  .tier-details-desktop li.detail-muted{color:#777;}
+  .tier-details-desktop li.detail-meta{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--gray);}
+}
+
+/* Кнопка «Сравнить тарифы» внутри карточки — только на телефоне */
+.tier-compare-btn{display:none;}
+@media(max-width:860px){
+  .tier-compare-btn{display:block;margin-bottom:8px;background:transparent;color:var(--gray);border-color:var(--line);cursor:pointer;width:100%;font-family:'JetBrains Mono',monospace;font-size:13px;text-transform:uppercase;letter-spacing:0.05em;transition:border-color .2s,color .2s;}
+  .tier-compare-btn:hover{border-color:var(--red);color:var(--red);}
+}
+.scarcity{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--gray-dim);margin-top:24px;text-align:center;letter-spacing:.03em;}
+.compare-row{margin-top:32px;text-align:center;}
+.modal-overlay{
+display:none;position:fixed;inset:0;background:rgba(4,4,5,.86);
+z-index:200;align-items:center;justify-content:center;padding:24px;
+backdrop-filter:blur(4px);
+overscroll-behavior:contain;
+}
+.modal-overlay.open{display:flex;}
+.modal-box{
+background:var(--bg-panel);width:100%;max-width:1080px;max-height:85vh;overflow:auto;
+ border:1px solid var(--red);;padding:42px;position:relative;
+ box-shadow:0 0 60px var(--red-glow-soft);
+overscroll-behavior:contain;
+}
+.modal-close{
+position:absolute;top:22px;right:24px;font-family:'JetBrains Mono';font-size:26px;
+background:none;border:none;cursor:pointer;color:var(--gray);line-height:1;transition:color .2s;
+}
+.modal-close:hover{color:var(--red);}
+.modal-box h3{font-size:26px;margin-bottom:10px;text-transform:uppercase;}
+.modal-box .hint{margin-bottom:28px;color:var(--gray);}
+.compare-table{width:100%;border-collapse:collapse;font-size:var(--text-small);font-family:'Inter';}
+.compare-table th,.compare-table td{border:1px solid var(--line);padding:12px 10px;text-align:center;vertical-align:middle;color:var(--gray);}
+.compare-table th{font-family:'JetBrains Mono';text-transform:uppercase;font-size:12px;letter-spacing:0.05em;background:#0a0a0d;color:var(--red);}
+.compare-table td:first-child,.compare-table th:first-child{text-align:left;font-size:var(--text-small);font-family:'Inter';min-width:200px;color:var(--white);}
+.compare-table td.yes{font-weight:700;color:var(--red);}
+.compare-table td.no{color:var(--gray-dim);}
+.compare-table .seats-row td{font-family:'JetBrains Mono';font-weight:700;color:var(--white);}
+
+/* На телефоне в landscape ширина viewport может быть >700px, поэтому выделение
+   последних двух тарифов НЕ ограничиваем старым @media(max-width:700px). */
+#tierModal .compare-table th:nth-child(5),
+#tierModal .compare-table td:nth-child(5),
+#tierModal .compare-table th:nth-child(6),
+#tierModal .compare-table td:nth-child(6){
+  background:rgba(255,36,56,.14);
+}
+#tierModal .compare-table th:nth-child(5),
+#tierModal .compare-table td:nth-child(5){
+  border-left:2px solid var(--red);
+}
+#tierModal .compare-table th:nth-child(6),
+#tierModal .compare-table td:nth-child(6){
+  border-right:2px solid var(--red);
+}
+#tierModal .compare-table th:nth-child(6),
+#tierModal .compare-table td:nth-child(6){
+  border-left:1px solid var(--red);
+}
+#tierModal .compare-table tbody tr td:nth-child(5),
+#tierModal .compare-table tbody tr td:nth-child(6){
+  border-bottom:1px solid var(--red);
+}
+#tierModal .compare-table thead th:nth-child(5),
+#tierModal .compare-table thead th:nth-child(6){
+  color:#fff;
+  background:rgba(255,36,56,.28);
+  border-top:2px solid var(--red);
+}
+#tierModal .compare-table tbody tr:last-child td:nth-child(5),
+#tierModal .compare-table tbody tr:last-child td:nth-child(6){
+  border-bottom:2px solid var(--red);
+}
+
+
+/* Полная сравнительная таблица по скрину — только ПК. Мобильную таблицу не трогаем. */
+.compare-table-desktop{display:none;}
+.compare-table-desktop .dt-num{display:block;font-size:11px;opacity:.55;margin-bottom:3px;letter-spacing:.08em;}
+.compare-table-desktop .dt-s1,.compare-table-desktop .s1{color:var(--red);}
+.compare-table-desktop .dt-s2,.compare-table-desktop .s2{color:var(--red);}
+.compare-table-desktop .dt-s3,.compare-table-desktop .s3{color:var(--red);}
+.compare-table-desktop .dt-s4,.compare-table-desktop .s4{color:var(--red);}
+.compare-table-desktop .dt-s5,.compare-table-desktop .s5{color:var(--red);}
+.compare-table-desktop th{vertical-align:top;text-align:left;line-height:1.35;}
+.compare-table-desktop th:not(:first-child){min-width:185px;}
+.compare-table-desktop td{vertical-align:top;text-align:left;line-height:1.35;}
+.compare-table-desktop td:first-child{min-width:245px;}
+.compare-table-desktop td.common{text-align:left;color:#eee;font-weight:600;}
+.compare-table-desktop td.no{color:#666;}
+.compare-table-desktop .mark-cell{font-weight:500;position:relative;color:var(--red);}
+.compare-table-desktop .section-break td{height:20px;padding:0;background:#3a3a38;border-color:#3a3a38;}
+
+@media(min-width:861px){
+  #tierModal .modal-box{max-width:calc(100vw - 56px);max-height:92vh;padding:24px;}
+  #tierModal .compare-table-mobile{display:none;}
+  #tierModal .compare-table-desktop{display:table;}
+  #tierModal .modal-box h3{font-size:24px;margin-bottom:6px;}
+  #tierModal .modal-box .hint{margin-bottom:16px;}
+  #tierModal .compare-table-desktop th,#tierModal .compare-table-desktop td{padding:9px 8px;font-size:12px;}
+  #tierModal .compare-table-desktop th{font-size:11px;}
+  #tierModal .compare-table-desktop td:first-child{min-width:215px;}
+  #tierModal .compare-table-desktop th:not(:first-child){min-width:170px;}
+  .compare-row{display:block;}
+}
+
+@media(max-width:700px){.modal-box{padding:24px;}.compare-table{font-size:13px;}}
+/* ---------- ТАРИФЫ: desktop/mobile layouts ---------- */
+.tier-show-all{display:none;}
+
+@media(min-width:861px){
+  /* На ПК в блоке тарифов полностью отключаем зачёркивание текста. */
+  #tiers, #tiers *, #tierModal .compare-table-desktop, #tierModal .compare-table-desktop * { text-decoration:none!important; }
+
+  /* На ПК весь текст внутри тарифов — нейтральный серый. */
+  .tiers .tier,
+  .tiers .tier *,
+  .tiers .tier .tname::before,
+  .tiers .tier .tname::after{
+    color:var(--gray)!important;
+  }
+
+  /* На ПК вместо pop-up показываем кнопку раскрытия прямо в сетке. */
+  .compare-row{display:none;}
+  .tiers{
+    grid-template-columns:repeat(3,1fr) .3fr;
+  }
+  .tiers > .tier:nth-of-type(n+4){display:none;}
+  .tier-show-all{
+    display:flex;
+    min-height:340px;
+    width:100%;
+    grid-column:span 1;
+    align-items:center;
+    justify-content:center;
+    padding:28px 20px;
+    background:var(--red);
+    border:1px solid var(--red);
+    color:#080808;
+    font-family:'JetBrains Mono',monospace;
+    font-size:13px;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    text-align:center;
+    cursor:pointer;
+    transition:background .25s, border-color .25s, box-shadow .25s, color .25s;
+  }
+  .tier-show-all span{display:block;transform:rotate(90deg);}
+  .tier-show-all:hover{
+    background:var(--red-2);
+    border-color:var(--red);
+    box-shadow:0 0 40px var(--red-glow-soft) inset, 0 20px 40px rgba(0,0,0,.4);
+    color:#fff;
+  }
+  .tiers.show-all{
+    grid-template-columns:repeat(5,1fr);
+  }
+  .tiers.show-all > .tier:nth-of-type(n+4){
+    display:flex;
+  }
+  .tiers.show-all .tier-show-all{
+    display:none;
+  }
+}
+
+
+  /* Дополнительные правки блока «Тарифы» на ПК */
+  @media(min-width:861px){
+    /* Убираем галочки у пунктов тарифов */
+    .tiers .tier-details-desktop li.common-item::before{
+      content:none!important;
+      display:none!important;
+    }
+
+    /* Названия тарифов — белые */
+    .tiers .tier .tname{
+      color:var(--white)!important;
+    }
+
+    /* В тарифе «Самостоятельный» недоступные опции показываем зачёркнутыми и полупрозрачными. */
+    /* Явно перебиваем общее text-decoration:none у блока тарифов. */
+    #tiers .tier.s1 .tier-details-desktop li.detail-struck{
+      text-decoration-line:line-through!important;
+      text-decoration-style:solid!important;
+      text-decoration-thickness:1px!important;
+      text-decoration-color:currentColor!important;
+      opacity:.3375;
+    }
+    /* В тарифе «Сопровождение в пятёрках» эти две опции также зачёркнуты и полупрозрачны. */
+    #tiers .tier.s2 .tier-details-desktop li.detail-struck-s2{
+      text-decoration-line:line-through!important;
+      text-decoration-style:solid!important;
+      text-decoration-thickness:1px!important;
+      text-decoration-color:currentColor!important;
+      opacity:.3375;
+    }
+    .tiers .tier .tname::before,
+    .tiers .tier .tname::after{
+      color:var(--red)!important;
+    }
+
+    /* Количество мест — красное */
+    .tiers .tier .tseats{
+      color:var(--red)!important;
+    }
+
+    /* Заголовки разделов — крупнее и красные */
+    .tiers .tier .tier-details-desktop li.detail-heading{
+      color:var(--red)!important;
+      font-size:13px!important;
+      line-height:1.4!important;
+      font-weight:600!important;
+    }
+  }
+
+@media(max-width:860px){
+  /* На телефонах в карточках тарифов не показываем ни номера в шестиугольниках, ни символы. */
+  #tiers .tier-index{display:none!important;}
+  /* На телефоне/планшете сохраняем pop-up сравнения и показываем только первые 3 тарифа. */
+  .tiers > .tier:nth-of-type(n+4){display:none;}
+  .tier-show-all{display:none !important;}
+}
+
+/* ---------- Мобильный pop-up тарифов: сначала подсказка о повороте ---------- */
+.modal-rotate-hint{display:none;}
+
+@media(max-width:860px){
+  /* После закрытия таблицы на телефоне показываем отдельное полноэкранное сообщение. */
+  #tierCloseRotateHint{
+    display:none;position:fixed;inset:0;z-index:9999;
+    align-items:center;justify-content:center;padding:24px;
+    background:rgba(4,4,5,.94);backdrop-filter:blur(5px);
+  }
+  #tierCloseRotateHint.show{display:flex !important;}
+  #tierCloseRotateHint .modal-rotate-hint{
+    display:flex;width:min(88vw,420px);padding:28px 24px;
+    border:2px solid var(--red);background:var(--bg-panel);
+    box-shadow:0 0 60px var(--red-glow-soft);text-align:center;
+    flex-direction:column;align-items:center;gap:12px;
+  }
+  #tierCloseRotateHint .modal-rotate-hint strong{
+    font-family:'JetBrains Mono',monospace;font-size:15px;line-height:1.4;
+    color:var(--red);letter-spacing:.06em;
+  }
+  #tierCloseRotateHint .modal-rotate-hint span{color:var(--gray);font-size:13px;line-height:1.5;}
+  #tierCloseRotateHint .modal-rotate-icon{
+    width:52px;height:52px;display:flex;align-items:center;justify-content:center;
+    border:1px solid var(--red);color:var(--red);font-size:28px;line-height:1;
+  }
+
+  #tierModal .modal-rotate-hint{
+    width:min(88vw,420px);
+    padding:28px 24px;
+    border:1px solid var(--red);
+    background:var(--bg-panel);
+    box-shadow:0 0 60px var(--red-glow-soft);
+    text-align:center;
+    flex-direction:column;
+    align-items:center;
+    gap:12px;
+  }
+  #tierModal .modal-rotate-hint strong{
+    font-family:'JetBrains Mono',monospace;
+    font-size:15px;
+    line-height:1.4;
+    color:var(--red);
+    letter-spacing:.06em;
+  }
+  #tierModal .modal-rotate-hint span{
+    color:var(--gray);
+    font-size:13px;
+    line-height:1.5;
+  }
+  #tierModal .modal-rotate-icon{
+    width:52px;
+    height:52px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid var(--red);
+    color:var(--red);
+    font-size:28px;
+    line-height:1;
+  }
+
+  /* В портретной ориентации таблица не показывается — только инструкция. */
+  @media(orientation:portrait){
+    #tierModal .modal-box{display:none;}
+    #tierModal .modal-rotate-hint{display:flex;}
+  }
+
+  /* После физического поворота телефона показываем обычную горизонтальную таблицу.
+     Никаких transform/rotate на body или html нет, поэтому остальной сайт не переворачивается. */
+  @media(orientation:landscape){
+    #tierModal .compare-table-mobile{
+      width:130%;
+      min-width:130%;
+    }
+    #tierModal .modal-rotate-hint{display:none;}
+    #tierModal{
+      padding:12px;
+    }
+    #tierModal .modal-box{
+      display:block;
+      max-width:none;
+      max-height:94vh;
+      padding:24px;
+      overflow:auto;
+    }
+    #tierModal .modal-box h3{font-size:22px;}
+    #tierModal .modal-box .hint{margin-bottom:18px;}
+    #tierModal .compare-table{
+      font-size:12px;
+      min-width:760px;
+    }
+    #tierModal .compare-table th,
+    #tierModal .compare-table td{
+      padding:8px 7px;
+      white-space:nowrap;
+    }
+    #tierModal .compare-table td:first-child,
+    #tierModal .compare-table th:first-child{
+      min-width:170px;
+    }
+
+  }
+}
+
+.policy-content h4{font-family:'Oswald',sans-serif;font-size:16px;text-transform:uppercase;letter-spacing:.03em;color:var(--red);margin:26px 0 10px;}
+.policy-content h4:first-child{margin-top:0;}
+.policy-content p{font-size:var(--text-body);color:var(--gray);margin-bottom:12px;font-family:'Inter';line-height:1.7;}
+.policy-content ol,.policy-content ul{margin:0 0 14px 20px;color:var(--gray);font-size:var(--text-body);line-height:1.7;font-family:'Inter';}
+.policy-content li{margin-bottom:6px;}
+.policy-content .req{margin-top:28px;padding-top:18px;border-top:1px solid var(--line-soft);font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--gray-dim);line-height:1.9;}
+.module-modal .mnum{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--red);text-transform:uppercase;letter-spacing:.08em;display:block;margin-bottom:8px;}
+.bonus-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+.bonus-card{background:var(--bg-panel);padding:34px 28px;min-height:200px;display:flex;flex-direction:column;justify-content:space-between;transition:background .2s;border:1px solid rgba(255,36,56,.22);}
+.bonus-card .bnum{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--red);text-transform:uppercase;letter-spacing:.06em;}
+.bonus-card h4{font-size:20px;margin:14px 0 10px;text-transform:none;letter-spacing:0;}
+.bonus-card p{font-size:var(--text-body);color:var(--gray);font-family:'Inter';}
+.closer{background:var(--bg);color:var(--white);padding:104px 0;text-align:center;border-bottom:none;position:relative;}
+.closer .wrap{position:relative;z-index:1;}
+.closer h2{font-size:44px;max-width:760px;margin:0 auto 24px;line-height:1.2;}
+.closer p{font-size:var(--text-lead);color:var(--gray);max-width:620px;margin:0 auto 36px;font-family:'Inter';}
+.faq-item{border-top:1px solid var(--line-soft);padding:24px 0;}
+.faq-item:last-child{border-bottom:1px solid var(--line-soft);}
+.faq-item summary{cursor:pointer;font-size:20px;font-weight:500;font-family:'Inter',sans-serif;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;color:var(--white);}
+.faq-item summary > *:first-child,.faq-item summary{min-width:0;}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item summary::after{content:'+';font-family:'JetBrains Mono',monospace;font-size:24px;flex-shrink:0;color:var(--red);}
+.faq-item[open] summary::after{content:'–';}
+.faq-item p{margin-top:18px;color:var(--gray);font-size:var(--text-body);max-width:680px;font-family:'Inter';}
+.final{background:var(--bg);color:var(--white);padding:108px 0;border-bottom:none;position:relative;}
+.final .hexgrid-bg{opacity:.35;}
+.final .sec-head p{color:var(--gray);}
+.final h2{font-size:48px;}
+.form-wrap{max-width:500px;position:relative;z-index:1;display:flex;flex-direction:column;order:1;}
+.final-grid{display:grid;grid-template-columns:1fr 460px;gap:48px;align-items:center;}
+.form-photo{
+position:relative;
+order:2;
+}
+.form-photo img{
+width:100%;height:auto;display:block;object-fit:contain;
+}
+/* ПК: без рамки, фото на 20% крупнее (центрируется в исходных границах),
+   плавно растворяется в прозрачность к низу через маску-градиент */
+@media(min-width:981px){
+.form-photo{
+overflow:visible;
+border:none;
+transform:translateY(-13%);
+}
+.form-photo img{
+width:120%;
+max-width:120%;
+margin-left:-10%;
+border:none;
+-webkit-mask-image:linear-gradient(to bottom, black 55%, transparent 96%);
+mask-image:linear-gradient(to bottom, black 55%, transparent 96%);
+}
+}
+@media(max-width:980px){
+.final-grid{grid-template-columns:1fr;}
+.form-photo{
+display:none;
+}
+}
+.field{margin-bottom:20px;}
+.field label{display:block;font-family:'JetBrains Mono',monospace;font-size:13px;text-transform:uppercase;letter-spacing:0.06em;color:var(--red);margin-bottom:10px;}
+.field input,.field select{
+width:100%;background:#0a0a0c;border:1px solid var(--line);color:var(--white);
+padding:16px 17px;font-family:'Inter';font-size:var(--text-body);transition:border-color .2s;
+}
+.field input:focus,.field select:focus{outline:none;border-color:var(--red);box-shadow:0 0 0 1px var(--red-glow-soft);}
+.field input::placeholder{color:var(--gray-dim);}
+.field select{
+appearance:none;-webkit-appearance:none;-moz-appearance:none;
+font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:.02em;
+text-transform:none;
+cursor:pointer;
+background-color:#0a0a0c;
+background-image:linear-gradient(160deg, rgba(255,36,56,.05), transparent 60%),
+url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23ff2438' stroke-width='1.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+background-repeat:no-repeat;
+background-position:0 0, right 18px center;
+padding-right:44px;
+transition:border-color .2s, box-shadow .2s, background-color .2s;
+clip-path:polygon(8px 0,100% 0,100% calc(100% - 8px),calc(100% - 8px) 100%,0 100%,0 8px);
+}
+.field select:hover{border-color:#3a3d46;background-color:#0d0d10;}
+@keyframes tier-fill-flash{
+0%{box-shadow:0 0 0 0 var(--red-glow);border-color:var(--red);}
+100%{box-shadow:0 0 0 8px transparent;border-color:var(--red);}
+}
+.field select.tier-preselected{animation:tier-fill-flash 1s ease-out;}
+.field select option{
+color:#f1f2f5;
+background:#0a0a0c;
+font-family:'Inter',sans-serif;
+}
+.custom-select{position:relative;}
+.cs-trigger{
+width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;
+background-color:#0a0a0c;
+background-image:linear-gradient(160deg, rgba(255,36,56,.05), transparent 60%);
+border:1px solid var(--line);color:var(--white);
+padding:16px 17px;font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:.02em;
+cursor:pointer;text-align:left;
+clip-path:polygon(8px 0,100% 0,100% calc(100% - 8px),calc(100% - 8px) 100%,0 100%,0 8px);
+transition:border-color .2s, box-shadow .2s, background-color .2s;
+}
+.cs-trigger:hover{border-color:#3a3d46;background-color:#0d0d10;}
+.custom-select.open .cs-trigger{border-color:var(--red);box-shadow:0 0 0 1px var(--red-glow-soft);}
+.cs-trigger .cs-value{color:var(--white);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.cs-trigger .cs-value.placeholder{color:var(--gray-dim);}
+.cs-arrow{flex-shrink:0;width:12px;height:8px;transition:transform .25s ease;}
+.cs-arrow path{stroke:var(--red);}
+.custom-select.open .cs-arrow{transform:rotate(180deg);}
+.cs-panel{
+position:absolute;left:0;right:0;top:calc(100% + 8px);z-index:40;
+background:#0a0a0c;border:1px solid var(--red);
+box-shadow:0 20px 44px rgba(0,0,0,.55), 0 0 24px var(--red-glow-soft);
+max-height:280px;overflow-y:auto;
+overscroll-behavior:contain;
+list-style:none;
+opacity:0;visibility:hidden;transform:translateY(-6px);
+transition:opacity .18s ease, transform .18s ease, visibility .18s;
+clip-path:polygon(10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%,0 10px);
+}
+.custom-select.open .cs-panel{opacity:1;visibility:visible;transform:translateY(0);}
+.cs-option{
+padding:13px 17px;font-family:'Inter',sans-serif;font-size:15px;color:var(--gray);
+cursor:pointer;border-top:1px solid var(--line-soft);
+transition:background .15s, color .15s, padding-left .15s;
+}
+.cs-option:first-child{border-top:none;}
+.cs-option::before{content:'▸ ';color:var(--red);opacity:0;transition:opacity .15s;}
+.cs-option:hover,.cs-option.active{background:var(--bg-panel-2);color:var(--white);padding-left:21px;}
+.cs-option:hover::before,.cs-option.active::before{opacity:1;}
+.cs-option.selected{color:var(--red);}
+.cs-panel::-webkit-scrollbar{width:8px;}
+.cs-panel::-webkit-scrollbar-thumb{background:var(--red);}
+.custom-select.tier-preselected .cs-trigger{animation:tier-fill-flash 1s ease-out;}
+.submit-btn{
+width:100%;background:var(--red);color:#08080a;border:none;
+padding:19px;font-family:'JetBrains Mono',monospace;font-size:15px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;
+margin-top:12px;cursor:pointer;transition:box-shadow .2s;
+clip-path:polygon(14px 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%,0 14px);
+}
+.submit-btn:hover{box-shadow:0 0 30px var(--red-glow);}
+.submit-btn:disabled{opacity:.35;cursor:not-allowed;box-shadow:none;}
+.consent-field{display:flex;align-items:flex-start;gap:12px;margin-bottom:22px;}
+.consent-field input[type="checkbox"]{
+appearance:none;-webkit-appearance:none;
+width:20px;height:20px;flex-shrink:0;margin-top:2px;
+border:1px solid var(--line);background:#0a0a0c;
+cursor:pointer;position:relative;transition:border-color .2s;
+display:inline-flex;align-items:center;justify-content:center;
+}
+.consent-field input[type="checkbox"]:checked{border-color:var(--red);background:var(--red);}
+.consent-field input[type="checkbox"]:checked::after{
+content:'';display:block;width:5px;height:9px;
+border:solid #08080a;border-width:0 2px 2px 0;
+transform:rotate(45deg) translate(-1px,-1px);
+}
+.consent-field label{color:var(--gray);font-size:var(--text-small);font-family:'Inter';line-height:1.55;cursor:pointer;text-transform:none;letter-spacing:0;}
+.consent-field a{color:var(--red);border-bottom:1px solid rgba(255,36,56,.4);}
+.consent-field a:hover{border-color:var(--red);}
+.final .hint{color:var(--gray-dim);margin-top:20px;}
+footer{padding:48px 0 36px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--gray-dim);letter-spacing:.08em;border-top:1px solid var(--line-soft);}
+.footer-inner{display:flex;flex-direction:column;align-items:center;gap:18px;}
+.footer-brand{color:var(--gray-dim);}
+.footer-legal-links{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;}
+.footer-legal-links a{color:var(--gray);transition:color .2s;text-transform:none;letter-spacing:0.02em;font-size:13px;}
+.footer-legal-links a:hover{color:var(--red);}
+.footer-requisites{color:var(--gray-dim);font-size:12px;letter-spacing:.04em;text-transform:none;max-width:640px;line-height:1.7;}
+#preloader{
+position:fixed;inset:0;z-index:9999;
+display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;
+background:var(--bg);
+transition:opacity .6s ease;
+}
+body.loaded #preloader{opacity:0;pointer-events:none;}
+.preload-hex{width:92px;height:92px;transform-origin:center;animation:breathe 2.1s ease-in-out infinite;}
+.preload-label{opacity:.8;}
+@keyframes breathe{
+0%,100%{transform:scale(.88);opacity:.6;}
+50%{transform:scale(1.08);opacity:1;}
+}
+.bg-photo{
+position:absolute;z-index:0;pointer-events:none;
+width:449px;height:686px;
+overflow:hidden;
+will-change:transform;
+top:8%;
+opacity:.82;
+}
+.bg-photo img{
+width:100%;height:100%;object-fit:cover;display:block;
+filter:brightness(.36) saturate(.7) contrast(1.05);
+}
+.bg-photo-label{
+position:absolute;bottom:18px;left:18px;z-index:2;
+font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gray-dim);
+text-transform:uppercase;letter-spacing:.08em;
+opacity:.6;
+}
+.bg-photo-left{
+left:-100px;
+mask-image:radial-gradient(ellipse 68% 72% at 40% 45%, black 28%, transparent 76%);
+-webkit-mask-image:radial-gradient(ellipse 68% 72% at 40% 45%, black 28%, transparent 76%);
+}
+.bg-photo-right{
+right:-100px;
+mask-image:radial-gradient(ellipse 68% 72% at 60% 45%, black 28%, transparent 76%);
+-webkit-mask-image:radial-gradient(ellipse 68% 72% at 60% 45%, black 28%, transparent 76%);
+}
+@media(max-width:1400px){
+.bg-photo{width:343px;height:528px;opacity:.82;}
+}
+@media(max-width:960px){
+.bg-photo{display:none;}
+}
+.kanji-mark{
+position:absolute;
+font-family:'Noto Serif JP',serif;
+font-weight:900;
+color:var(--red);
+opacity:.07;
+line-height:1;
+pointer-events:none;
+user-select:none;
+z-index:0;
+filter:blur(.2px);
+transform:rotate(-2deg);
+max-width:100%;
+overflow:hidden;
+}
+.kanji-mark.flicker{animation:kanji-flicker 6s ease-in-out infinite;}
+@keyframes kanji-flicker{
+0%,100%{opacity:.06;}
+45%{opacity:.06;}
+50%{opacity:.12;}
+55%{opacity:.06;}
+}
+.kanji-stamp{
+position:absolute;
+font-family:'Noto Serif JP',serif;
+font-weight:900;
+line-height:1;
+pointer-events:none;
+user-select:none;
+z-index:6;
+letter-spacing:-.02em;
+}
+.kanji-stamp.red{color:var(--red);text-shadow:0 2px 22px rgba(255,36,56,.5), 0 0 2px rgba(0,0,0,.6);}
+.kanji-stamp.white{color:var(--white);opacity:.88;text-shadow:0 2px 18px rgba(0,0,0,.7);}
+.kanji-stamp.pop{animation:stamp-in .8s cubic-bezier(.2,.7,.3,1) both;}
+@keyframes stamp-in{
+0%{opacity:0;transform:scale(1.4) rotate(-14deg);}
+60%{opacity:1;}
+100%{opacity:1;transform:scale(1) rotate(var(--rot,-6deg));}
+}
+@media(max-width:860px){
+.hero h1{font-size:40px;}
+.hero-frame{padding:44px 28px;min-height:440px;}
+.hero-frame .big-hex{display:none;}
+.hero-frame > .kanji-mark,.hero-frame > .kanji-stamp{display:none;}
+.hero-photo-frame{
+margin:-44px -28px 32px;
+width:auto;
+max-width:none;
+}
+.hero-brand{margin-top:6px;}
+.grid-cards{grid-template-columns:repeat(2,1fr);}
+.win-row{grid-template-columns:repeat(2,1fr);}
+.author-grid{grid-template-columns:1fr;}
+.photo-frame{height:auto;aspect-ratio:3/4;min-height:0;}
+.modules{grid-template-columns:repeat(2,1fr);}
+.format-cards{grid-template-columns:1fr;grid-template-rows:none;}
+.fcard{display:flex;grid-row:auto;padding:48px 24px 28px;}
+.fcard::before{display:none;}
+.fcard-icon{position:relative;top:auto;left:auto;transform:none;margin:-36px auto 18px;}
+.format-stats{grid-template-columns:1fr;}
+.tiers{grid-template-columns:repeat(2,1fr);}
+.bonus-grid{grid-template-columns:1fr;}
+.cost-compare{grid-template-columns:1fr;}
+section{padding:76px 0;}
+.wrap{padding:0 20px;}
+}
+@media(max-width:600px){
+body{font-size:var(--text-mobile-body);}
+section{padding:56px 0;}
+.navbar{padding:14px 18px;}
+.logo{font-size:19px;gap:8px;}
+.logo svg{width:26px;height:26px;}
+html,body{overflow-x:hidden;max-width:100vw;}
+.wrap,section,.hero-frame,.final-grid{max-width:100vw;overflow-x:hidden;}
+#form{overflow:visible;overflow-x:visible;}
+.hero{padding-top:24px;padding-bottom:56px;}
+.hero-frame{padding:32px 20px 40px;min-height:0;}
+.hero-photo-frame{max-width:none;height:auto;margin:-32px -20px -20%;position:relative;z-index:1;}
+.hero-brand{font-size:12px;letter-spacing:.1em;}
+.hero-tagline{font-size:11px;letter-spacing:.1em;margin-bottom:20px;}
+.hero h1{font-size:30px;line-height:1.15;margin-bottom:20px;}
+.hero p.lead{font-size:var(--text-mobile-lead);margin-top:0;margin-bottom:24px !important;}
+.btn-row{flex-direction:column;align-items:stretch;gap:14px;}
+.btn,.btn-outline{width:100%;text-align:center;padding:18px 24px;font-size:14px;}
+.hint{font-size:13px;text-align:center;}
+.sec-head{margin-bottom:36px;}
+#format .sec-head{margin-bottom:61px;}
+.sec-head h2{font-size:28px;}
+.sec-head p{font-size:var(--text-mobile-lead);}
+.grid-cards{grid-template-columns:repeat(2,1fr);}
+.grid-cards{grid-auto-rows:auto;align-items:stretch;}
+.card{padding:14px 10px;min-height:0;height:auto;}
+.card.ab-card > div{height:auto;}
+.card h3{font-size:13px;margin-bottom:6px;line-height:1.2;}
+.ab-card h3{min-height:6em;}
+.card p{font-size:var(--text-label);}
+.card .tag{font-size:10px;}
+.ab-block{margin-top:12px;}
+.ab-block:first-of-type{margin-top:10px;}
+.ab-now{min-height:8.3em;}
+.ab-card .ab-result{flex:none;height:auto;}
+.ab-label{font-size:9.5px;gap:6px;margin-bottom:5px;}
+.ab-label .dot{width:5px;height:5px;}
+.ab-now p{font-size:var(--text-label);}
+.ab-divider{margin:10px 0;font-size:11px;gap:6px;}
+.ab-result{padding:15px 14px;min-height:190px;}
+.ab-result p{font-size:var(--text-label);}
+.win-row{grid-template-columns:1fr;}
+.promise-text{font-size:18px;}
+.cost-compare{grid-template-columns:1fr 1fr;}
+.cost-col{padding:16px 12px;}
+.cost-col h4{font-size:12px;margin-bottom:12px;}
+.cost-col ul{font-size:var(--text-mobile-body);}
+.cost-col li{padding:8px 0;}
+.author-copy p:nth-of-type(2){display:none;}
+.stats-row{grid-template-columns:1fr;}
+.stat{padding:16px 10px;}
+.stat .num{font-size:22px;}
+.stat .lbl{font-size:12px;}
+.modules{grid-template-columns:1fr;}
+.outcomes li{font-size:17px;gap:16px;padding:20px 0;}
+.modules-hex-wrap{display:block;padding:0;overflow:visible;}
+.hex-outline{display:none;}
+.modules-hex{
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:stretch;
+gap:1px;
+background:var(--line);
+border:1px solid var(--line);
+}
+.hex-crown{order:-1;margin-bottom:0;display:none;}
+.hex-module.module.m1{order:1;}
+.hex-module.module.m2{order:2;}
+.hex-module.module.m3{order:3;}
+.hex-module.module.m4{order:4;}
+.hex-module.module.m5{order:5;}
+.hex-module.module.m6{order:6;}
+.hex-col{display:contents;}
+.hex-module.module{
+width:100%;height:auto;min-height:0;padding:20px 16px 16px;
+clip-path:none;
+text-align:left;align-items:flex-start;justify-content:flex-start;
+border:none;
+background:var(--bg-panel);
+overflow:visible;
+}
+.hex-module.module .mnum{font-size:11px;}
+.hex-module.module h3{font-size:15px;margin:8px 0 6px;line-height:1.25;}
+.hex-module.module p{display:block;font-size:var(--text-label);}
+.hex-module.module.crown{
+width:100%;margin:0 0 1px;padding:26px 20px;min-height:0;
+clip-path:none;
+border:1px solid var(--red) !important;
+text-align:left;align-items:flex-start;
+}
+.hex-module.module.crown .mnum{font-size:12px;}
+.hex-module.module.crown h3{font-size:19px;margin:10px 0 8px;}
+.hex-module.module.crown p{display:block;font-size:14px;}
+.hex-module.module:not(.crown)::after{right:12px;top:12px;width:18px;height:18px;background-size:9px 2px,2px 9px;}
+.format-cards{display:flex;flex-direction:column;grid-template-columns:none;grid-template-rows:none;gap:42px;background:transparent;border:0;box-shadow:none;padding:34px 0 0;}
+.format-cards::before,.format-cards::after{display:none;}
+.fcard{display:flex !important;flex-direction:column;grid-template-rows:none;grid-row:auto;width:100%;min-width:0;padding:54px 18px 18px;min-height:0;border:1px solid rgba(255,36,56,.42);box-shadow:0 0 18px rgba(255,36,56,.08);}
+.fcard-icon{position:absolute;top:-30px;left:50%;transform:translateX(-50%);width:64px;height:58px;margin:0;}
+.fcard-icon svg{width:29px;height:29px;}
+.fcard .fnum{font-size:10px;margin-bottom:6px;}
+.fcard h4{font-size:15px;margin:8px 0 10px;}
+.fcard p{display:flex;width:100%;min-width:0;font-size:var(--text-label);line-height:1.5;padding:12px 0;gap:9px;}
+.fcard .ficon{width:16px;height:16px;flex-basis:16px;margin-top:1px;}
+.format-stats{grid-template-columns:repeat(3,1fr);}
+.format-stats{margin-top:14px;border:1px solid rgba(255,36,56,.35);}
+.fstat{padding:16px 5px;}
+.fstat .num{font-size:19px;}
+.fstat .lbl{font-size:9.5px;}
+.tiers{grid-template-columns:1fr;}
+.tier{min-height:0;padding:20px 18px;}
+.tier .tier-index{gap:0;margin-bottom:10px;}
+.tier .tname{min-height:0;margin-bottom:4px;font-size:16px;}
+.tier .tseats{min-height:0;margin-bottom:8px;}
+.tier .tpitch{margin-bottom:14px;}
+.tier ul{margin-bottom:14px;}
+.tier ul li{padding:7px 0;font-size:var(--text-mobile-body);}
+.tier-cta{padding:11px;}
+.final h2{font-size:30px;}
+.final-grid{gap:0;}
+.form-photo{height:auto;margin-bottom:22px;}
+.closer h2{font-size:28px;}
+.faq-item summary{font-size:17px;}
+.modal-box{padding:18px;}
+.modal-box h3{font-size:20px;}
+.kanji-mark{font-size:130px !important;opacity:.09 !important;}
+.kanji-stamp{font-size:36px !important;opacity:.95;}
+.field input,.field select,.cs-trigger{padding:15px 14px;font-size:var(--text-mobile-body);}
+footer{padding:36px 0 28px;}
+.footer-legal-links{gap:6px 14px;}
+.footer-legal-links a{font-size:var(--text-label);}
+.bonus-grid{grid-template-columns:repeat(2,1fr);}
+.bonus-card{padding:20px 16px;min-height:0;}
+.bonus-card:nth-child(3){grid-column:1/3;}
+.bg-photo{
+display:block;
+position:absolute;
+width:158px;height:264px;
+opacity:.4;
+top:6%;
+}
+.bg-photo-left{left:0;}
+.bg-photo-right{right:0;}
+.bg-photo-label{display:none;}
+}
+.global-scan{
+position:fixed;left:0;right:0;top:0;height:220px;z-index:120;pointer-events:none;
+background:linear-gradient(180deg, transparent, rgba(255,36,56,.05), transparent);
+animation:scan 11s linear infinite;
+mix-blend-mode:screen;
+}
+.nav-links a{transition:color .2s;}
+.nav-links a{background-image:linear-gradient(var(--red),var(--red));background-repeat:no-repeat;background-position:left bottom;background-size:0% 1px;transition:background-size .25s ease,color .2s;}
+.nav-links a:hover{background-size:100% 1px;}
+.card,.hex-module.module,.tier{
+transition:transform .35s cubic-bezier(.2,.7,.3,1), box-shadow .35s, background .25s, border-color .25s;
+}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(0,0,0,.35), 0 0 0 1px var(--red-glow-soft) inset;background:var(--bg-panel-2);z-index:2;}
+.btn,.btn-outline{position:relative;overflow:hidden;}
+.btn::before,.btn-outline::before{
+content:'';position:absolute;top:0;left:-140%;width:60%;height:100%;
+background:linear-gradient(100deg, transparent, rgba(255,255,255,.35), transparent);
+transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
+}
+.btn:hover::before,.btn-outline:hover::before{left:140%;}
+.faq-item summary::after{transition:transform .3s ease;display:inline-block;}
+.faq-item[open] summary::after{transform:rotate(180deg);}
+@media (prefers-reduced-motion: reduce){
+*{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;}
+}
+
+/* На телефоне скрываем номера тарифов в карточках. */
+@media (max-width: 860px) {
+  #tiers .tier-index {
+    display: none !important;
+  }
+  #tiers .bg-photo,
+  #tiers .kanji-mark,
+  #tiers .kanji-stamp,
+  #tiers.hud::before,
+  #tiers.hud::after,
+  #tiers .hud::before,
+  #tiers .hud::after,
+  #tiers .hud .bl,
+  #tiers .hud .br {
+    display: none !important;
+  }
+}
+
+
+/* ---------- ТАРИФЫ: выравнивание содержимого карточек на ПК ---------- */
+@media(min-width:861px){
+  .tiers .tier{
+    /* Одинаковые строки шапки, чтобы названия/места/описания шли строго по одной линии. */
+    display:grid;
+    grid-template-rows:auto auto auto 58px 1fr auto;
+  }
+
+  .tiers .tier > div:first-child{
+    display:contents;
+  }
+
+  .tiers .tier-index{
+    grid-row:1;
+  }
+
+  .tiers .tier .tname{
+    grid-row:2;
+    min-height:46px;
+    display:flex;
+    align-items:flex-start;
+  }
+
+  .tiers .tier .tseats{
+    grid-row:3;
+    min-height:30px;
+  }
+
+  .tiers .tier .tpitch{
+    grid-row:4;
+    min-height:58px;
+    margin-bottom:0;
+  }
+
+  .tiers .tier .tier-details-desktop{
+    grid-row:5;
+    align-self:stretch;
+    display:flex;
+    flex-direction:column;
+    margin:0 0 20px!important;
+  }
+
+  /* Высоту каждой строки выставляет JS по самому высокому пункту
+     в этой же строке. Поэтому коротким пунктам добавляется ровно столько
+     свободного места, сколько нужно, чтобы следующий пункт начинался
+     на одной вертикальной линии во всех карточках. */
+  .tiers .tier-details-desktop > li{
+    min-height:0;
+    display:flex;
+    align-items:flex-start;
+    box-sizing:border-box;
+    padding:9px 0!important;
+  }
+
+  .tiers .tier-details-desktop > li.detail-heading{
+    min-height:0;
+    padding:13px 0 7px!important;
+    align-items:center;
+  }
+
+  .tiers .tier-details-desktop > li.detail-meta{
+    min-height:1px;
+    height:1px!important;
+    padding:0!important;
+  }
+
+  .tiers .tier > .tier-cta{
+    grid-row:6;
+  }
+}
+
+/* Равная высота блоков "Результат" в соседних карточках */
+@media (min-width:601px){
+  .grid-cards .ab-card > div{height:100%;}
+}
+
+  @media(min-width:861px){
+    /* Больше воздуха перед заголовками разделов тарифа */
+    .tiers .tier-details-desktop li.detail-heading{
+      padding-top:38px!important;
+      padding-bottom:10px!important;
+    }
+    /* Первый заголовок не прижимается к описанию тарифа */
+    .tiers .tier-details-desktop li.detail-heading:first-child{
+      padding-top:38px!important;
+    }
+  }
+
+</style>
+<style>
+@media (min-width: 861px){
+  .tier .tseats{
+    padding-top: 6px;
+  }
+}
+</style>
+
+
+<style>
+@media (max-width: 860px){
+  /* Оставляем кнопку «Сравнить тарифы», убираем следующие шаги */
+  .compare-row ~ * {
+    /* intentionally scoped below via the selectors added in the script */
+  }
+
+  /* Скрываем содержимое popup таблицы тарифов на телефоне */
+  .compare-modal,
+  .tariff-modal,
+  #compareModal,
+  #tariffModal {
+    display: none !important;
+  }
+
+  /* Модальные окна с контентом показываем как обычно — баг с module-попапами */
+  .modal-overlay:not(.open) {
+    display: none !important;
+  }
+  .modal-overlay.open {
+    display: flex !important;
+  }
+
+  /* Убираем кнопку сравнения под тарифами на телефоне — она теперь в каждой карточке */
+  .compare-row {
+    display: none !important;
+  }
+
+  /* После кнопки сравнения скрываем последующие шаги/блоки */
+  .compare-row ~ .steps,
+  .compare-row ~ .next-steps,
+  .compare-row ~ .steps-section,
+  .compare-row ~ section.steps,
+  .compare-row ~ section.next-steps {
+    display: none !important;
+  }
+}
+</style>
+
+
+<style>
+/* ---------- НОВОЕ СРАВНЕНИЕ ТАРИФОВ: ТОЛЬКО ТЕЛЕФОН ---------- */
+@media (max-width: 860px){
+  body.mobile-compare-open{overflow:hidden!important;}
+
+  #tierModal{
+    display:none!important;
+    position:fixed!important;
+    inset:0!important;
+    width:100vw!important;
+    height:100dvh!important;
+    padding:0!important;
+    margin:0!important;
+    background:#080808!important;
+    z-index:9999!important;
+    align-items:stretch!important;
+    justify-content:stretch!important;
+    backdrop-filter:none!important;
+  }
+  #tierModal.open{
+    display:flex!important;
+  }
+  #tierModal > .modal-rotate-hint{
+    display:none!important;
+  }
+  #tierModal > .modal-box{
+    display:block!important;
+    width:100%!important;
+    max-width:none!important;
+    height:100dvh!important;
+    max-height:none!important;
+    margin:0!important;
+    padding:0!important;
+    border:0!important;
+    box-shadow:none!important;
+    overflow:hidden!important;
+    background:#101010!important;
+  }
+
+  #tierModal > .modal-box > *:not(.mobile-compare){
+    display:none!important;
+  }
+  #tierModal .mobile-compare{
+    display:flex!important;
+    flex-direction:column!important;
+    width:100%!important;
+    height:100%!important;
+    min-height:0!important;
+    color:#eee;
+    font-family:'Inter',sans-serif;
+  }
+  .mobile-compare-top{
+    position:relative;
+    flex:0 0 42px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-bottom:1px solid #303030;
+    background:#111;
+  }
+  .mobile-compare-title{
+    font-family:'JetBrains Mono',monospace;
+    font-size:10px;
+    letter-spacing:.1em;
+    color:#eee;
+  }
+  .mobile-compare-close{
+    position:absolute;
+    right:8px;
+    top:5px;
+    width:32px;
+    height:32px;
+    border:0;
+    background:transparent;
+    color:#aaa;
+    font-size:28px;
+    line-height:28px;
+    padding:0;
+  }
+  .mobile-compare-head{
+    flex:0 0 auto;
+    display:grid;
+    grid-template-columns:30% repeat(5,14%);
+    width:100%;
+    background:#2e2e2e;
+    border-bottom:2px solid #3a3a3a;
+    box-shadow:0 3px 10px rgba(0,0,0,.45);
+    z-index:5;
+  }
+  .mobile-compare-head > div{
+    min-width:0;
+    box-sizing:border-box;
+    border-right:1px solid #333;
+  }
+  .mc-head-label{
+    display:flex;
+    align-items:center;
+    padding:5px 4px;
+    color:#777;
+    font:600 7px/1.2 'JetBrains Mono',monospace;
+    letter-spacing:.04em;
+  }
+  .mc-plan{
+    min-height:70px;
+    padding:5px 2px;
+    text-align:center;
+    font:600 7px/1.2 'JetBrains Mono',monospace;
+    color:#aaa;
+  }
+  .mc-plan span{
+    display:block;
+    margin-top:3px;
+    font-family:'Inter',sans-serif;
+    font-size:7px;
+    line-height:1.2;
+    color:#eee;
+  }
+  .mc-plan.mc-s4,.mc-plan.mc-s5{color:#ff2438;}
+  .mc-plan.mc-s2{color:#d8a62b;}
+  .mc-plan.mc-s3{color:#4e9b6b;}
+  .mc-plan.mc-s4 span,.mc-plan.mc-s5 span{color:#ff2438;}
+
+  .mobile-compare-scroll{
+    flex:1 1 auto;
+    min-height:0;
+    overflow-y:auto;
+    -webkit-overflow-scrolling:touch;
+    overscroll-behavior:contain;
+    padding-bottom:24px;
+  }
+  .mc-section{
+    position:sticky;
+    top:0;
+    z-index:3;
+    padding:6px 5px;
+    background:#363634;
+    border-top:1px solid #454543;
+    border-bottom:1px solid #454543;
+    color:#ddd;
+    font:600 7px/1.2 'JetBrains Mono',monospace;
+    letter-spacing:.07em;
+  }
+  .mc-row{
+    display:grid;
+    grid-template-columns:30% repeat(5,14%);
+    width:100%;
+    border-bottom:1px solid #292929;
+    background:#151515;
+  }
+  .mc-row > div{
+    min-width:0;
+    box-sizing:border-box;
+    border-right:1px solid #292929;
+  }
+  .mc-label{
+    padding:7px 4px;
+    color:#eee;
+    font-size:7px;
+    line-height:1.28;
+    overflow-wrap:anywhere;
+  }
+  .mc-cell{
+    padding:7px 2px;
+    text-align:center;
+    color:#ddd;
+    font-size:6.5px;
+    line-height:1.3;
+    overflow-wrap:anywhere;
+  }
+  .mc-cell.common{
+    color:#eee;
+    font-weight:700;
+    font-size:10px;
+  }
+  .mc-cell.no{
+    color:#666;
+    text-decoration:line-through;
+  }
+  .mc-cell.s2{color:#d8a62b;font-weight:600;}
+  .mc-cell.s3{color:#4e9b6b;font-weight:600;}
+  .mc-cell.s4{color:#9a63b5;font-weight:600;}
+  .mc-cell.s5{color:#d84d91;font-weight:600;}
+  .mc-row.mc-price-old .mc-cell{
+    color:#666;
+    text-decoration:line-through;
+  }
+  .mc-row.mc-price .mc-cell{
+    font-size:7px;
+    font-weight:700;
+    color:#eee;
+  }
+  .mc-row.mc-price .mc-cell.s4{color:#9a63b5;}
+  .mc-row.mc-price .mc-cell.s5{color:#d84d91;}
+  .mc-row.mc-seats .mc-cell{
+    font-family:'JetBrains Mono',monospace;
+    font-weight:700;
+    color:#eee;
+  }
+  .mc-row.mc-seats .mc-cell.s2{color:#d8a62b;}
+  .mc-row.mc-seats .mc-cell.s3{color:#4e9b6b;}
+  .mc-row.mc-seats .mc-cell.s4{color:#9a63b5;}
+  .mc-row.mc-seats .mc-cell.s5{color:#d84d91;}
+}
+
+@media (max-width:380px){
+  .mc-plan{font-size:6.5px;}
+  .mc-plan span{font-size:6.5px;}
+  .mc-label{font-size:6.7px;}
+  .mc-cell{font-size:6.2px;}
+}
+</style>
+
+
+<style id="mobile-compare-v2">
+@media (max-width: 860px){
+  .mobile-compare-overlay .mobile-compare-table-wrap{
+    width:100%;
+    overflow-x:auto !important;
+    overflow-y:auto !important;
+    -webkit-overflow-scrolling:touch;
+    overscroll-behavior:contain;
+  }
+
+  .mobile-compare-overlay .mobile-compare-table{
+    width:max-content !important;
+    min-width:760px !important;
+    table-layout:fixed !important;
+    border-collapse:collapse;
+  }
+
+  .mobile-compare-overlay .mobile-compare-table th,
+  .mobile-compare-overlay .mobile-compare-table td{
+    color:#fff !important;
+    font-size:14px !important;
+    line-height:1.45 !important;
+    white-space:normal !important;
+    overflow-wrap:anywhere !important;
+    word-break:normal !important;
+    vertical-align:top !important;
+    box-sizing:border-box !important;
+  }
+
+  .mobile-compare-overlay .mobile-compare-table th{
+    min-width:150px !important;
+    max-width:150px !important;
+  }
+
+  .mobile-compare-overlay .mobile-compare-table td{
+    min-width:150px !important;
+    max-width:150px !important;
+  }
+
+  /* Keep every cell visually contained even for long Russian text. */
+  .mobile-compare-overlay .mobile-compare-table td *,
+  .mobile-compare-overlay .mobile-compare-table th *{
+    max-width:100% !important;
+    overflow-wrap:anywhere !important;
+    word-break:normal !important;
+  }
+
+  /* Fixed tariff header remains visible while the table is scrolled vertically. */
+  .mobile-compare-overlay .mobile-compare-sticky{
+    position:sticky !important;
+    top:0 !important;
+    z-index:20 !important;
+    background:#171717 !important;
+  }
+
+  /* The horizontal scrollbar stays usable at the bottom of the table area. */
+  .mobile-compare-overlay .mobile-compare-table-wrap{
+    scrollbar-width:thin;
+  }
+
+  /* User requested all popup text to be white. */
+  .mobile-compare-overlay,
+  .mobile-compare-overlay *{
+    color:#fff !important;
+  }
+}
+</style>
+
+
+<style id="mobile-compare-hide-prices">
+@media (max-width: 860px){
+  .mobile-compare-overlay .compare-price,
+  .mobile-compare-overlay .old-price,
+  .mobile-compare-overlay .new-price,
+  .mobile-compare-overlay .price,
+  .mobile-compare-overlay .oldprice,
+  .mobile-compare-overlay .current-price,
+  .mobile-compare-overlay .tariff-price,
+  .mobile-compare-overlay [class*="price"],
+  .mobile-compare-overlay [class*="Price"]{
+    display:none !important;
+  }
+}
+</style>
+
+
+<style id="mobile-compare-column-width-fix">
+@media (max-width:860px){
+  /* Все колонки мобильного сравнения увеличены на 30% без переноса названий тарифов. */
+  .mobile-compare{
+    overflow-x:auto;
+    overflow-y:hidden;
+  }
+  .mobile-compare-head,
+  .mc-row{
+    width:130%;
+    min-width:130%;
+    grid-template-columns:39% repeat(5,18.2%);
+  }
+  .mc-plan span{
+    white-space:nowrap;
+    overflow:visible;
+  }
+}
+
+
+
+
+/* Тарифы: отдельные формулировки только для ПК. */
+.tiers-title-desktop,.tiers-lead-desktop,.tier-show-all-desktop,.special-formats-note{display:none;}
+@media(min-width:861px){
+  .tiers-title-mobile,.tiers-lead-mobile,.tier-show-all-mobile{display:none;}
+  .tiers-title-desktop,.tiers-lead-desktop,.tier-show-all-desktop,.special-formats-note{display:inline;}
+  .special-formats-note{
+    display:block;
+    margin-top:10px;
+    text-align:center;
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px;
+    line-height:1.5;
+    color:var(--gray-dim);
+    letter-spacing:.03em;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="global-scan" aria-hidden="true"></div>
+
+<div id="preloader" aria-hidden="true">
+  <svg class="preload-hex" viewBox="0 0 40 40" fill="none">
+    <polygon points="20,2 35,11 35,29 20,38 5,29 5,11" stroke="#ff2438" stroke-width="1.4"/>
+    <polygon points="20,10 29,15 29,25 20,30 11,25 11,15" stroke="#ff2438" stroke-width="1" opacity=".6"/>
+  </svg>
+  <div class="preload-label mono">Мужайся! <span class="cursor">_</span></div>
+</div>
+
+<div id="site-content">
+
+<header>
+  <div class="navbar">
+    <div class="logo">
+      МУЖАЙСЯ!
+      <svg viewBox="0 0 40 40" fill="none">
+        <polygon points="20,2 35,11 35,29 20,38 5,29 5,11" stroke="#ff2438" stroke-width="1.4"/>
+        <polygon points="20,10 29,15 29,25 20,30 11,25 11,15" stroke="#ff2438" stroke-width="1" opacity=".6"/>
+      </svg>
+    </div>
+    <nav class="nav-links">
+      <a href="#program" onclick="return smoothScrollTo(event,'#program');">Программа</a>
+      <a href="#format" onclick="return smoothScrollTo(event,'#format');">Формат</a>
+      <a href="#tiers" onclick="return smoothScrollTo(event,'#tiers');">Тарифы</a>
+      <a href="#bonuses" onclick="return smoothScrollTo(event,'#bonuses');">Бонусы</a>
+      <a href="#faq" onclick="return smoothScrollTo(event,'#faq');">Вопросы</a>
+    </nav>
+    <div class="navbar-right">
+      <a href="#form" class="cta" onclick="scrollToForm();return false;">Бесплатный разбор</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="#program" onclick="return smoothScrollTo(event,'#program');">Программа</a>
+    <a href="#format" onclick="return smoothScrollTo(event,'#format');">Формат</a>
+    <a href="#tiers" onclick="return smoothScrollTo(event,'#tiers');">Тарифы</a>
+    <a href="#bonuses" onclick="return smoothScrollTo(event,'#bonuses');">Бонусы</a>
+    <a href="#faq" onclick="return smoothScrollTo(event,'#faq');">Вопросы</a>
+    <a href="#form" class="btn" style="text-align:center;margin-top:8px;" onclick="scrollToForm();return false;">Бесплатный разбор</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-frame hud">
+      <span class="bl"></span><span class="br"></span>
+      <div class="hexgrid-bg"></div>
+      <div class="scanline"></div>
+      <div class="big-hex">
+        <svg viewBox="0 0 400 400">
+          <polygon class="spin1" points="200,20 340,110 340,290 200,380 60,290 60,110" fill="none" stroke="#ff2438" stroke-width="1" opacity=".5"/>
+          <polygon class="spin2" points="200,80 300,140 300,260 200,320 100,260 100,140" fill="none" stroke="#ffffff" stroke-width="1" opacity=".18"/>
+          <polygon points="200,140 250,170 250,230 200,260 150,230 150,170" fill="none" stroke="#ff2438" stroke-width="1" opacity=".35"/>
+        </svg>
+      </div>
+      <div class="hero-photo-frame hud">
+        <span class="bl"></span><span class="br"></span>
+        <img src="images/1.webp" alt="Рамзес" width="900" height="1202" fetchpriority="high" decoding="async">
+      </div>
+      <span class="kanji-mark" style="left:24px;bottom:-18px;font-size:180px;">力</span>
+      <span class="kanji-stamp red pop" style="--rot:-8deg;right:34px;top:26px;font-size:64px;transform:rotate(-8deg);">武</span>
+      <div class="hero-brand">Мужайся! ⬡ Man Up! ⬡ Системная программа для мужчин<span class="cursor">_</span></div>
+      <h1><span class="glitch-wrap" data-text="Возьми свою личную жизнь&#10;под контроль">Возьми свою личную жизнь<br>под контроль</span></h1>
+      <p class="lead" style="margin-top:0;margin-bottom:30px;">За 6 месяцев соберёшь собственную управляемую систему общения с женщинами — от знакомств до свиданий, секса и отношений — с теми, кого выбираешь ТЫ.</p>
+      <div class="btn-row">
+        <a href="#form" class="btn" onclick="scrollToForm();return false;">Оставить заявку</a>
+        <span class="hint" style="font-size:18px;">Обсудим твою ситуацию </br>и определим следующие шаги</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="portraits">
+  <div class="bg-photo bg-photo-left" data-speed="0.06" aria-hidden="true">
+    <img src="images/3.webp" alt="" width="736" height="1308" loading="lazy" decoding="async">
+    <span class="bg-photo-label">[ рамзес ]</span>
+  </div>
+  <span class="kanji-mark flicker" style="right:-20px;top:10%;font-size:130px;transform:rotate(3deg);">侍</span>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="mono eyebrow">02 // для кого эта программа</span>
+      <h2>В какой ситуации ты сейчас?</h2>
+      <p>К нам приходят с разными историями. Какая из них больше похожа на твою?</p>
+    </div>
+    <div class="grid-cards">
+      <div class="card ab-card">
+        <div>
+          <span class="tag">[ 01 ]</span>
+          <h3>Ступор при знакомстве </br></br></br></h3>
+          <div class="ab-block ab-now">
+            <span class="ab-label"><span class="dot"></span>Сейчас</span>
+            <p>Видишь девушку, которая нравится — начинаешь тупить, ждать её сигналов и искать идеальный момент.</p>
+          </div>
+          <div class="ab-divider"><span class="arrow">→</span></div>
+          <div class="ab-block ab-result">
+            <span class="ab-label"><span class="dot"></span>Результат</span>
+            <p>Подходишь сам и понимаешь, что говорить и куда вести общение дальше.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card ab-card">
+        <div>
+          <span class="tag">[ 02 ]</span>
+          <h3>Результаты есть </br> пока ты в форме </br>и от девушки не сносит голову</h3>
+          <div class="ab-block ab-now">
+            <span class="ab-label"><span class="dot"></span>Сейчас</span>
+            <p>С одними всё легко, но стоит просесть по состоянию или сильно залипнуть на девушку — начинаешь сыпаться.</p>
+          </div>
+          <div class="ab-divider"><span class="arrow">→</span></div>
+          <div class="ab-block ab-result">
+            <span class="ab-label"><span class="dot"></span>Результат</span>
+            <p>Понимаешь, что делать на каждом этапе общения, и не сыпешься даже с теми, от которых сносит башню.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card ab-card">
+        <div>
+          <span class="tag">[ 03 ]</span>
+          <h3>После долгих отношений / брака</br></br></br></h3>
+          <div class="ab-block ab-now">
+            <span class="ab-label"><span class="dot"></span>Сейчас</span>
+            <p>Отвык от общения с новыми женщинами и не понимаешь, как снова начать знакомиться без кринжа и старых сценариев.</p>
+          </div>
+          <div class="ab-divider"><span class="arrow">→</span></div>
+          <div class="ab-block ab-result">
+            <span class="ab-label"><span class="dot"></span>Результат</span>
+            <p>Возвращаешь форму, спокойно знакомишься с девушками и сам выбираешь, с кем тебе быть.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card ab-card">
+        <div>
+          <span class="tag">[ 04 ]</span>
+          <h3>Покупаешь внимание</h3>
+          <div class="ab-block ab-now">
+            <span class="ab-label"><span class="dot"></span>Сейчас</span>
+            <p>Не понимаешь, интересен девушке ты или то, что ты ей даёшь.</p>
+          </div>
+          <div class="ab-divider"><span class="arrow">→</span></div>
+          <div class="ab-block ab-result">
+            <span class="ab-label"><span class="dot"></span>Результат</span>
+            <p>Привлекаешь девушек своей личностью, а деньги используешь как инструмент - не как способ купить внимание.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card ab-card">
+        <div>
+          <span class="tag">[ 05 ]</span>
+          <h3>Хочешь девушку для отношений</h3>
+          <div class="ab-block ab-now">
+            <span class="ab-label"><span class="dot"></span>Сейчас</span>
+            <p>Не хочешь количества — хочешь одну классную, но выбирать почти не из кого.</p>
+          </div>
+          <div class="ab-divider"><span class="arrow">→</span></div>
+          <div class="ab-block ab-result">
+            <span class="ab-label"><span class="dot"></span>Результат</span>
+            <p>У тебя появляется выбор, и ты строишь отношения с той, которая реально тебе подходит, а не с той, с кем само собой сложилось.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card ab-card">
+        <div>
+          <span class="tag">[ 06 ]</span>
+          <h3>Хочешь вернуть самого себя</h3>
+          <div class="ab-block ab-now">
+            <span class="ab-label"><span class="dot"></span>Сейчас</span>
+            <p>Просели уверенность, дисциплина и границы. Не понимаешь, чего хочешь, и всё чаще сомневаешься в своих решениях.</p>
+          </div>
+          <div class="ab-divider"><span class="arrow">→</span></div>
+          <div class="ab-block ab-result">
+            <span class="ab-label"><span class="dot"></span>Результат</span>
+            <p>Снова чувствуешь себя сильным и живым: понимаешь, чего хочешь, можешь на себя положиться и кайфуешь от знакомств, флирта и новых историй с девушками.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="diagnostic-cta-row">
+      <a href="#form" class="hint" onclick="scrollToForm();return false;">Не нашёл себя? Разберём твою ситуацию на диагностике →</a>
+      <a href="#form" class="diagnostic-cta" onclick="scrollToForm();return false;">ОСТАВИТЬ ЗАЯВКУ</a>
+    </div>
+  </div>
+</section>
+
+<section id="author">
+  <div class="bg-photo bg-photo-right" data-speed="0.06" aria-hidden="true">
+    <img src="images/4.webp" alt="" width="522" height="682" loading="lazy" decoding="async">
+    <span class="bg-photo-label">[ мотоцикл ]</span>
+  </div>
+  <span class="kanji-mark" style="right:-20px;top:20px;font-size:120px;">心</span>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="mono eyebrow">03 // автор программы</span>
+      <h2>Рамзес</h2>
+    </div>
+    <div class="author-grid">
+      <div class="photo-frame hud">
+        <span class="bl"></span><span class="br"></span>
+        <img src="images/2.png" alt="Рамзес" width="1200" height="1331" loading="lazy" decoding="async">
+        <div class="scanline"></div>
+      </div>
+      <div class="author-copy">
+        <div class="author-badge">ПЕДАГОГ · ПСИХОЛОГ · 10+ ЛЕТ ПРАКТИКИ В ДЕЙТИНГЕ</div>
+        <p>Меня зовут Рамзес Кубинский. Больше 10 лет я изучаю и практикую знакомства и соблазнение — в разных странах и обстоятельствах. За это время через моё обучение прошли сотни учеников.</p>
+        <p>За годы работы я видел много сильных и способных мужчин, которые в личной жизни становятся куда мягче и слабее, чем в работе, бизнесе или спорте. Они позволяют страху отказа, зависимости от конкретной женщины или привычке к комфорту сковывать их потенциал.</p>
+        <p>Мужчина должен знать, чего он хочет, принимать решения, действовать в соответствии с ними и нести за них ответственность — даже когда страшно, неудобно и никто не даёт гарантий.</p>
+        <div class="author-quote">«Я сам вырос без мужской ролевой модели. Характер и опору внутри себя мне пришлось взращивать самостоятельно — через собственный опыт, ошибки и испытания. Поэтому сегодня я и занимаюсь этим — чтоб помогать другим парням становиться сильнее. Становиться теми, кем они сами хотят быть.»</div>
+        <div class="stats-row">
+          <div class="stat"><div class="num">СОТНИ</div><div class="lbl">Учеников за годы работы</div></div>
+          <div class="stat"><div class="num">10+ лет</div><div class="lbl">Практики в дейтинге</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="program">
+  <div class="bg-photo bg-photo-left" data-speed="0.06" aria-hidden="true">
+    <img src="images/5.webp" alt="" width="402" height="655" loading="lazy" decoding="async">
+    <span class="bg-photo-label">[ девушка ]</span>
+  </div>
+  <span class="kanji-mark" style="left:-20px;top:6%;font-size:160px;transform:rotate(-3deg);">道</span>
+  <span class="kanji-stamp white pop" style="--rot:5deg;left:30px;top:24px;font-size:56px;transform:rotate(5deg);">力</span>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="mono eyebrow">04 // программа</span>
+      <h2>6 модулей</h2>
+      <p>Более 30 часов уроков. Каждый модуль — новый уровень контроля. Нажми на модуль, чтобы увидеть подробности.</p>
+    </div>
+    <div class="modules-hex-wrap">
+      <svg class="hex-outline" viewBox="0 0 400 400" aria-hidden="true">
+        <polygon class="spin-outline" points="200,10 360,102 360,298 200,390 40,298 40,102" fill="none" stroke="#ff2438" stroke-width="1"/>
+        <polygon points="200,60 316,128 316,272 200,340 84,272 84,128" fill="none" stroke="#ff2438" stroke-width="0.6" opacity=".5"/>
+      </svg>
+      <div class="hex-crown">
+        <div class="hex-module module crown">
+          <span class="mnum">Точка сборки</span>
+          <h3>Новый уровень тебя</h3>
+          <p>Каждый модуль — отдельный вклад. Здесь они соединяются: ты не проходишь этапы по очереди, а собираешь из них мужчину, который управляет знакомствами, свиданиями и собственной жизнью.</p>
+        </div>
+      </div>
+      <div class="modules-hex">
+        
+        <div class="hex-col">
+          <div class="hex-module module m1" onclick="openPolicy('module-1')">
+            <span class="mnum"><span class="mlabel">Модуль</span><span class="mnumber">01</span></span>
+            <h3>Опора на себя</h3>
+            <p>Режим, дисциплина, мышление и личные цели</p><button class="hex-more" type="button" onclick="openPolicy('module-1');event.stopPropagation();">Открыть модуль</button>
+          </div>
+          <div class="hex-module module m4" onclick="openPolicy('module-4')">
+            <span class="mnum"><span class="mlabel">Модуль</span><span class="mnumber">04</span></span>
+            <h3>Цифровой мост</h3>
+            <p>Переписка и созвоны до реального свидания</p><button class="hex-more" type="button" onclick="openPolicy('module-4');event.stopPropagation();">Открыть модуль</button>
+          </div>
+        </div>
+        <div class="hex-col offset">
+          <div class="hex-module module m2" onclick="openPolicy('module-2')">
+            <span class="mnum"><span class="mlabel">Модуль</span><span class="mnumber">02</span></span>
+            <h3>Внутри женской головы</h3>
+            <p>Влечение, женские проверки и типы девушек</p><button class="hex-more" type="button" onclick="openPolicy('module-2');event.stopPropagation();">Открыть модуль</button>
+          </div>
+          <div class="hex-module module m5" onclick="openPolicy('module-5')">
+            <span class="mnum"><span class="mlabel">Модуль</span><span class="mnumber">05</span></span>
+            <h3>Свидания как кино</h3>
+            <p>Сценарии свиданий, эмоции, близость и атмосфера</p><button class="hex-more" type="button" onclick="openPolicy('module-5');event.stopPropagation();">Открыть модуль</button>
+          </div>
+        </div>
+        <div class="hex-col">
+          <div class="hex-module module m3" onclick="openPolicy('module-3')">
+            <span class="mnum"><span class="mlabel">Модуль</span><span class="mnumber">03</span></span>
+            <h3>«Я решил — я подошёл»</h3>
+            <p>Знакомства, язык тела и уверенная подача</p><button class="hex-more" type="button" onclick="openPolicy('module-3');event.stopPropagation();">Открыть модуль</button>
+          </div>
+          <div class="hex-module module m6" onclick="openPolicy('module-6')">
+            <span class="mnum"><span class="mlabel">Модуль</span><span class="mnumber">06</span></span>
+            <h3>Уединение и секс</h3>
+            <p>Сближение, прелюдия, сомнения и забота после</p><button class="hex-more" type="button" onclick="openPolicy('module-6');event.stopPropagation();">Открыть модуль</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="outcomes">
+  <span class="kanji-mark" style="right:-30px;bottom:-10%;font-size:180px;transform:rotate(4deg);">魂</span>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="mono eyebrow">05 // по итогу</span>
+      <h2>Что ты получишь</h2>
+    </div>
+    <div class="author-grid">
+      <ul class="outcomes">
+        <li><span class="idx hex-icon">01</span><span>Вернёшь опору на себя, границы и внутренний стержень</span></li>
+        <li><span class="idx hex-icon">02</span><span>Сможешь знакомиться, когда сам захочешь — независимо от состояния, сигналов девушки и обстоятельств</span></li>
+        <li><span class="idx hex-icon">03</span><span>Будешь понимать, что делать на каждом этапе общения, и управлять его развитием</span></li>
+        <li><span class="idx hex-icon">04</span><span>Сможешь выбирать девушек красивее, интереснее и ближе тебе — а не то, что само идёт в руки</span></li>
+        <li><span class="idx hex-icon">05</span><span>Вернёшь драйв, азарт и вкус к жизни через знакомства, флирт и новые приключения</span></li>
+      </ul>
+      <div class="photo-frame hud">
+        <span class="bl"></span><span class="br"></span>
+        <img src="images/8.png" alt="Мужайся!" width="1200" height="1331" loading="lazy" decoding="async">
+        <div class="scanline"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="format">
+  <span class="kanji-mark" style="right:-20px;bottom:4%;font-size:170px;transform:rotate(3deg);">誠</span>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="mono eyebrow">06 // формат</span>
+      <h2>Как это всё устроено</h2>
+      <p>Ты проходишь программу не один: рядом другие участники и обратная связь по ходу обучения</p>
+    </div>
+
+<div class="format-cards">
+  <div class="fcard">
+    <div class="fcard-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="1"/><path d="M7 20h10M9 17v3M15 17v3M7 9h10M8 12h5"/></svg></div>
+    <span class="fnum">Контент</span>
+    <h4>Всё в одном месте</h4>
+    <p>
+      <svg class="ficon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="15" rx="1"/><path d="M7 21h10M8 8h8M8 12h5"/></svg>
+      <span class="fitem"><strong>Онлайн-программа на закрытой платформе</strong><span>Уроки, задания, конспекты и доп материалы собраны в одном месте</span></span>
+    </p>
+    <p>
+      <svg class="ficon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7h8M8 11h8M8 15h5"/></svg>
+      <span class="fitem"><strong>Уроки доступны сразу</strong><span>Можешь изучать то, что тебе актуальней в данный момент</span></span>
+    </p>
+    <p>
+      <svg class="ficon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21V5.5Z"/><path d="M4 5.5V21M8 7h8M8 11h6"/></svg>
+      <span class="fitem"><strong>База знаний</strong><span>Дополнительные уроки, мини-курс </br>«I AM», записи знакомств, звонков и свиданий Рамзеса</span></span>
+    </p>
+  </div>
+  <div class="fcard">
+    <div class="fcard-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3.5 20a5.5 5.5 0 0 1 11 0M14 16a4.5 4.5 0 0 1 6.5 4M12 4V2M20 13h2"/></svg></div>
+    <span class="fnum">Групповая динамика</span>
+    <h4>Расти не в одиночку</h4>
+    <p>
+      <svg class="ficon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H8l-4 4V5Z"/><path d="M8 9h8M8 12h5"/></svg>
+      <span class="fitem"><strong>Общий чат потока</strong><span>Для вопросов по программе, обсуждения материала, обмена опытом и общего контекста</span></span>
+    </p>
+    <p>
+      <svg class="ficon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="10" r="2.5"/><path d="M3.5 20a5.5 5.5 0 0 1 11 0M14 16a4.5 4.5 0 0 1 6.5 4"/></svg>
+      <span class="fitem"><strong>Мини-группы</strong><span>По 5 человек — для поддержки, отчётности и командного духа</span></span>
+    </p>
+    <p>
+      <svg class="ficon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18V9M10 18V5M16 18v-7M22 18v-4"/><path d="m3 6 6-2 6 3 6-4"/></svg>
+      <span class="fitem"><strong>Трекинг прогресса</strong><span>Мы следим за твоим продвижением, чтоб ты не выпадал из общего ритма</span></span>
+    </p>
+  </div>
+  <div class="fcard">
+    <div class="fcard-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4V5Z"/><path d="M8 9h8M8 12h5"/></svg></div>
+    <span class="fnum">Обратная связь</span>
+    <h4>Тебя сопровождают</h4>
+    <p>
+      <svg class="ficon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M8 8h8M8 12h5M8 16h3M15 16l1 1 3-3"/></svg>
+      <span class="fitem"><strong>Домашние задания</strong><span>С проверкой от тренеров проекта</span></span>
+    </p>
+    <p>
+      <svg class="ficon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="m10 8 5 4-5 4V8Z"/></svg>
+      <span class="fitem"><strong>Эфиры с Рамзесом</strong><span>Раз в месяц для всех тарифов</span></span>
+    </p>
+    <p>
+      <svg class="ficon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="3"/><path d="M5 20a7 7 0 0 1 14 0M4 12h4M16 12h4M12 3v-1M12 21v-1"/></svg>
+      <span class="fitem"><strong>Мастермайнды в мини-группах</strong><span>С тренером, закреплённым за пятёркой — для разбора вопросов и обратной связи</span></span>
+    </p>
+  </div>
+</div>
+
+    <div class="format-stats">
+      <div class="fstat"><div class="num">30+ часов</div><div class="lbl">Уроков</div></div>
+      <div class="fstat"><div class="num">5 человек</div><div class="lbl">Максимум в мини-группе</div></div>
+      <div class="fstat"><div class="num">6 месяцев</div><div class="lbl">Сопровождения</div></div>
+    </div>
+
+    <div class="btn-row" style="margin-top:34px;">
+      <a href="#form" class="btn" onclick="scrollToForm();return false;">Оставить заявку</a>
+    </div>
+  </div>
+</section>
+
+<section id="tiers">
+  <div class="bg-photo bg-photo-right" data-speed="0.06" aria-hidden="true">
+    <img src="images/6.webp" alt="" width="673" height="1200" loading="lazy" decoding="async">
+    <span class="bg-photo-label">[ единоборства ]</span>
+  </div>
+  <span class="kanji-mark" style="left:-10px;bottom:0;font-size:140px;">武</span>
+  <span class="kanji-stamp white pop" style="--rot:-6deg;right:34px;top:20px;transform:rotate(-6deg);font-size:58px;">闘</span>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="mono eyebrow">07 // тарифы</span>
+      <h2><span class="tiers-title-mobile">Какой формат тебя вытащит</span><span class="tiers-title-desktop">Какой формат подойдёт тебе</span></h2>
+      <p><span class="tiers-lead-mobile">От самостоятельного темпа до личного наставничества Рамзеса.</span><span class="tiers-lead-desktop">От самостоятельного прохождения до индивидуальной работы с Рамзесом</span></p>
+    </div>
+
+    <div class="tiers">
+      <div class="tier s1">
+        <div>
+          <div class="tier-index"><span class="tier-number">01</span></div>
+          <div class="tname">Самостоятельный</div>
+          <div class="tseats">20 мест</div>
+          <div class="tpitch">В своём темпе, без сопровождения</div>
+          <ul class="tier-details-desktop">
+            <li class="detail-heading">Обучение и материалы</li>
+            <li class="common-item">6 основных модулей MAN UP! — более 30 часов уроков</li>
+            <li class="common-item">База знаний: дополнительные уроки от Рамзеса и приглашённых спикеров</li>
+            <li class="common-item">Мини-курс по уверенности в себе I AM</li>
+            <li class="detail-muted detail-struck">Курс по онлайн-дэйтингу и перепискам Texting Ninja</li>
+            <li class="common-item">Дополнительные конспекты и другие материалы</li>
+            <li>Фрагменты видеозаписей знакомств Рамзеса: </br>- дневная игра </br>- ночная игра </br>- свидания </br>- вызвоны </br></br>- в разных странах </br>- на русском и английском языках</li>
+            <li class="marked">Доступ к курсу и всем материалам на 9 месяцев</li>
+            <li class="detail-heading">Поддержка и практика</li>
+            <li class="detail-muted detail-struck">Мини-группа (5 человек) с сопровождением тренера проекта</li>
+            <li class="detail-muted detail-struck">Отдельный чат пятёрки с тренером проекта</li>
+            <li class="detail-muted detail-struck">Мастермайнды раз в 2 недели с тренером пятёрки</li>
+            <li class="detail-muted detail-struck">1 личная сессия с Рамзесом для проработки убеждений</li>
+            <li class="common-item">Общий чат участников</li>
+            <li class="common-item">Групповые онлайн-разборы с Рамзесом раз в месяц для всех участников потока</li>
+            <li class="detail-muted detail-struck">Подписка на 6 месяцев на искусственный интеллект для переписок VIBE AI</li>
+            <li class="detail-meta"></li>
+          </ul>
+          <ul>
+            <li>6 модулей + база знаний + I AM</li>
+            <li>Общий чат и разборы раз в месяц</li>
+            <li>Без проверки ДЗ и мини-группы</li>
+          </ul>
+        </div>
+        <button type="button" class="tier-cta tier-compare-btn" onclick="openTierModal()">Сравнить тарифы</button>
+        <a href="#form" class="tier-cta" onclick="selectTier('Самостоятельный'); scrollToForm(); return false;">ОСТАВИТЬ ЗАЯВКУ</a>
+      </div>
+
+      <div class="tier s2">
+        <div>
+          <div class="tier-index"><span class="tier-number">02</span></div>
+          <div class="tname">Сопровождение в пятёрках</div>
+          <div class="tseats">15 мест</div>
+          <div class="tpitch">С обратной связью и поддержкой тренера по ходу обучения</div>
+          <ul class="tier-details-desktop">
+            <li class="detail-heading">Обучение и материалы</li>
+            <li class="common-item">6 основных модулей MAN UP! — более 30 часов уроков</li>
+            <li class="common-item">База знаний: дополнительные уроки от Рамзеса и приглашённых спикеров</li>
+            <li class="common-item">Мини-курс по уверенности в себе I AM</li>
+            <li class="detail-muted detail-struck-s2">Курс по онлайн-дэйтингу и перепискам Texting Ninja</li>
+            <li class="common-item">Дополнительные конспекты и другие материалы</li>
+            <li class="marked">Полные видеозаписи знакомств Рамзеса с разборами: </br>- дневная игра </br>- ночная игра </br>- свидания </br>- вызвоны </br></br>- в разных странах </br>- на русском и английском языках (12+ часов)</li>
+            <li class="marked">Доступ к курсу и всем материалам на 12 месяцев</li>
+            <li class="detail-heading">Поддержка и практика</li>
+            <li class="marked muted-item">Мини-группа из 5 человек с сопровождением тренера проекта</li>
+            <li class="marked muted-item">Отдельный чат пятёрки с тренером проекта</li>
+            <li class="marked muted-item">Проверка домашних заданий</li>
+            <li class="marked muted-item">Мастермайнды раз в 2 недели с тренером пятёрки</li>
+            <li class="detail-muted detail-struck-s2">1 личная сессия с Рамзесом для проработки убеждений</li>
+            <li class="common-item">Общий чат участников</li>
+            <li class="common-item">Групповые онлайн-разборы с Рамзесом раз в месяц для всех участников потока</li>
+            <li class="marked muted-item">Подписка на 6 месяцев на ИИ для переписок VIBE AI</li>
+            <li class="detail-meta"></li>
+          </ul>
+          <ul>
+            <li>Мини-группа 5 человек с тренером</li>
+            <li>Проверка ДЗ + трекинг прогресса</li>
+            <li>Texting Ninja и VIBE AI в комплекте</li>
+          </ul>
+        </div>
+        <button type="button" class="tier-cta tier-compare-btn" onclick="openTierModal()">Сравнить тарифы</button>
+        <a href="#form" class="tier-cta" onclick="selectTier('Сопровождение в пятёрках'); scrollToForm(); return false;">ОСТАВИТЬ ЗАЯВКУ</a>
+      </div>
+
+      <div class="tier s3 featured hud">
+        <span class="bl"></span><span class="br"></span>
+        <div>
+          <div class="tier-index"><span class="tier-number">03</span></div>
+          <div class="tname">Мастер-группа с Рамзесом</div>
+          <div class="tseats">10 мест</div>
+          <div class="tpitch">С обратной связью и поддержкой Рамзеса по ходу обучения</div>
+          <ul class="tier-details-desktop">
+            <li class="detail-heading">Обучение и материалы</li>
+            <li class="common-item">6 основных модулей MAN UP! — более 30 часов уроков</li>
+            <li class="common-item">База знаний: дополнительные уроки от Рамзеса и приглашённых спикеров</li>
+            <li class="common-item">Мини-курс по уверенности в себе I AM</li>
+            <li class="marked">Курс по онлайн-дэйтингу и перепискам Texting Ninja</li>
+            <li class="common-item">Дополнительные конспекты и другие материалы</li>
+            <li class="marked">Полные видеозаписи знакомств Рамзеса с разборами: </br>- дневная игра </br>- ночная игра </br>- свидания </br>- вызвоны </br></br>- в разных странах </br>- на русском и английском языках (12+ часов)</li>
+            <li class="marked">Доступ к курсу и всем материалам на 18 месяцев</li>
+            <li class="detail-heading">Поддержка и практика</li>
+            <li class="marked">Мини-группа из 5 человек с сопровождением Рамзеса</li>
+            <li class="marked">Отдельный чат мастер-группы с Рамзесом</li>
+            <li class="marked">Развёрнутая обратная связь от Рамзеса по домашним заданиям</li>
+            <li class="marked">Мастермайнды раз в 2 недели с Рамзесом</li>
+            <li class="marked">1 личная сессия с Рамзесом для проработки убеждений</li>
+            <li class="common-item">Общий чат участников</li>
+            <li class="common-item">Групповые онлайн-разборы с Рамзесом раз в месяц для всех участников потока</li>
+            <li class="marked">Подписка на 6 месяцев на ИИ для переписок VIBE AI</li>
+            <li class="detail-meta"></li>
+          </ul>
+          <ul>
+            <li>Мини-группа с Рамзесом лично</li>
+            <li>Полные разборы знакомств (12+ ч)</li>
+            <li>Сессия на проработку убеждений</li>
+          </ul>
+        </div>
+        <button type="button" class="tier-cta tier-compare-btn" onclick="openTierModal()">Сравнить тарифы</button>
+        <a href="#form" class="tier-cta" onclick="selectTier('Мастер-группа с Рамзесом'); scrollToForm(); return false;">ОСТАВИТЬ ЗАЯВКУ</a>
+      </div>
+
+      <button type="button" class="tier-show-all" onclick="toggleAllTiers()"><span class="tier-show-all-mobile"></span><span class="tier-show-all-desktop">СПЕЦИАЛЬНЫЕ ФОРМАТЫ</span></button>
+
+      <div class="tier s4">
+        <div>
+          <div class="tier-index"><span class="tier-number">04</span></div>
+          <div class="tname">БУТКЕМП</div>
+          <div class="trequest">ПО ЗАПРОСУ</div>
+          <div class="tseats">4 места</div>
+          <div class="tpitch">Групповое наставничество с Рамзесом вживую</div>
+          <ul class="tier-details-desktop">
+            <li class="detail-heading">Обучение и материалы</li>
+            <li class="common-item">6 основных модулей MAN UP! — более 30 часов уроков</li>
+            <li class="common-item">База знаний: дополнительные уроки от Рамзеса и приглашённых спикеров</li>
+            <li class="common-item">Мини-курс по уверенности в себе I AM</li>
+            <li class="marked">Курс по онлайн-дэйтингу и перепискам Texting Ninja</li>
+            <li class="common-item">Дополнительные конспекты и другие материалы</li>
+            <li class="marked">Полные видеозаписи знакомств Рамзеса с разборами: </br>- дневная игра </br>- ночная игра </br>- свидания </br>- вызвоны </br></br>- в разных странах </br>- на русском и английском языках (12+ часов)</li>
+            <li class="marked unlimited-access">Неограниченный доступ к курсу и всем материалам</li>
+            <li class="detail-heading">Поддержка и практика</li>
+            <li class="marked">Мини-группа из 3–4 человек с сопровождением Рамзеса вживую</li>
+            <li class="marked">Отдельный чат буткемпа с Рамзесом</li>
+            <li class="marked">Развёрнутая обратная связь от Рамзеса по домашним заданиям</li>
+            <li class="marked">Неограниченная обратная связь от Рамзеса в течение месяца</li>
+            <li class="marked">1 личная сессия с Рамзесом для проработки убеждений</li>
+            <li class="common-item">Общий чат участников</li>
+            <li class="common-item">Групповые онлайн-разборы с Рамзесом раз в месяц для всех участников потока</li>
+            <li class="marked">Подписка VIBE AI на 6 месяцев</li>
+            <li class="marked">Минимум 3 групповых выхода в поля еженедельно: улицы, кафе, ночные клубы.</br> Буткемпы проходят периодически в разных городах мира.</br> Локации, даты проведения и открытие набора определяются графиком проекта и количеством запросов.</br></br>Участие — только после личного интервью с Рамзесом.</li>
+            <li class="marked">3 групповых выхода в поля еженедельно: улицы, кафе, ночные клубы</li>
+            <li class="marked">Участие — только через интервью с Рамзесом</li>
+          </ul>
+          <ul>
+            <li>Живое обучение, группа 3-4 человека</li>
+            <li>3 выхода в поля в неделю с Рамзесом</li>
+            <li>Безлимитная обратная связь весь месяц</li>
+          </ul>
+        </div>
+        <a href="#form" class="tier-cta" onclick="selectTier('Буткемп в Москве'); scrollToForm(); return false;">УТОЧНИТЬ ДОСТУПНОСТЬ</a>
+      </div>
+
+      <div class="tier s5">
+        <div>
+          <div class="tier-index"><span class="tier-number">05</span></div>
+          <div class="tname">Индива 1-на-1</div>
+          <div class="trequest">ПО ЗАПРОСУ</div>
+          <div class="tseats">1 место</div>
+          <div class="tpitch">Персональная работа с Рамзесом 1 на 1 вживую как с тренером и психологом</div>
+          <ul class="tier-details-desktop">
+            <li class="detail-heading">Обучение и материалы</li>
+            <li class="common-item">6 основных модулей MAN UP! — более 30 часов уроков</li>
+            <li class="common-item">База знаний: дополнительные уроки от Рамзеса и приглашённых спикеров</li>
+            <li class="common-item">Мини-курс по уверенности в себе I AM</li>
+            <li class="marked">Курс по онлайн-дэйтингу и перепискам Texting Ninja</li>
+            <li class="common-item">Дополнительные конспекты и другие материалы</li>
+            <li class="marked">Полные видеозаписи знакомств Рамзеса с разборами: </br>- дневная игра </br>- ночная игра </br>- свидания </br>- вызвоны </br></br>- в разных странах </br>- на русском и английском языках (12+ часов)</li>
+            <li class="marked unlimited-access">Неограниченный доступ к курсу и всем материалам</li>
+            <li class="detail-heading">Поддержка и практика</li>
+            <li class="marked">Индивидуальная работа с Рамзесом 1 на 1</li>
+            <li class="marked">Отдельный чат с Рамзесом для индивидуальной работы</li>
+            <li class="marked">Развёрнутая обратная связь от Рамзеса по домашним заданиям</li>
+            <li class="marked">Индивидуальная обратная связь от Рамзеса в течении 6 недель</li>
+            <li class="marked">Неограниченная поддержка от Рамзеса касательно работы с убеждениями, страхами, негативными паттернами в течении 6 недель</li>
+            <li class="common-item">Общий чат участников</li>
+            <li class="common-item">Групповые онлайн-разборы с Рамзесом раз в месяц для всех участников потока</li>
+            <li class="marked">Подписка VIBE AI на 6 месяцев</li>
+            <li class="marked">Совместные выходы 1 на 1 днём, ночью и на мероприятиях — до 3 раз в неделю.</br></br>Индивидуальная работа доступна ограниченно и формируется под конкретный запрос.</br>Сроки и интенсивность сопровождения согласовываются персонально.</li>
+            <li class="marked">Совместные выходы 1 на 1 днём, ночью и на мероприятиях 3 раза в неделю; частота подбирается индивидуально</li>
+            <li class="marked">Участие — только через интервью с Рамзесом</li>
+          </ul>
+          <ul>
+            <li>Личное наставничество с Рамзесом</li>
+            <li>Совместные выходы 3 раза в неделю</li>
+            <li>Безлимитная поддержка 6 недель</li>
+          </ul>
+        </div>
+        <a href="#form" class="tier-cta" onclick="selectTier('Индива 1-на-1'); scrollToForm(); return false;">УТОЧНИТЬ ДОСТУПНОСТЬ</a>
+      </div>
+    </div>
+
+    <p class="scarcity">Количество мест на каждом формате ограничено. Доступность буткемпа и индивидуальной работы уточняется отдельно.</p>
+    <div class="compare-row">
+      <button class="btn btn-outline" onclick="openTierModal()">Сравнить тарифы</button>
+    </div>
+  </div>
+</section>
+
+<div class="modal-overlay" id="tierModal" onclick="if(event.target===this) closeTierModal()">
+  <div class="modal-rotate-hint">
+    <div class="modal-rotate-icon">↻</div>
+    <strong>ПОВЕРНИТЕ ТЕЛЕФОН НА 90°</strong>
+    <span>Для сравнения всех тарифов в таблице нужен горизонтальный просмотр.</span>
+  </div>
+  <div class="modal-box">
+
+<div class="mobile-compare">
+  <div class="mobile-compare-top">
+    <div class="mobile-compare-title">СРАВНЕНИЕ ТАРИФОВ</div>
+    <button class="mobile-compare-close" type="button" onclick="closeTierModal()" aria-label="Закрыть">×</button>
+  </div>
+
+  <div class="mobile-compare-head">
+    <div class="mc-head-label">ПУНКТ</div>
+    <div class="mc-plan mc-s1">01<br><span>Самостоятельный</span></div>
+    <div class="mc-plan mc-s2">02<br><span>Сопровождение<br>в пятёрках</span></div>
+    <div class="mc-plan mc-s3">03<br><span>Мастер-группа<br>с Рамзесом</span></div>
+    <div class="mc-plan mc-s4">04<br><span>Буткемп</span></div>
+    <div class="mc-plan mc-s5">05<br><span>Индива<br>1-на-1</span></div>
+  </div>
+
+  <div class="mobile-compare-scroll">
+    <div class="mc-section">ОБУЧЕНИЕ И МАТЕРИАЛЫ</div>
+
+    <div class="mc-row">
+      <div class="mc-label">6 основных модулей MAN UP!<br>(более 30 часов уроков)</div>
+      <div class="mc-cell common">✓</div><div class="mc-cell common">✓</div><div class="mc-cell common">✓</div><div class="mc-cell common">✓</div><div class="mc-cell common">✓</div>
+    </div>
+    <div class="mc-row">
+      <div class="mc-label">База знаний: дополнительные уроки от Рамзеса и приглашённых спикеров</div>
+      <div class="mc-cell common">✓</div><div class="mc-cell common">✓</div><div class="mc-cell common">✓</div><div class="mc-cell common">✓</div><div class="mc-cell common">✓</div>
+    </div>
+    <div class="mc-row">
+      <div class="mc-label">Мини-курс по уверенности в себе I AM</div>
+      <div class="mc-cell common">✓</div><div class="mc-cell common">✓</div><div class="mc-cell common">✓</div><div class="mc-cell common">✓</div><div class="mc-cell common">✓</div>
+    </div>
+    <div class="mc-row">
+      <div class="mc-label">Курс по онлайн-дэйтингу и перепискам Texting Ninja</div>
+      <div class="mc-cell no">—</div><div class="mc-cell no">—</div><div class="mc-cell s3">Входит</div><div class="mc-cell s4">Входит</div><div class="mc-cell s5">Входит</div>
+    </div>
+    <div class="mc-row">
+      <div class="mc-label">Дополнительные конспекты и другие материалы</div>
+      <div class="mc-cell common">✓</div><div class="mc-cell common">✓</div><div class="mc-cell common">✓</div><div class="mc-cell common">✓</div><div class="mc-cell common">✓</div>
+    </div>
+    <div class="mc-row">
+      <div class="mc-label">Фрагменты / полные видеозаписи знакомств Рамзеса</div>
+      <div class="mc-cell">Фрагменты:<br><br>– дневная игра<br>– ночная игра<br>– свидания<br>– вызвоны<br><br>– в разных странах<br>– на русском и английском языках</div>
+      <div class="mc-cell s2">Полные видеозаписи знакомств Рамзеса с разборами:<br><br>– дневная игра<br>– ночная игра<br>– свидания<br>– вызвоны<br><br>– в разных странах<br>– на русском и английском языках<br><br>(12+ часов)</div>
+      <div class="mc-cell s3">Полные видеозаписи знакомств Рамзеса с разборами:<br><br>– дневная игра<br>– ночная игра<br>– свидания<br>– вызвоны<br><br>– в разных странах<br>– на русском и английском языках<br><br>(12+ часов)</div>
+      <div class="mc-cell s4">Полные видеозаписи знакомств Рамзеса с разборами:<br><br>– дневная игра<br>– ночная игра<br>– свидания<br>– вызвоны<br><br>– в разных странах<br>– на русском и английском языках<br><br>(12+ часов)</div>
+      <div class="mc-cell s5">Полные видеозаписи знакомств Рамзеса с разборами:<br><br>– дневная игра<br>– ночная игра<br>– свидания<br>– вызвоны<br><br>– в разных странах<br>– на русском и английском языках<br><br>(12+ часов)</div>
+    </div>
+    <div class="mc-row">
+      <div class="mc-label">Доступ к курсу и всем материалам</div>
+      <div class="mc-cell s1">9 месяцев</div><div class="mc-cell s2">12 месяцев</div><div class="mc-cell s3">18 месяцев</div><div class="mc-cell s4">Неограниченный</div><div class="mc-cell s5">Неограниченный</div>
+    </div>
+
+    <div class="mc-section">ПОДДЕРЖКА И ПРАКТИКА</div>
+
+    <div class="mc-row">
+      <div class="mc-label">Мини-группа</div>
+      <div class="mc-cell no">—</div>
+      <div class="mc-cell s2">Мини-группа (5 человек) с сопровождением тренера проекта</div>
+      <div class="mc-cell s3">Мини-группа (5 человек) с сопровождением Рамзеса</div>
+      <div class="mc-cell s4">Мини-группа (3–4 человека) с сопровождением Рамзеса вживую</div>
+      <div class="mc-cell s5">Индивидуальная работа с Рамзесом 1 на 1</div>
+    </div>
+    <div class="mc-row">
+      <div class="mc-label">Отдельный чат</div>
+      <div class="mc-cell no">—</div><div class="mc-cell s2">Отдельный чат пятёрки с тренером проекта</div><div class="mc-cell s3">Отдельный чат мастер-группы с Рамзесом</div><div class="mc-cell s4">Отдельный чат буткемпа с Рамзесом</div><div class="mc-cell s5">Отдельный чат с Рамзесом для индивидуальной работы</div>
+    </div>
+    <div class="mc-row">
+      <div class="mc-label">Проверка домашних заданий</div>
+      <div class="mc-cell no">—</div><div class="mc-cell s2">Проверка домашних заданий</div><div class="mc-cell s3">Развёрнутая обратная связь от Рамзеса по домашним заданиям</div><div class="mc-cell s4">Развёрнутая обратная связь от Рамзеса по домашним заданиям</div><div class="mc-cell s5">Развёрнутая обратная связь от Рамзеса по домашним заданиям</div>
+    </div>
+    <div class="mc-row">
+      <div class="mc-label">Мастермайнды / обратная связь</div>
+      <div class="mc-cell no">—</div><div class="mc-cell s2">Мастермайнды раз в 2 недели с тренером пятёрки</div><div class="mc-cell s3">Мастермайнды раз в 2 недели с Рамзесом</div><div class="mc-cell s4">Неограниченная обратная связь от Рамзеса в течение месяца</div><div class="mc-cell s5">Индивидуальная обратная связь от Рамзеса в течение 6 недель</div>
+    </div>
+    <div class="mc-row">
+      <div class="mc-label">Сессия на проработку убеждений</div>
+      <div class="mc-cell no">—</div><div class="mc-cell no">—</div><div class="mc-cell s3">1 личная сессия с Рамзесом для проработки убеждений</div><div class="mc-cell s4">1 личная сессия с Рамзесом для проработки убеждений</div><div class="mc-cell s5">Неограниченная поддержка от Рамзеса касательно работы с убеждениями, страхами, негативными паттернами в течение 6 недель</div>
+    </div>
+
+    <div class="mc-section">ОБЩИЕ БОНУСЫ</div>
+
+    <div class="mc-row">
+      <div class="mc-label">Общий чат участников</div>
+      <div class="mc-cell common">✓</div><div class="mc-cell common">✓</div><div class="mc-cell common">✓</div><div class="mc-cell common">✓</div><div class="mc-cell common">✓</div>
+    </div>
+    <div class="mc-row">
+      <div class="mc-label">Групповые онлайн-разборы с Рамзесом раз в месяц для всех участников потока</div>
+      <div class="mc-cell common">✓</div><div class="mc-cell common">✓</div><div class="mc-cell common">✓</div><div class="mc-cell common">✓</div><div class="mc-cell common">✓</div>
+    </div>
+    <div class="mc-row">
+      <div class="mc-label">Подписка на 6 месяцев на искусственный интеллект для переписок VIBE AI</div>
+      <div class="mc-cell no">—</div><div class="mc-cell s2">Входит</div><div class="mc-cell s3">Входит</div><div class="mc-cell s4">Входит</div><div class="mc-cell s5">Входит</div>
+    </div>
+
+    <div class="mc-section">ЖИВОЕ НАСТАВНИЧЕСТВО</div>
+
+    <div class="mc-row">
+      <div class="mc-label">Живое наставничество</div>
+      <div class="mc-cell no">—</div><div class="mc-cell no">—</div><div class="mc-cell no">—</div><div class="mc-cell s4">Групповое живое наставничество в Москве</div><div class="mc-cell s5">Полное живое ведение от Рамзеса 1 на 1 как тренера и психолога</div>
+    </div>
+    <div class="mc-row">
+      <div class="mc-label">Выходы в поля</div>
+      <div class="mc-cell no">—</div><div class="mc-cell no">—</div><div class="mc-cell no">—</div><div class="mc-cell s4">3 групповых выхода в поля еженедельно (улицы, кафе, ночные клубы)</div><div class="mc-cell s5">Совместные выходы 1 на 1 днём, ночью, на мероприятиях 3 раза в неделю. Частота подбирается индивидуально</div>
+    </div>
+    <div class="mc-row">
+      <div class="mc-label">Условия участия</div>
+      <div class="mc-cell no">—</div><div class="mc-cell no">—</div><div class="mc-cell no">—</div><div class="mc-cell s4">Только через<br>интервью</div><div class="mc-cell s5">Только через<br>интервью</div>
+    </div>
+
+    <div class="mc-section">КОЛИЧЕСТВО МЕСТ</div>
+
+    
+    <div class="mc-row mc-seats">
+      <div class="mc-label">Мест в потоке</div>
+      <div class="mc-cell">20 мест</div><div class="mc-cell s2">15 мест</div><div class="mc-cell s3">10 мест</div><div class="mc-cell s4">4 места</div><div class="mc-cell s5">1 место</div>
+    </div>
+  </div>
+</div>
+    <button class="modal-close" onclick="closeTierModal()">×</button>
+    <h3>Все тарифы построчно</h3>
+    <p class="hint">Полный состав каждого формата — чтобы ты выбирал осознанно.</p>
+    <table class="compare-table compare-table-desktop">
+      <thead>
+        <tr>
+          <th></th>
+          <th><span class="dt-num">01</span><span>Самостоятельный</span></th>
+          <th><span class="dt-num">02</span><span>Сопровождение<br>в пятёрках с тренером</span></th>
+          <th><span class="dt-num">03</span><span>Мастер-группа с Рамзесом<br>(максимум 2 пятёрки)</span></th>
+          <th><span class="dt-num">04</span><span>Буткемп<br>(живое обучение в Москве<br>в мини-группе 3-4 человека)</span></th>
+          <th><span class="dt-num">05</span><span>Индива<br>(наставничество 1-1)</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>6 основных модулей MAN UP!<br>(более 30 часов уроков)</td><td class="common">✓</td><td class="common">✓</td><td class="common">✓</td><td class="common">✓</td><td class="common">✓</td></tr>
+        <tr><td>База знаний: дополнительные уроки от Рамзеса<br>и приглашённых спикеров</td><td class="common">✓</td><td class="common">✓</td><td class="common">✓</td><td class="common">✓</td><td class="common">✓</td></tr>
+        <tr><td>Мини-курс по уверенности в себе I AM</td><td class="common">✓</td><td class="common">✓</td><td class="common">✓</td><td class="common">✓</td><td class="common">✓</td></tr>
+        <tr><td>Курс по онлайн-дэйтингу и перепискам<br>Texting Ninja</td><td class="no">—</td><td class="no">—</td><td class="mark-cell s3">Курс по онлайн-дэйтингу и перепискам<br>Texting Ninja</td><td class="mark-cell s4">Курс по онлайн-дэйтингу и перепискам<br>Texting Ninja</td><td class="mark-cell s5">Курс по онлайн-дэйтингу и перепискам<br>Texting Ninja</td></tr>
+        <tr><td>Дополнительные конспекты и другие материалы</td><td class="common">✓</td><td class="common">✓</td><td class="common">✓</td><td class="common">✓</td><td class="common">✓</td></tr>
+        <tr><td>Фрагменты / полные видеозаписи знакомств Рамзеса:</td><td>Фрагменты<br><br>- дневная игра<br>- ночная игра<br>- свидания<br>- вызвоны<br><br>- в разных странах<br>- на русском и английском языках</td><td class="mark-cell s2">Полные видеозаписи знакомств Рамзеса с разборами:<br><br>- дневная игра<br>- ночная игра<br>- свидания<br>- вызвоны<br><br>- в разных странах<br>- на русском и английском языках<br><br>(12+ часов)</td><td class="mark-cell s3">Полные видеозаписи знакомств Рамзеса с разборами:<br><br>- дневная игра<br>- ночная игра<br>- свидания<br>- вызвоны<br><br>- в разных странах<br>- на русском и английском языках<br><br>(12+ часов)</td><td class="mark-cell s4">Полные видеозаписи знакомств Рамзеса с разборами:<br><br>- дневная игра<br>- ночная игра<br>- свидания<br>- вызвоны<br><br>- в разных странах<br>- на русском и английском языках<br><br>(12+ часов)</td><td class="mark-cell s5">Полные видеозаписи знакомств Рамзеса с разборами:<br><br>- дневная игра<br>- ночная игра<br>- свидания<br>- вызвоны<br><br>- в разных странах<br>- на русском и английском языках<br><br>(12+ часов)</td></tr>
+        <tr><td>Доступ к курсу и всем материалам</td><td class="mark-cell s1">9 месяцев</td><td class="mark-cell s2">12 месяцев</td><td class="mark-cell s3">18 месяцев</td><td class="mark-cell s4">Неограниченный доступ к курсу и всем материалам</td><td class="mark-cell s5">Неограниченный доступ к курсу и всем материалам</td></tr>
+        <tr><td>Мини-группа</td><td class="no">—</td><td class="mark-cell s2">Мини-группа (5 человек) с сопровождением тренера проекта</td><td class="mark-cell s3">Мини-группа (5 человек) с сопровождением Рамзеса</td><td class="mark-cell s4">Мини-группа (3-4 человека) с сопровождением Рамзеса вживую</td><td class="mark-cell s5">Индивидуальная работа с Рамзесом 1 на 1</td></tr>
+        <tr><td>Отдельный чат</td><td class="no">—</td><td class="mark-cell s2">Отдельный чат пятёрки с тренером проекта</td><td class="mark-cell s3">Отдельный чат мастер-группы с Рамзесом</td><td class="mark-cell s4">Отдельный чат буткемпа с Рамзесом</td><td class="mark-cell s5">Отдельный чат с Рамзесом для индивидуальной работы</td></tr>
+        <tr><td>Проверка домашних заданий</td><td class="no">—</td><td class="mark-cell s2">Проверка домашних заданий</td><td class="mark-cell s3">Развёрнутая обратная связь от Рамзеса по домашним заданиям</td><td class="mark-cell s4">Развёрнутая обратная связь от Рамзеса по домашним заданиям</td><td class="mark-cell s5">Развёрнутая обратная связь от Рамзеса по домашним заданиям</td></tr>
+        <tr><td>Мастермайнды / обратная связь</td><td class="no">—</td><td class="mark-cell s2">Мастермайнды раз в 2 недели с тренером пятёрки</td><td class="mark-cell s3">Мастермайнды раз в 2 недели с Рамзесом</td><td class="mark-cell s4">Неограниченная обратная связь от Рамзеса в течение месяца</td><td class="mark-cell s5">Индивидуальная обратная связь от Рамзеса в течение 6 недель</td></tr>
+        <tr><td>Сессия на проработку убеждений</td><td class="no">—</td><td class="no">—</td><td class="mark-cell s3">1 личная сессия с Рамзесом для проработки убеждений</td><td class="mark-cell s4">1 личная сессия с Рамзесом для проработки убеждений</td><td class="mark-cell s5">Неограниченная поддержка от Рамзеса касательно работы с убеждениями, страхами, негативными паттернами в течение 6 недель</td></tr>
+        <tr><td>Общий чат участников</td><td class="common">✓</td><td class="common">✓</td><td class="common">✓</td><td class="common">✓</td><td class="common">✓</td></tr>
+        <tr><td>Групповые онлайн-разборы с Рамзесом<br>раз в месяц для всех участников потока</td><td class="common">✓</td><td class="common">✓</td><td class="common">✓</td><td class="common">✓</td><td class="common">✓</td></tr>
+        <tr><td>Подписка на 6 месяцев на искусственный<br>интеллект для переписок VIBE AI</td><td class="no">—</td><td class="mark-cell s2">Подписка на 6 месяцев на искусственный интеллект для переписок VIBE AI</td><td class="mark-cell s3">Подписка на 6 месяцев на искусственный интеллект для переписок VIBE AI</td><td class="mark-cell s4">Подписка на 6 месяцев на искусственный интеллект для переписок VIBE AI</td><td class="mark-cell s5">Подписка на 6 месяцев на искусственный интеллект для переписок VIBE AI</td></tr>
+        <tr><td>Живое наставничество</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="mark-cell s4">Групповое живое наставничество в Москве</td><td class="mark-cell s5">Полное живое ведение от Рамзеса 1 на 1 как тренера и психолога</td></tr>
+        <tr><td>Выходы в поля</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="mark-cell s4">3 групповых выхода в поля еженедельно<br>(улицы, кафе, ночные клубы)</td><td class="mark-cell s5">Совместные выходы 1 на 1 днём, ночью, на мероприятиях 3 раза в неделю.<br>Частота подбирается индивидуально</td></tr>
+        <tr><td>Условия участия</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="mark-cell s4">Только через интервью с Рамзесом</td><td class="mark-cell s5">Только через интервью с Рамзесом</td></tr>
+        <tr class="seats-row"><td>Мест в потоке</td><td class="s1">20 мест</td><td class="s2">15 мест</td><td class="s3">10 мест</td><td class="s4">4 места</td><td class="s5">1 место</td></tr>
+      </tbody>
+    </table>
+
+    <table class="compare-table compare-table-mobile">
+      <thead>
+        <tr>
+          <th>Что входит</th>
+          <th>Самостоятельный</th>
+          <th>Сопровождение в пятёрках</th>
+          <th>Мастер-группа с Рамзесом</th>
+          <th>Буткемп</th>
+          <th>Индива 1-на-1</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>6 основных модулей MAN UP! (более 30 часов уроков)</td><td>Да</td><td>Да</td><td>Да</td><td>Да</td><td>Да</td></tr>
+        <tr><td>База знаний: дополнительные уроки от Рамзеса и приглашённых спикеров</td><td>Да</td><td>Да</td><td>Да</td><td>Да</td><td>Да</td></tr>
+        <tr><td>Мини-курс по уверенности в себе I AM</td><td>Да</td><td>Да</td><td>Да</td><td>Да</td><td>Да</td></tr>
+        <tr><td>Курс по онлайн-дэйтингу и перепискам Texting Ninja</td><td>Не входит</td><td>Не входит</td><td>Входит</td><td>Входит</td><td>Входит</td></tr>
+        <tr><td>Дополнительные конспекты и другие материалы</td><td>Да</td><td>Да</td><td>Да</td><td>Да</td><td>Да</td></tr>
+        <tr><td>Видеозаписи знакомств Рамзеса</td><td>Фрагменты: дневная и ночная игра, свидания, вызвоны; разные страны, русский и английский языки</td><td>Полные записи с разборами (12+ часов): дневная и ночная игра, свидания, вызвоны; разные страны, русский и английский языки</td><td>Полные записи с разборами (12+ часов): дневная и ночная игра, свидания, вызвоны; разные страны, русский и английский языки</td><td>Полные записи с разборами (12+ часов): дневная и ночная игра, свидания, вызвоны; разные страны, русский и английский языки</td><td>Полные записи с разборами (12+ часов): дневная и ночная игра, свидания, вызвоны; разные страны, русский и английский языки</td></tr>
+        <tr><td>Доступ к курсу и всем материалам</td><td>9 месяцев</td><td>12 месяцев</td><td>18 месяцев</td><td>Неограниченный</td><td>Неограниченный</td></tr>
+        <tr><td>Мини-группа</td><td>Не входит</td><td>5 человек, тренер проекта</td><td>5 человек, Рамзес</td><td>3–4 человека, Рамзес вживую</td><td>Индивидуально, 1 на 1 с Рамзесом</td></tr>
+        <tr><td>Отдельный чат</td><td>Не входит</td><td>Чат пятёрки с тренером проекта</td><td>Чат мастер-группы с Рамзесом</td><td>Чат буткемпа с Рамзесом</td><td>Чат с Рамзесом для индивидуальной работы</td></tr>
+        <tr><td>Проверка домашних заданий</td><td>Не входит</td><td>Проверка домашних заданий</td><td>Развёрнутая обратная связь от Рамзеса по домашним заданиям</td><td>Развёрнутая обратная связь от Рамзеса по домашним заданиям</td><td>Развёрнутая обратная связь от Рамзеса по домашним заданиям</td></tr>
+        <tr><td>Мастермайнды / обратная связь</td><td>Не входят</td><td>Мастермайнды раз в 2 недели с тренером пятёрки</td><td>Мастермайнды раз в 2 недели с Рамзесом</td><td>Неограниченная обратная связь от Рамзеса в течение месяца</td><td>Индивидуальная обратная связь от Рамзеса в течение 6 недель</td></tr>
+        <tr><td>Сессия на проработку убеждений</td><td>Не входит</td><td>Не входит</td><td>1 личная сессия с Рамзесом для проработки убеждений</td><td>1 личная сессия с Рамзесом для проработки убеждений</td><td>Неограниченная поддержка по работе с убеждениями, страхами и негативными паттернами в течение 6 недель</td></tr>
+        <tr><td>Общий чат участников</td><td>Да</td><td>Да</td><td>Да</td><td>Да</td><td>Да</td></tr>
+        <tr><td>Групповые онлайн-разборы с Рамзесом раз в месяц для всех участников потока</td><td>Да</td><td>Да</td><td>Да</td><td>Да</td><td>Да</td></tr>
+        <tr><td>Подписка на 6 месяцев на искусственный интеллект для переписок VIBE AI</td><td>Не входит</td><td>Входит</td><td>Входит</td><td>Входит</td><td>Входит</td></tr>
+        <tr><td>Живое наставничество</td><td>Не входит</td><td>Не входит</td><td>Не входит</td><td>Групповое живое наставничество в Москве</td><td>Полное живое ведение от Рамзеса 1 на 1 как тренера и психолога</td></tr>
+        <tr><td>Выходы в поля</td><td>Не входят</td><td>Не входят</td><td>Не входят</td><td>3 групповых выхода в поля еженедельно (улицы, кафе, ночные клубы)</td><td>Совместные выходы 1 на 1 днём, ночью и на мероприятиях 3 раза в неделю; частота подбирается индивидуально</td></tr>
+        <tr><td>Условия участия</td><td>—</td><td>—</td><td>—</td><td>Только через интервью с Рамзесом</td><td>Только через интервью с Рамзесом</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<section id="bonuses">
+  <span class="kanji-mark" style="left:-20px;top:8%;font-size:140px;transform:rotate(-5deg);">勇</span>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="mono eyebrow">08 // бонусы</span>
+      <h2>Что ещё входит</h2>
+      <p>Материалы и инструменты, расширяющие основной маршрут программы</p>
+    </div>
+    <div class="bonus-grid">
+      <div class="bonus-card">
+        <div><span class="bnum">[ бонус 01 ]</span><h4>База знаний</h4><p>Дополнительные уроки от Рамзеса и приглашённых спикеров для более глубокого разбора отдельных тем</p></div>
+      </div>
+      <div class="bonus-card">
+        <div><span class="bnum">[ бонус 02 ]</span><h4>I AM</h4><p>Отдельный мини-курс для глубокой работы с головой: уверенность, самооценка, убеждения, личные границы и самосаботаж</p></div>
+      </div>
+      <div class="bonus-card">
+        <div><span class="bnum">[ бонус 03 ]</span><h4>VIBE AI на 6 месяцев</h4><p>ИИ-помощник для переписок: помогает придумывать первые сообщения, ответы и реакции на сторис под конкретную девушку и ситуацию</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final" id="form">
+  <div class="hexgrid-bg"></div>
+  <span class="kanji-mark" style="right:0;top:6%;font-size:170px;transform:rotate(-3deg);max-width:120px;overflow:hidden;display:block;position:absolute;">誓</span>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="mono eyebrow">09 // заявка</span>
+      <h2>Мужайся!<br>Запишись на разбор</h2>
+      <p>Бесплатный созвон, 20 минут — не продажа. Разберём твою ситуацию и подберём формат.</p>
+    </div>
+    
+      <script id="b401fe4e03050145f9178f5e56c6df65c907b046" src="https://manup.getcourse.ru/pl/lite/widget/script?id=1658729"></script>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <span class="kanji-mark" style="right:-20px;bottom:2%;font-size:150px;transform:rotate(4deg);">雄</span>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="mono eyebrow">10 // вопросы</span>
+      <h2>Что может тебя остановить</h2>
+    </div>
+    <div>
+      <details class="faq-item"><summary>У меня реально ступор, даже в переписке. Это точно про меня?</summary><p>Модуль 1 целиком про это. Большинство участников стартуют именно с полного ступора, а не с продвинутого уровня.</p></details>
+      <details class="faq-item"><summary>Сколько времени нужно уделять в неделю?</summary><p>Пара часов на уроки и практику. Это не марафон 24/7, а регулярные маленькие шаги, которые складываются в навык.</p></details>
+      <details class="faq-item"><summary>А если я пока не готов к расширенному формату?</summary><p>Самостоятельный формат даёт всю программу целиком. Тренер и мини-группа ускоряют процесс, но не обязательны для результата.</p></details>
+      <details class="faq-item"><summary>Мне не 20, а 35-45. Это ещё работает?</summary><p>Программу проходят мужчины разных возрастов. Психология влечения и навык знакомства не завязаны на возраст.</p></details>
+      <details class="faq-item"><summary>Это пикап с заучиванием фраз?</summary><p>Нет. Упор на своё, живое поведение и понимание себя и женщин — не на скрипты и роли.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="closer">
+  <span class="kanji-mark" style="left:50%;top:50%;transform:translate(-50%,-50%) rotate(-2deg);font-size:340px;opacity:.06;">道</span>
+  <span class="kanji-stamp red pop" style="--rot:-4deg;left:50%;top:24px;transform:translateX(-50%) rotate(-4deg);font-size:60px;">魂</span>
+  <div class="wrap">
+    <h2>ВЕРНИ СЕБЕ УПРАВЛЕНИЕ НАД СВОЕЙ ЛИЧНОЙ ЖИЗНЬЮ</h2>
+    <p>Оставь заявку - разберём твою ситуацию, к чему хочешь прийти и составим план следующих шагов.</p>
+    <a href="#form" class="btn" onclick="scrollToForm();return false;">ОСТАВИТЬ ЗАЯВКУ</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div class="footer-brand">МУЖАЙСЯ! · СИСТЕМА 2026</div>
+    <nav class="footer-legal-links">
+      <a href="documents/oferta.docx" download>Договор оферты</a>
+      <a href="documents/politika-konfidencialnosti.docx" download>Политика конфиденциальности и обработки персональных данных</a>
+      <a href="documents/soglasie-obrabotka-pd.docx" download>Согласие на обработку персональных данных</a>
+      <a href="documents/soglasie-reklama.docx" download>Согласие на получение рассылки рекламного, информационного характера</a>
+    </nav>
+    <div class="footer-requisites">ИП Акбутаев Рустам Тимурович · ИНН 770974041537 · ОГРНИП 323774600546391</div>
+    <div class="footer-requisites">
+  <a href="https://t.me/ilinykhegor" target="_blank" rel="noopener" style="color:var(--red);transition:opacity .2s;" onmouseover="this.style.opacity='0.75'" onmouseout="this.style.opacity='1'">САЙТ РАЗРАБОТАН</a>
+</div>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="policy-module-1" onclick="if(event.target===this) this.classList.remove('open')">
+  <div class="modal-box module-modal">
+    <button class="modal-close" onclick="document.getElementById('policy-module-1').classList.remove('open')">×</button>
+    <span class="mnum">Модуль 01</span>
+    <h3>Опора на себя</h3>
+    <div class="policy-content">
+      <h4>Что внутри</h4>
+      <ul>
+        <li>Samurai Lifestyle I — фундамент образа жизни: режим, дисциплина, спорт, питание, медитации, дневник, осознанность, полезные привычки</li>
+        <li>Samurai Lifestyle II — точки опоры, личные рутины, ценности, желания, социализация, ревизия окружения</li>
+        <li>Убеждения уверенной в себе личности — работа с ограничивающими установками, внутренним диалогом и самооценкой</li>
+        <li>Постулаты сильного мировоззрения — опорные установки от Рамзеса</li>
+      </ul>
+      <h4>Результат модуля</h4>
+      <p>Ты начнёшь возвращать себе контроль над своей жизнью и собирать каркас для прохождения всей программы.</p>
+      <ul>
+        <li>Трезво оценишь текущую ситуацию с девушками, поймёшь, над чем работать, и поставишь цели на обучение</li>
+        <li>Лучше поймёшь себя: ценности, желания, личный кодекс и формат отношений, который тебе подходит</li>
+        <li>Соберёшь точки опоры: ритуалы и рутины, которые держат состояние и фокус</li>
+        <li>Начнёшь выстраивать образ жизни, который возвращает энергию, дисциплину и контроль над собой</li>
+        <li>Научишься отлавливать ограничивающие убеждения и заменять их на полезные</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="policy-module-2" onclick="if(event.target===this) this.classList.remove('open')">
+  <div class="modal-box module-modal">
+    <button class="modal-close" onclick="document.getElementById('policy-module-2').classList.remove('open')">×</button>
+    <span class="mnum">Модуль 02</span>
+    <h3>Внутри женской головы</h3>
+    <div class="policy-content">
+      <h4>Что внутри</h4>
+      <ul>
+        <li>20 факторов, отталкивающих девушек, и 15 факторов, привлекающих их</li>
+        <li>Эволюционная биология: 12 триггеров влечения</li>
+        <li>Глубинный взгляд на женские манипуляции и работу с ними</li>
+        <li>8 методов обхода проверок, гайд «128 женских проверок»</li>
+        <li>Типы девушек и как их определять</li>
+        <li>Многоуровневая карта соблазнения и метрики контроля прогресса</li>
+      </ul>
+      <h4>Результат модуля</h4>
+      <p>Женский мозг и поведение больше не будут для тебя хаосом — ты поймёшь, как они устроены с точки зрения эволюции и психологии.</p>
+      <ul>
+        <li>Увидишь свои прошлые ошибки в общении с девушками</li>
+        <li>Поймёшь, какие качества и поведение вызывают интерес, а какие отталкивают</li>
+        <li>Разберёшься, как работают женские проверки и манипуляции</li>
+        <li>Перестанешь идеализировать красивых и востребованных девушек</li>
+        <li>Получишь карту соблазнения и систему эффективного взаимодействия с девушками</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="policy-module-3" onclick="if(event.target===this) this.classList.remove('open')">
+  <div class="modal-box module-modal">
+    <button class="modal-close" onclick="document.getElementById('policy-module-3').classList.remove('open')">×</button>
+    <span class="mnum">Модуль 03</span>
+    <h3>«Я решил — я подошёл»</h3>
+    <div class="policy-content">
+      <h4>Что внутри</h4>
+      <ul>
+        <li>Работа с тревожностью перед знакомством, виды прямого и непрямого знакомства</li>
+        <li>Язык тела: корпус, взгляд, дистанция, жесты и позы</li>
+        <li>Структура диалога, инструменты сторителлинга и вовлечения в общение</li>
+        <li>Предположения, которые цепляют, и холодное чтение</li>
+        <li>Работа с обратной связью от девушки и телесным контактом</li>
+        <li>Квалификация и игра с окружением девушки</li>
+      </ul>
+      <h4>Результат модуля</h4>
+      <p>Ты получишь стабильный, управляемый навык эффективных знакомств — где бы ты ни находился и как бы себя ни чувствовал.</p>
+      <ul>
+        <li>Сможешь справляться с тревожностью перед знакомством</li>
+        <li>Начнёшь знакомиться в любых контекстах: улица, тц, кафе, метро, клубы, мероприятия</li>
+        <li>Прокачаешь язык тела, голос и взгляд, чтобы транслировать уверенность невербально</li>
+        <li>Научишься вести диалог живо и структурно, считывать обратную связь и калибровать действия</li>
+        <li>Перестанешь зависеть от идеальных условий, состояния и её сигналов</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="policy-module-4" onclick="if(event.target===this) this.classList.remove('open')">
+  <div class="modal-box module-modal">
+    <button class="modal-close" onclick="document.getElementById('policy-module-4').classList.remove('open')">×</button>
+    <span class="mnum">Модуль 04</span>
+    <h3>Цифровой мост</h3>
+    <div class="policy-content">
+      <h4>Что внутри</h4>
+      <ul>
+        <li>Оформление профиля и перевод общения в мессенджеры</li>
+        <li>10 базовых правил переписок и развитие общения на расстоянии</li>
+        <li>Признаки заинтересованности и незаинтересованности на расстоянии</li>
+        <li>Как правильно брать контакт при знакомстве</li>
+        <li>Структура звонка, который естественно ведёт к встрече</li>
+        <li>Приглашение на свидание без давления и нуждаемости</li>
+      </ul>
+      <h4>Результат модуля</h4>
+      <p>Ты научишься поддерживать контакт с девушками после знакомства и доводить их до свиданий через переписки и звонки.</p>
+      <ul>
+        <li>Приведёшь профиль и соцсети в порядок</li>
+        <li>Научишься переписываться ярко: поддерживать интерес, добавлять юмор и эмоции</li>
+        <li>Сможешь считывать степень заинтересованности на расстоянии</li>
+        <li>Научишься уверенно созваниваться и назначать свидания</li>
+        <li>Девушки будут заметно реже сливаться после знакомства</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="policy-module-5" onclick="if(event.target===this) this.classList.remove('open')">
+  <div class="modal-box module-modal">
+    <button class="modal-close" onclick="document.getElementById('policy-module-5').classList.remove('open')">×</button>
+    <span class="mnum">Модуль 05</span>
+    <h3>Свидания как кино</h3>
+    <div class="policy-content">
+      <h4>Что внутри</h4>
+      <ul>
+        <li>Комфорт и сценарии свиданий, работа с френдзоной</li>
+        <li>Последовательность локаций на свиданиях</li>
+        <li>Дизайн свиданий от ведущего тренера проекта</li>
+        <li>Отслеживание эмоциональной динамики и гибкое планирование без жёсткого сценария</li>
+        <li>Баланс структуры и эмоциональности, управление своей энергией</li>
+        <li>Создание эмоций на свидании буквально из ничего</li>
+      </ul>
+      <h4>Результат модуля</h4>
+      <p>Ты научишься проводить свидания так, чтобы это была живая история между вами — с эмоциями, доверием, флиртом и атмосферой.</p>
+      <ul>
+        <li>Поймёшь, как не завышать значимость девушки и управлять своей энергией</li>
+        <li>Научишься создавать комфорт и душевную связь, не скатываясь в френдзону</li>
+        <li>Сможешь делать свидания яркими без больших расходов</li>
+        <li>Будешь естественно подводить свидание к сближению</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="policy-module-6" onclick="if(event.target===this) this.classList.remove('open')">
+  <div class="modal-box module-modal">
+    <button class="modal-close" onclick="document.getElementById('policy-module-6').classList.remove('open')">×</button>
+    <span class="mnum">Модуль 06</span>
+    <h3>Уединение и секс</h3>
+    <div class="policy-content">
+      <h4>Что внутри</h4>
+      <ul>
+        <li>Логистика сближения: как перевести свидание в место уединения</li>
+        <li>Что делать наедине и как помочь девушке почувствовать себя комфортно</li>
+        <li>Настройка к сексу: страхи, ограничивающие убеждения, расслабление</li>
+        <li>Работа с сомнениями и сопротивлением перед сексом</li>
+        <li>Прикосновения, эрогенные зоны и мощная прелюдия</li>
+        <li>Aftercare — забота после близости</li>
+      </ul>
+      <h4>Результат модуля</h4>
+      <p>Ты будешь красиво доводить свидания до секса: создавать комфорт, работать с сомнениями, проводить запоминающуюся прелюдию, а после — оставлять у девушки классное послевкусие.</p>
+      <ul>
+        <li>Научишься плавно переводить свидание к себе домой через нестандартные поводы</li>
+        <li>Разберёшь свои страхи и ограничивающие убеждения о сексе</li>
+        <li>Научишься возбуждать девушку через прикосновения и считывать её реакции</li>
+        <li>Поймёшь, как работать с сомнениями девушки перед сексом</li>
+        <li>Научишься вести себя после секса так, чтобы сохранить репутацию и перевести общение в нужный формат</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="tierCloseRotateHint" aria-hidden="true">
+  <div class="modal-rotate-hint">
+    <div class="modal-rotate-icon">↻</div>
+    <strong>ПОВЕРНИТЕ ТЕЛЕФОН ВЕРТИКАЛЬНО</strong>
+    <span>Таблица закрыта. Верните телефон в вертикальное положение, чтобы продолжить просмотр сайта.</span>
+  </div>
+</div>
+
+</div>
+
+<script>
+function openPolicy(key){
+const el = document.getElementById('policy-'+key);
+if(el) el.classList.add('open');
+}
+function scrollToForm(){
+const form = document.getElementById('form');
+if(form) form.scrollIntoView({behavior:'smooth', block:'start'});
+}
+function alignTierDetailRows(){
+  if(!window.matchMedia('(min-width:861px)').matches) return;
+  const tiersWrap = document.querySelector('.tiers');
+  if(!tiersWrap) return;
+
+  // Считаем высоту по всем 5 тарифам, даже когда 4-й и 5-й скрыты.
+  const wasExpanded = tiersWrap.classList.contains('show-all');
+  if(!wasExpanded) tiersWrap.classList.add('show-all');
+
+  const tiers = Array.from(tiersWrap.querySelectorAll(':scope > .tier'));
+  const lists = tiers.map(t => t.querySelector('.tier-details-desktop')).filter(Boolean);
+  if(!lists.length){
+    if(!wasExpanded) tiersWrap.classList.remove('show-all');
+    return;
+  }
+
+  // Убираем старые inline-высоты и даём каждой строке определить свою
+  // естественную высоту. Затем для каждой позиции берём максимум по всем тарифам.
+  lists.forEach(list => {
+    list.style.gridTemplateRows = 'repeat(17, auto)';
+    Array.from(list.children).forEach(li => {
+      li.style.height = '';
+      li.style.minHeight = '';
+    });
+  });
+
+  const maxRows = Math.max(...lists.map(list => list.children.length));
+  const rowHeights = [];
+
+  for(let row = 0; row < maxRows; row++){
+    let maxHeight = 0;
+    lists.forEach(list => {
+      const li = list.children[row];
+      if(!li) return;
+      maxHeight = Math.max(maxHeight, li.getBoundingClientRect().height);
+    });
+    rowHeights[row] = Math.ceil(maxHeight);
+  }
+
+  lists.forEach(list => {
+    Array.from(list.children).forEach((li, row) => {
+      if(rowHeights[row]) li.style.height = rowHeights[row] + 'px';
+    });
+    list.style.gridTemplateRows = rowHeights.map(h => h + 'px').join(' ');
+  });
+
+  if(!wasExpanded) tiersWrap.classList.remove('show-all');
+}
+
+function toggleAllTiers(){
+  const tiers = document.querySelector('.tiers');
+  if(!tiers) return;
+  tiers.classList.add('show-all');
+  // Ждём, пока 4-й и 5-й тарифы появятся в сетке, и только потом измеряем строки.
+  requestAnimationFrame(() => requestAnimationFrame(alignTierDetailRows));
+}
+
+window.addEventListener('load', alignTierDetailRows);
+window.addEventListener('resize', () => {
+  clearTimeout(window.__tierAlignTimer);
+  window.__tierAlignTimer = setTimeout(alignTierDetailRows, 80);
+});
+function openTierModal(){
+  const modal = document.getElementById('tierModal');
+  const closeHint = document.getElementById('tierCloseRotateHint');
+  if(closeHint){ closeHint.classList.remove('show'); closeHint.setAttribute('aria-hidden','true'); }
+  if(modal) modal.classList.add('open');
+  if(window.matchMedia('(max-width:860px)').matches){
+    document.body.classList.add('mobile-compare-open');
+  }
+}
+function closeTierModal(){
+  const modal = document.getElementById('tierModal');
+  if(modal) modal.classList.remove('open');
+  if(window.matchMedia('(max-width:860px)').matches){
+    document.body.classList.remove('mobile-compare-open');
+  }
+}
+function hideTierCloseRotateHint(){
+  const closeHint = document.getElementById('tierCloseRotateHint');
+  if(!closeHint) return;
+  closeHint.classList.remove('show');
+  closeHint.setAttribute('aria-hidden','true');
+}
+window.addEventListener('orientationchange', hideTierCloseRotateHint);
+window.addEventListener('resize', function(){
+  if(window.matchMedia('(max-width:860px) and (orientation:portrait)').matches) hideTierCloseRotateHint();
+});
+function smoothScrollTo(e, hash){
+if(e) e.preventDefault();
+const el = document.querySelector(hash);
+if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+return false;
+}
+/* ---------- body scroll lock for modals (prevents the page and the
+modal from fighting over the wheel/touch scroll at the same time) */
+let __scrollLockHtmlOverflow = '';
+let __scrollLockBodyOverflow = '';
+function lockBodyScroll(){
+__scrollLockHtmlOverflow = document.documentElement.style.overflow;
+__scrollLockBodyOverflow = document.body.style.overflow;
+document.documentElement.style.overflow = 'hidden';
+document.body.style.overflow = 'hidden';
+}
+function unlockBodyScroll(){
+document.documentElement.style.overflow = __scrollLockHtmlOverflow;
+document.body.style.overflow = __scrollLockBodyOverflow;
+}
+/* watch every modal-overlay for open/close via class changes, so the
+lock applies no matter which button/handler toggled it */
+document.querySelectorAll('.modal-overlay').forEach(overlay=>{
+const mo = new MutationObserver(()=>{
+const anyOpen = document.querySelector('.modal-overlay.open');
+if(anyOpen && document.documentElement.style.overflow !== 'hidden'){
+lockBodyScroll();
+} else if(!anyOpen && document.documentElement.style.overflow === 'hidden'){
+unlockBodyScroll();
+}
+});
+mo.observe(overlay, {attributes:true, attributeFilter:['class']});
+});
+/* mobile hamburger nav */
+(function(){
+const toggle = document.getElementById('navToggle');
+const menu = document.getElementById('mobileNav');
+if(!toggle || !menu) return;
+toggle.addEventListener('click', ()=>{
+const isOpen = menu.classList.toggle('open');
+toggle.classList.toggle('open', isOpen);
+toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+});
+menu.querySelectorAll('a').forEach(a=>{
+a.addEventListener('click', ()=>{
+menu.classList.remove('open');
+toggle.classList.remove('open');
+toggle.setAttribute('aria-expanded','false');
+});
+});
+})();
+/* pre-fill the form's format select when a tier card's CTA is clicked */
+function selectTier(name){
+setCustomSelectValue('formatSelect', name, true);
+}
+/* ---------- custom select widgets ---------- */
+function setCustomSelectValue(selectId, value, flash){
+const native = document.getElementById(selectId);
+if(!native) return;
+const wrap = document.querySelector('.custom-select[data-select-id="'+selectId+'"]');
+if(!wrap) return;
+native.value = value;
+const valueEl = wrap.querySelector('.cs-value');
+valueEl.textContent = value;
+valueEl.classList.remove('placeholder');
+wrap.querySelectorAll('.cs-option').forEach(opt=>{
+opt.classList.toggle('selected', opt.dataset.value === value);
+});
+if(flash){
+wrap.classList.remove('tier-preselected');
+void wrap.offsetWidth;
+wrap.classList.add('tier-preselected');
+}
+}
+document.querySelectorAll('.custom-select').forEach(wrap=>{
+const trigger = wrap.querySelector('.cs-trigger');
+const panel = wrap.querySelector('.cs-panel');
+const native = wrap.querySelector('.cs-native');
+function closeSelect(){
+wrap.classList.remove('open');
+trigger.setAttribute('aria-expanded','false');
+}
+function openSelect(){
+document.querySelectorAll('.custom-select.open').forEach(other=>{
+if(other !== wrap){ other.classList.remove('open'); }
+});
+wrap.classList.add('open');
+trigger.setAttribute('aria-expanded','true');
+}
+trigger.addEventListener('click', (e)=>{
+e.stopPropagation();
+wrap.classList.contains('open') ? closeSelect() : openSelect();
+});
+wrap.querySelectorAll('.cs-option').forEach(opt=>{
+opt.addEventListener('click', ()=>{
+setCustomSelectValue(native.id, opt.dataset.value, false);
+closeSelect();
+});
+});
+document.addEventListener('click', (e)=>{
+if(!wrap.contains(e.target)) closeSelect();
+});
+document.addEventListener('keydown', (e)=>{
+if(e.key === 'Escape') closeSelect();
+});
+trigger.addEventListener('keydown', (e)=>{
+if(e.key === 'Enter' || e.key === ' '){
+e.preventDefault();
+wrap.classList.contains('open') ? closeSelect() : openSelect();
+}
+});
+});
+/* ---------- subtle scroll parallax for in-section background photos ---------- */
+(function(){
+const photos = document.querySelectorAll('.bg-photo');
+if(!photos.length) return;
+let ticking = false;
+function updateParallax(){
+const vh = window.innerHeight;
+/* read phase: gather all layout measurements first */
+const updates = [];
+photos.forEach(p=>{
+const speed = parseFloat(p.dataset.speed || '0.06');
+const rect = p.getBoundingClientRect();
+const center = rect.top + rect.height/2;
+const delta = (vh/2 - center) * speed;
+updates.push([p, delta]);
+});
+/* write phase: apply all style changes after reads are done, avoids layout thrashing */
+updates.forEach(([p, delta])=>{
+p.style.transform = `translateY(${delta}px)`;
+});
+ticking = false;
+}
+window.addEventListener('scroll', ()=>{
+if(!ticking){
+window.requestAnimationFrame(updateParallax);
+ticking = true;
+}
+}, {passive:true});
+window.addEventListener('resize', updateParallax);
+updateParallax();
+})();
+/* required consent checkbox gates the submit button */
+const consentCheckbox = document.getElementById('consentCheckbox');
+const submitBtn = document.getElementById('submitBtn');
+const consentHint = document.getElementById('consentHint');
+if(consentCheckbox && submitBtn){
+consentCheckbox.addEventListener('change', ()=>{
+submitBtn.disabled = !consentCheckbox.checked;
+if(consentHint) consentHint.textContent = consentCheckbox.checked ? 'Заявку читает команда лично — без спама.' : 'Отметь согласие выше, чтобы отправить заявку.';
+});
+}
+const io = new IntersectionObserver((entries)=>{
+entries.forEach(e=>{
+if(e.isIntersecting){ e.target.classList.add('reveal'); io.unobserve(e.target); }
+});
+},{threshold:.12});
+document.querySelectorAll('.card, .hex-module, .tier').forEach(el=>io.observe(el));
+/* preloader: glitching hexagon, then site slides up + fades in */
+window.addEventListener('load', ()=>{
+const minDelay = new Promise(res=>setTimeout(res, 1500));
+minDelay.then(()=>{
+document.body.classList.add('loaded');
+const pre = document.getElementById('preloader');
+setTimeout(()=>{ if(pre) pre.style.display='none'; }, 700);
+});
+});
+/* subtle parallax on hero hexagon following the cursor */
+const bigHex = document.querySelector('.hero-frame .big-hex');
+if(bigHex){
+document.querySelector('.hero-frame').addEventListener('mousemove', (e)=>{
+const r = e.currentTarget.getBoundingClientRect();
+const x = (e.clientX - r.left)/r.width - .5;
+const y = (e.clientY - r.top)/r.height - .5;
+bigHex.style.transform = `translateY(-50%) rotate(${x*6}deg) translate(${x*10}px, ${y*10}px)`;
+});
+}
+/* count-up on the author stats when they enter view */
+const counters = document.querySelectorAll('.stat .num');
+const countIo = new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{
+if(!entry.isIntersecting) return;
+const el = entry.target;
+const text = el.textContent.trim();
+const match = text.match(/^(\d+)(.*)$/);
+if(match){
+const target = parseInt(match[1],10);
+const suffix = match[2];
+let cur = 0;
+const step = Math.max(1, Math.round(target/30));
+const tick = ()=>{
+cur = Math.min(target, cur+step);
+el.textContent = cur + suffix;
+if(cur < target) requestAnimationFrame(tick);
+};
+tick();
+}
+countIo.unobserve(el);
+});
+},{threshold:.6});
+counters.forEach(c=>countIo.observe(c));
+</script>
+
+<script>
+/* ---------- ТАРИФЫ: строки деталей выравниваются по самому высокому пункту ---------- */
+(function(){
+  function alignTierDetailRows(){
+    var isDesktop = window.innerWidth >= 861;
+    var lists = Array.prototype.slice.call(document.querySelectorAll('.tiers .tier-details-desktop'));
+    if(!lists.length) return;
+
+    /* Сначала снимаем прошлые размеры, чтобы каждый пункт измерялся в своей
+       естественной высоте. */
+    lists.forEach(function(list){
+      Array.prototype.forEach.call(list.children, function(li){
+        li.style.height = '';
+      });
+    });
+
+    if(!isDesktop) return;
+
+    var maxHeights = [];
+    lists.forEach(function(list){
+      Array.prototype.forEach.call(list.children, function(li, index){
+        if(li.classList.contains('detail-meta')) return;
+        var h = li.getBoundingClientRect().height;
+        if(h > (maxHeights[index] || 0)) maxHeights[index] = h;
+      });
+    });
+
+    lists.forEach(function(list){
+      Array.prototype.forEach.call(list.children, function(li, index){
+        if(li.classList.contains('detail-meta')) return;
+        if(maxHeights[index]) li.style.height = maxHeights[index] + 'px';
+      });
+    });
+  }
+
+  var tierAlignTimer;
+  function scheduleTierAlign(){
+    clearTimeout(tierAlignTimer);
+    tierAlignTimer = setTimeout(function(){
+      requestAnimationFrame(function(){
+        alignTierDetailRows();
+        requestAnimationFrame(alignTierDetailRows);
+      });
+    }, 40);
+  }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', scheduleTierAlign);
+  }else{
+    scheduleTierAlign();
+  }
+  window.addEventListener('load', scheduleTierAlign);
+  window.addEventListener('resize', scheduleTierAlign);
+})();
+</script>
+
+
+
+<script>
+(function(){
+  function equalizeAudienceCards(){
+    const grid=document.querySelector('.grid-cards');
+    if(!grid) return;
+    const cards=[...grid.querySelectorAll('.ab-card')];
+    if(!cards.length) return;
+
+    // Сбрасываем предыдущие значения перед новым замером.
+    cards.forEach(card=>{
+      const now=card.querySelector('.ab-now');
+      const result=card.querySelector('.ab-result');
+      if(now) now.style.height='';
+      if(result) result.style.height='';
+    });
+
+    // Группируем карточки по строкам.
+    const rows=new Map();
+    cards.forEach(card=>{
+      const top=Math.round(card.getBoundingClientRect().top);
+      if(!rows.has(top)) rows.set(top,[]);
+      rows.get(top).push(card);
+    });
+
+    rows.forEach(row=>{
+      let maxNow=0;
+      row.forEach(card=>{
+        const el=card.querySelector('.ab-now');
+        if(el) maxNow=Math.max(maxNow,el.getBoundingClientRect().height);
+      });
+      row.forEach(card=>{
+        const el=card.querySelector('.ab-now');
+        if(el) el.style.height=maxNow+'px';
+      });
+
+      let maxResult=0;
+      row.forEach(card=>{
+        const el=card.querySelector('.ab-result');
+        if(el) maxResult=Math.max(maxResult,el.getBoundingClientRect().height);
+      });
+      row.forEach(card=>{
+        const el=card.querySelector('.ab-result');
+        if(el) el.style.height=maxResult+'px';
+      });
+    });
+  }
+
+  window.addEventListener('load',equalizeAudienceCards);
+  window.addEventListener('resize',equalizeAudienceCards);
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(equalizeAudienceCards);
+})();
+</script>
+</body>
+</html><style id="mobile-compare-final-fix">
+@media (max-width:860px){
+  /* Один горизонтально прокручиваемый лист: 5 тарифов остаются в одной строке. */
+  #tierModal .mobile-compare{
+    width:100%;
+    height:100%;
+    min-width:0;
+    overflow:auto !important;
+    -webkit-overflow-scrolling:touch;
+    overscroll-behavior:contain;
+    scrollbar-width:thin;
+    background:#101010;
+  }
+
+  #tierModal .mobile-compare-top{
+    position:sticky !important;
+    top:0 !important;
+    left:0 !important;
+    width:100vw !important;
+    min-width:100vw !important;
+    z-index:50 !important;
+  }
+
+  /* Шапка тарифов фиксирована по вертикали и листается вместе с колонками по горизонтали. */
+  #tierModal .mobile-compare-head{
+    position:sticky !important;
+    top:42px !important;
+    width:703px !important;
+    min-width:703px !important;
+    grid-template-columns:113px repeat(5,118px) !important;
+    z-index:40 !important;
+    background:#2e2e2e !important;
+  }
+
+  #tierModal .mobile-compare-scroll{
+    width:703px !important;
+    min-width:703px !important;
+    overflow:visible !important;
+    padding-bottom:30px !important;
+  }
+
+
+  #tierModal .mc-row{
+    width:703px !important;
+    min-width:703px !important;
+    grid-template-columns:113px repeat(5,118px) !important;
+  }
+
+  /* Левая колонка (названия пунктов) зафиксирована по горизонтали так же,
+     как шапка тарифов зафиксирована по вертикали. */
+  #tierModal .mc-head-label{
+    position:sticky !important;
+    left:0 !important;
+    z-index:45 !important;
+    background:#2e2e2e !important;
+    box-shadow:2px 0 6px rgba(0,0,0,.45);
+  }
+
+  #tierModal .mc-label{
+    position:sticky !important;
+    left:0 !important;
+    z-index:15 !important;
+    background:#272727 !important;
+    box-shadow:2px 0 6px rgba(0,0,0,.45);
+  }
+
+  #tierModal .mc-section{
+    width:100vw !important;
+    min-width:100vw !important;
+    position:sticky !important;
+    left:0 !important;
+    z-index:20 !important;
+  }
+
+  /* Размер текста как на основном сайте, без выхода за границы ячеек. */
+  #tierModal .mc-plan{
+    min-height:82px !important;
+    padding:8px 5px !important;
+    font-size:12px !important;
+    line-height:1.25 !important;
+    color:#fff !important;
+    overflow-wrap:anywhere !important;
+    word-break:normal !important;
+  }
+  #tierModal .mc-plan span{
+    font-size:12px !important;
+    line-height:1.25 !important;
+    color:#fff !important;
+    overflow-wrap:anywhere !important;
+  }
+  #tierModal .mc-head-label{
+    font-size:8px !important;
+    line-height:1.25 !important;
+    padding:5px 4px !important;
+    color:#fff !important;
+  }
+
+  #tierModal .mc-label{
+    padding:8px 5px !important;
+    font-size:10px !important;
+    line-height:1.3 !important;
+    color:#fff !important;
+    overflow-wrap:anywhere !important;
+    word-break:normal !important;
+    white-space:normal !important;
+  }
+  #tierModal .mc-cell{
+    padding:9px 6px !important;
+    font-size:12px !important;
+    line-height:1.45 !important;
+    color:#fff !important;
+    overflow-wrap:anywhere !important;
+    word-break:normal !important;
+    white-space:normal !important;
+    text-align:center;
+  }
+  #tierModal .mc-cell.common{font-size:14px !important;color:#fff !important;}
+  #tierModal .mc-cell.no{color:#fff !important;opacity:.3375;}
+  #tierModal .mc-cell.s2,
+  #tierModal .mc-cell.s3,
+  #tierModal .mc-cell.s4,
+  #tierModal .mc-cell.s5,
+  #tierModal .mc-row.mc-price .mc-cell,
+  #tierModal .mc-row.mc-seats .mc-cell{
+    color:#fff !important;
+  }
+
+  #tierModal .mc-section{
+    padding:8px 7px !important;
+    font-size:11px !important;
+    line-height:1.3 !important;
+    color:#fff !important;
+  }
+
+  /* Сохраняем разделители и не даём длинному тексту вылезать наружу. */
+  #tierModal .mc-row > div{
+    min-width:0 !important;
+    max-width:100% !important;
+    box-sizing:border-box !important;
+    overflow-wrap:anywhere !important;
+  }
+  #tierModal .mc-row > div *{
+    max-width:100% !important;
+    overflow-wrap:anywhere !important;
+  }
+}
+
+@media (max-width:380px){
+  #tierModal .mobile-compare-head,
+  #tierModal .mobile-compare-scroll,
+  #tierModal .mc-row,
+  #tierModal .mc-section{width:668px !important;min-width:668px !important;}
+  #tierModal .mobile-compare-head,
+  #tierModal .mc-row{grid-template-columns:103px repeat(5,113px) !important;}
+  #tierModal .mc-plan,
+  #tierModal .mc-plan span,
+  #tierModal .mc-cell{font-size:11px !important;}
+  #tierModal .mc-label{font-size:9px !important;padding:7px 4px !important;}
+  #tierModal .mc-head-label{font-size:7px !important;padding:4px 3px !important;}
+}
+    @media(min-width:861px){
+      /* Больше нижнего воздуха у каждого пункта описания тарифов на ПК,
+         чтобы текст не выглядел обрезанным и соседние строки не слипались. */
+      .tier-details-desktop li{
+        padding-bottom:26px!important;
+      }
+    }
+</style>
