@@ -306,8 +306,8 @@ background:transparent;color:var(--white);border:1px solid var(--line);
 .sec-head h2::after{content:']';color:var(--red);opacity:.5;margin-left:10px;font-weight:400;}
 .sec-head p{color:var(--gray);font-size:var(--text-lead);font-family:'Inter';}
 .tier .tname{position:relative;}
-.tier .tname::before{content:'[ ';color:var(--red);opacity:.45;}
-.tier .tname::after{content:' ]';color:var(--red);opacity:.45;}
+.tier .tname::before{content:'[ ';color:var(--red);opacity:.3375;}
+.tier .tname::after{content:' ]';color:var(--red);opacity:.3375;}
 .grid-cards{
 display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
 background:var(--line);border:1px solid var(--line);
@@ -697,7 +697,7 @@ box-shadow:0 0 40px var(--red-glow-soft) inset, 0 20px 40px rgba(0,0,0,.4);
   .tier > div > .tpitch{height:45px;min-height:45px;margin-bottom:20px;}
   .tier-details-desktop{
     display:grid;
-    grid-template-rows:34px repeat(7,62px) 34px repeat(8,62px) 18px;
+    grid-template-rows:repeat(17, auto);
     align-content:start;
     list-style:none!important;
     margin:0 0 20px!important;
@@ -708,19 +708,26 @@ box-shadow:0 0 40px var(--red-glow-soft) inset, 0 20px 40px rgba(0,0,0,.4);
   .tier-details-desktop li{
     min-width:0;
     min-height:0;
-    height:auto;
-    padding:9px 0!important;
+    height:auto!important;
+    padding:12px 0 16px!important;
     border-top:1px solid var(--line-soft);
     color:#d2d2d6;
     overflow-wrap:anywhere;
-    overflow:hidden;
+    overflow:visible!important;
+    line-height:1.55;
+  }
+  /* Длинные пункты с несколькими строками не обрезаем и даём им
+     дополнительный воздух снизу. */
+  .tier-details-desktop li:nth-child(7),
+  .tier-details-desktop li:nth-child(18){
+    padding-bottom:24px!important;
   }
   .tier-details-desktop li:first-child{border-top:0;}
   .tier-details-desktop li.marked{color:var(--red);}
   .tier-details-desktop li.muted-item{color:#d2d2d6;}
   .tier-details-desktop li.common-item::before{content:'✓';position:absolute;left:5px;top:9px;color:#eee;font-size:12px;}
-  .tier-details-desktop li.detail-heading{padding:9px 0 7px!important;color:var(--white);font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.06em;font-size:10px;font-weight:600;border-top:1px solid rgba(255,36,56,.3);}
-  .tier-details-desktop li.detail-muted{color:#777;text-decoration:line-through;}
+  .tier-details-desktop li.detail-heading{padding:12px 0 10px!important;color:var(--white);font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.06em;font-size:10px;font-weight:600;border-top:1px solid rgba(255,36,56,.3);}
+  .tier-details-desktop li.detail-muted{color:#777;}
   .tier-details-desktop li.detail-meta{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--gray);}
 }
 
@@ -809,7 +816,7 @@ background:none;border:none;cursor:pointer;color:var(--gray);line-height:1;trans
 .compare-table-desktop td{vertical-align:top;text-align:left;line-height:1.35;}
 .compare-table-desktop td:first-child{min-width:245px;}
 .compare-table-desktop td.common{text-align:left;color:#eee;font-weight:600;}
-.compare-table-desktop td.no{color:#666;text-decoration:line-through;}
+.compare-table-desktop td.no{color:#666;}
 .compare-table-desktop .mark-cell{font-weight:500;position:relative;color:var(--red);}
 .compare-table-desktop .section-break td{height:20px;padding:0;background:#3a3a38;border-color:#3a3a38;}
 
@@ -831,6 +838,17 @@ background:none;border:none;cursor:pointer;color:var(--gray);line-height:1;trans
 .tier-show-all{display:none;}
 
 @media(min-width:861px){
+  /* На ПК в блоке тарифов полностью отключаем зачёркивание текста. */
+  #tiers, #tiers *, #tierModal .compare-table-desktop, #tierModal .compare-table-desktop * { text-decoration:none!important; }
+
+  /* На ПК весь текст внутри тарифов — нейтральный серый. */
+  .tiers .tier,
+  .tiers .tier *,
+  .tiers .tier .tname::before,
+  .tiers .tier .tname::after{
+    color:var(--gray)!important;
+  }
+
   /* На ПК вместо pop-up показываем кнопку раскрытия прямо в сетке. */
   .compare-row{display:none;}
   .tiers{
@@ -874,6 +892,57 @@ background:none;border:none;cursor:pointer;color:var(--gray);line-height:1;trans
     display:none;
   }
 }
+
+
+  /* Дополнительные правки блока «Тарифы» на ПК */
+  @media(min-width:861px){
+    /* Убираем галочки у пунктов тарифов */
+    .tiers .tier-details-desktop li.common-item::before{
+      content:none!important;
+      display:none!important;
+    }
+
+    /* Названия тарифов — белые */
+    .tiers .tier .tname{
+      color:var(--white)!important;
+    }
+
+    /* В тарифе «Самостоятельный» недоступные опции показываем зачёркнутыми и полупрозрачными. */
+    /* Явно перебиваем общее text-decoration:none у блока тарифов. */
+    #tiers .tier.s1 .tier-details-desktop li.detail-struck{
+      text-decoration-line:line-through!important;
+      text-decoration-style:solid!important;
+      text-decoration-thickness:1px!important;
+      text-decoration-color:currentColor!important;
+      opacity:.3375;
+    }
+    /* В тарифе «Сопровождение в пятёрках» эти две опции также зачёркнуты и полупрозрачны. */
+    .tiers .tier-details-desktop li .tariff-duration-red{color:var(--red)!important;}
+    #tiers .tier.s2 .tier-details-desktop li.detail-struck-s2{
+      text-decoration-line:line-through!important;
+      text-decoration-style:solid!important;
+      text-decoration-thickness:1px!important;
+      text-decoration-color:currentColor!important;
+      opacity:.3375;
+    }
+    .tiers .tier .tname::before,
+    .tiers .tier .tname::after{
+      color:var(--red)!important;
+    }
+
+    /* Количество мест — красное */
+    .tiers .tier .tseats{
+      color:var(--red)!important;
+    }
+
+    /* Заголовки разделов — крупнее и красные */
+    .tiers .tier .tier-details-desktop li.detail-heading{
+      color:var(--red)!important;
+      font-size:13px!important;
+      line-height:1.4!important;
+      font-weight:600!important;
+    }
+  }
 
 @media(max-width:860px){
   /* На телефонах в карточках тарифов не показываем ни номера в шестиугольниках, ни символы. */
@@ -1535,6 +1604,19 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
 @media (min-width:601px){
   .grid-cards .ab-card > div{height:100%;}
 }
+
+  @media(min-width:861px){
+    /* Больше воздуха перед заголовками разделов тарифа */
+    .tiers .tier-details-desktop li.detail-heading{
+      padding-top:38px!important;
+      padding-bottom:10px!important;
+    }
+    /* Первый заголовок не прижимается к описанию тарифа */
+    .tiers .tier-details-desktop li.detail-heading:first-child{
+      padding-top:38px!important;
+    }
+  }
+
 </style>
 <style>
 @media (min-width: 861px){
@@ -1905,6 +1987,23 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
 
 
 
+
+/* Тарифы: отдельные формулировки только для ПК. */
+.tiers-title-desktop,.tiers-lead-desktop,.tier-show-all-desktop,.special-formats-note{display:none;}
+@media(min-width:861px){
+  .tiers-title-mobile,.tiers-lead-mobile,.tier-show-all-mobile{display:none;}
+  .tiers-title-desktop,.tiers-lead-desktop,.tier-show-all-desktop,.special-formats-note{display:inline;}
+  .special-formats-note{
+    display:block;
+    margin-top:10px;
+    text-align:center;
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px;
+    line-height:1.5;
+    color:var(--gray-dim);
+    letter-spacing:.03em;
+  }
+}
 </style>
 </head>
 <body>
@@ -2301,8 +2400,8 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
   <div class="wrap">
     <div class="sec-head">
       <span class="mono eyebrow">07 // тарифы</span>
-      <h2>Какой формат тебя вытащит</h2>
-      <p>От самостоятельного темпа до личного наставничества Рамзеса.</p>
+      <h2><span class="tiers-title-mobile">Какой формат тебя вытащит</span><span class="tiers-title-desktop">Какой формат подойдёт тебе</span></h2>
+      <p><span class="tiers-lead-mobile">От самостоятельного темпа до личного наставничества Рамзеса.</span><span class="tiers-lead-desktop">От самостоятельного прохождения до индивидуальной работы с Рамзесом</span></p>
     </div>
 
     <div class="tiers">
@@ -2311,24 +2410,24 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
           <div class="tier-index"><span class="tier-number">01</span></div>
           <div class="tname">Самостоятельный</div>
           <div class="tseats">20 мест</div>
-          <div class="tpitch">В своём темпе. Ответственность на тебе.</div>
+          <div class="tpitch">В своём темпе, без сопровождения</div>
           <ul class="tier-details-desktop">
             <li class="detail-heading">Обучение и материалы</li>
             <li class="common-item">6 основных модулей MAN UP! — более 30 часов уроков</li>
             <li class="common-item">База знаний: дополнительные уроки от Рамзеса и приглашённых спикеров</li>
             <li class="common-item">Мини-курс по уверенности в себе I AM</li>
-            <li class="detail-muted">Курс Texting Ninja — не входит</li>
+            <li class="detail-muted detail-struck">Курс по онлайн-дэйтингу и перепискам Texting Ninja</li>
             <li class="common-item">Дополнительные конспекты и другие материалы</li>
-            <li>Фрагменты видеозаписей знакомств: дневная и ночная игра, свидания, вызвоны; разные страны, русский и английский языки</li>
-            <li class="marked">Доступ к курсу и материалам — 9 месяцев</li>
+            <li>Фрагменты видеозаписей знакомств Рамзеса: </br>- дневная игра </br>- ночная игра </br>- свидания </br>- вызвоны </br></br>- в разных странах </br>- на русском и английском языках</li>
+            <li class="marked">Доступ к курсу и всем материалам на 9 месяцев</li>
             <li class="detail-heading">Поддержка и практика</li>
-            <li class="detail-muted">Мини-группа и отдельный чат — не входят</li>
-            <li class="detail-muted">Проверка домашних заданий — не входит</li>
-            <li class="detail-muted">Мастермайнды / обратная связь — не входят</li>
-            <li class="detail-muted">Личная сессия по убеждениям — не входит</li>
+            <li class="detail-muted detail-struck">Мини-группа (5 человек) с сопровождением тренера проекта</li>
+            <li class="detail-muted detail-struck">Отдельный чат пятёрки с тренером проекта</li>
+            <li class="detail-muted detail-struck">Мастермайнды раз в 2 недели с тренером пятёрки</li>
+            <li class="detail-muted detail-struck">1 личная сессия с Рамзесом для проработки убеждений</li>
             <li class="common-item">Общий чат участников</li>
             <li class="common-item">Групповые онлайн-разборы с Рамзесом раз в месяц для всех участников потока</li>
-            <li class="detail-muted">Подписка VIBE AI на 6 месяцев — не входит</li>
+            <li class="detail-muted detail-struck">Подписка на 6 месяцев на искусственный интеллект для переписок VIBE AI</li>
             <li class="detail-meta"></li>
           </ul>
           <ul>
@@ -2338,7 +2437,7 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
           </ul>
         </div>
         <button type="button" class="tier-cta tier-compare-btn" onclick="openTierModal()">Сравнить тарифы</button>
-        <a href="#form" class="tier-cta" onclick="selectTier('Самостоятельный'); scrollToForm(); return false;">Узнать на созвоне</a>
+        <a href="#form" class="tier-cta" onclick="selectTier('Самостоятельный'); scrollToForm(); return false;">ОСТАВИТЬ ЗАЯВКУ</a>
       </div>
 
       <div class="tier s2">
@@ -2346,25 +2445,25 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
           <div class="tier-index"><span class="tier-number">02</span></div>
           <div class="tname">Сопровождение в пятёрках</div>
           <div class="tseats">15 мест</div>
-          <div class="tpitch">Тренер не даст слиться.</div>
+          <div class="tpitch">С обратной связью и поддержкой тренера по ходу обучения</div>
           <ul class="tier-details-desktop">
             <li class="detail-heading">Обучение и материалы</li>
             <li class="common-item">6 основных модулей MAN UP! — более 30 часов уроков</li>
             <li class="common-item">База знаний: дополнительные уроки от Рамзеса и приглашённых спикеров</li>
             <li class="common-item">Мини-курс по уверенности в себе I AM</li>
-            <li class="detail-muted">Курс Texting Ninja — не входит</li>
+            <li class="detail-muted detail-struck-s2">Курс по онлайн-дэйтингу и перепискам Texting Ninja</li>
             <li class="common-item">Дополнительные конспекты и другие материалы</li>
-            <li class="marked">Полные видеозаписи знакомств с разборами (12+ часов): дневная и ночная игра, свидания, вызвоны; разные страны, русский и английский языки</li>
-            <li class="marked">Доступ к курсу и материалам — 12 месяцев</li>
+            <li class="marked">Полные видеозаписи знакомств Рамзеса с разборами: </br>- дневная игра </br>- ночная игра </br>- свидания </br>- вызвоны </br></br>- в разных странах </br>- на русском и английском языках (12+ часов)</li>
+            <li class="marked">Доступ к курсу и всем материалам на 12 месяцев</li>
             <li class="detail-heading">Поддержка и практика</li>
             <li class="marked muted-item">Мини-группа из 5 человек с сопровождением тренера проекта</li>
             <li class="marked muted-item">Отдельный чат пятёрки с тренером проекта</li>
             <li class="marked muted-item">Проверка домашних заданий</li>
             <li class="marked muted-item">Мастермайнды раз в 2 недели с тренером пятёрки</li>
-            <li class="detail-muted">Личная сессия по убеждениям — не входит</li>
+            <li class="detail-muted detail-struck-s2">1 личная сессия с Рамзесом для проработки убеждений</li>
             <li class="common-item">Общий чат участников</li>
             <li class="common-item">Групповые онлайн-разборы с Рамзесом раз в месяц для всех участников потока</li>
-            <li class="marked muted-item">Подписка VIBE AI на 6 месяцев</li>
+            <li class="marked muted-item">Подписка на 6 месяцев на ИИ для переписок VIBE AI</li>
             <li class="detail-meta"></li>
           </ul>
           <ul>
@@ -2374,7 +2473,7 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
           </ul>
         </div>
         <button type="button" class="tier-cta tier-compare-btn" onclick="openTierModal()">Сравнить тарифы</button>
-        <a href="#form" class="tier-cta" onclick="selectTier('Сопровождение в пятёрках'); scrollToForm(); return false;">Узнать на созвоне</a>
+        <a href="#form" class="tier-cta" onclick="selectTier('Сопровождение в пятёрках'); scrollToForm(); return false;">ОСТАВИТЬ ЗАЯВКУ</a>
       </div>
 
       <div class="tier s3 featured hud">
@@ -2383,7 +2482,7 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
           <div class="tier-index"><span class="tier-number">03</span></div>
           <div class="tname">Мастер-группа с Рамзесом</div>
           <div class="tseats">10 мест</div>
-          <div class="tpitch">Учишься напрямую у автора.</div>
+          <div class="tpitch">С обратной связью и поддержкой Рамзеса по ходу обучения</div>
           <ul class="tier-details-desktop">
             <li class="detail-heading">Обучение и материалы</li>
             <li class="common-item">6 основных модулей MAN UP! — более 30 часов уроков</li>
@@ -2391,8 +2490,8 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
             <li class="common-item">Мини-курс по уверенности в себе I AM</li>
             <li class="marked">Курс по онлайн-дэйтингу и перепискам Texting Ninja</li>
             <li class="common-item">Дополнительные конспекты и другие материалы</li>
-            <li class="marked">Полные видеозаписи знакомств с разборами (12+ часов): дневная и ночная игра, свидания, вызвоны; разные страны, русский и английский языки</li>
-            <li class="marked">Доступ к курсу и материалам — 18 месяцев</li>
+            <li class="marked">Полные видеозаписи знакомств Рамзеса с разборами: </br>- дневная игра </br>- ночная игра </br>- свидания </br>- вызвоны </br></br>- в разных странах </br>- на русском и английском языках (12+ часов)</li>
+            <li class="marked">Доступ к курсу и всем материалам на 18 месяцев</li>
             <li class="detail-heading">Поддержка и практика</li>
             <li class="marked">Мини-группа из 5 человек с сопровождением Рамзеса</li>
             <li class="marked">Отдельный чат мастер-группы с Рамзесом</li>
@@ -2401,7 +2500,7 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
             <li class="marked">1 личная сессия с Рамзесом для проработки убеждений</li>
             <li class="common-item">Общий чат участников</li>
             <li class="common-item">Групповые онлайн-разборы с Рамзесом раз в месяц для всех участников потока</li>
-            <li class="marked">Подписка VIBE AI на 6 месяцев</li>
+            <li class="marked">Подписка на 6 месяцев на ИИ для переписок VIBE AI</li>
             <li class="detail-meta"></li>
           </ul>
           <ul>
@@ -2411,17 +2510,17 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
           </ul>
         </div>
         <button type="button" class="tier-cta tier-compare-btn" onclick="openTierModal()">Сравнить тарифы</button>
-        <a href="#form" class="tier-cta" onclick="selectTier('Мастер-группа с Рамзесом'); scrollToForm(); return false;">Узнать на созвоне</a>
+        <a href="#form" class="tier-cta" onclick="selectTier('Мастер-группа с Рамзесом'); scrollToForm(); return false;">ОСТАВИТЬ ЗАЯВКУ</a>
       </div>
 
-      <button type="button" class="tier-show-all" onclick="toggleAllTiers()"><span>ПОСМОТРЕТЬ ВСЕ ТАРИФЫ</span></button>
+      <button type="button" class="tier-show-all" onclick="toggleAllTiers()"><span class="tier-show-all-mobile"></span><span class="tier-show-all-desktop">СПЕЦИАЛЬНЫЕ ФОРМАТЫ</span></button>
 
       <div class="tier s4">
         <div>
           <div class="tier-index"><span class="tier-number">04</span></div>
-          <div class="tname">Буткемп в Москве</div>
+          <div class="tname">БУТКЕМП</div>
           <div class="tseats">4 места</div>
-          <div class="tpitch">Результат за недели, вживую.</div>
+          <div class="tpitch">Групповое наставничество с Рамзесом вживую</div>
           <ul class="tier-details-desktop">
             <li class="detail-heading">Обучение и материалы</li>
             <li class="common-item">6 основных модулей MAN UP! — более 30 часов уроков</li>
@@ -2429,8 +2528,8 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
             <li class="common-item">Мини-курс по уверенности в себе I AM</li>
             <li class="marked">Курс по онлайн-дэйтингу и перепискам Texting Ninja</li>
             <li class="common-item">Дополнительные конспекты и другие материалы</li>
-            <li class="marked">Полные видеозаписи знакомств с разборами (12+ часов): дневная и ночная игра, свидания, вызвоны; разные страны, русский и английский языки</li>
-            <li class="marked">Неограниченный доступ к курсу и всем материалам</li>
+            <li class="marked">Полные видеозаписи знакомств Рамзеса с разборами: </br>- дневная игра </br>- ночная игра </br>- свидания </br>- вызвоны </br></br>- в разных странах </br>- на русском и английском языках (12+ часов)</li>
+            <li class="marked"><span class="tariff-duration-red">Неограниченный доступ к курсу и всем материалам</span></li>
             <li class="detail-heading">Поддержка и практика</li>
             <li class="marked">Мини-группа из 3–4 человек с сопровождением Рамзеса вживую</li>
             <li class="marked">Отдельный чат буткемпа с Рамзесом</li>
@@ -2440,7 +2539,7 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
             <li class="common-item">Общий чат участников</li>
             <li class="common-item">Групповые онлайн-разборы с Рамзесом раз в месяц для всех участников потока</li>
             <li class="marked">Подписка VIBE AI на 6 месяцев</li>
-            <li class="marked">Групповое живое наставничество в Москве</li>
+            <li class="marked">Минимум 3 групповых выхода в поля еженедельно: улицы, кафе, ночные клубы.</br> Буткемпы проходят периодически в разных городах мира.</br> Локации, даты проведения и открытие набора определяются графиком проекта и количеством запросов.</br></br>Участие — только после личного интервью с Рамзесом.</li>
             <li class="marked">3 групповых выхода в поля еженедельно: улицы, кафе, ночные клубы</li>
             <li class="marked">Участие — только через интервью с Рамзесом</li>
           </ul>
@@ -2450,7 +2549,7 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
             <li>Безлимитная обратная связь весь месяц</li>
           </ul>
         </div>
-        <a href="#form" class="tier-cta" onclick="selectTier('Буткемп в Москве'); scrollToForm(); return false;">Узнать на созвоне</a>
+        <a href="#form" class="tier-cta" onclick="selectTier('Буткемп в Москве'); scrollToForm(); return false;">УТОЧНИТЬ ДОСТУПНОСТЬ</a>
       </div>
 
       <div class="tier s5">
@@ -2458,7 +2557,7 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
           <div class="tier-index"><span class="tier-number">05</span></div>
           <div class="tname">Индива 1-на-1</div>
           <div class="tseats">1 место</div>
-          <div class="tpitch">Рамзес ведёт лично, как тренер и психолог.</div>
+          <div class="tpitch">Персональная работа с Рамзесом 1 на 1 вживую как с тренером и психологом</div>
           <ul class="tier-details-desktop">
             <li class="detail-heading">Обучение и материалы</li>
             <li class="common-item">6 основных модулей MAN UP! — более 30 часов уроков</li>
@@ -2466,18 +2565,18 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
             <li class="common-item">Мини-курс по уверенности в себе I AM</li>
             <li class="marked">Курс по онлайн-дэйтингу и перепискам Texting Ninja</li>
             <li class="common-item">Дополнительные конспекты и другие материалы</li>
-            <li class="marked">Полные видеозаписи знакомств с разборами (12+ часов): дневная и ночная игра, свидания, вызвоны; разные страны, русский и английский языки</li>
-            <li class="marked">Неограниченный доступ к курсу и всем материалам</li>
+            <li class="marked">Полные видеозаписи знакомств Рамзеса с разборами: </br>- дневная игра </br>- ночная игра </br>- свидания </br>- вызвоны </br></br>- в разных странах </br>- на русском и английском языках (12+ часов)</li>
+            <li class="marked"><span class="tariff-duration-red">Неограниченный доступ к курсу и всем материалам</span></li>
             <li class="detail-heading">Поддержка и практика</li>
             <li class="marked">Индивидуальная работа с Рамзесом 1 на 1</li>
             <li class="marked">Отдельный чат с Рамзесом для индивидуальной работы</li>
             <li class="marked">Развёрнутая обратная связь от Рамзеса по домашним заданиям</li>
-            <li class="marked">Индивидуальная обратная связь от Рамзеса в течение 6 недель</li>
-            <li class="marked">Неограниченная поддержка по работе с убеждениями, страхами и негативными паттернами в течение 6 недель</li>
+            <li class="marked">Индивидуальная обратная связь от Рамзеса в течении 6 недель</li>
+            <li class="marked">Неограниченная поддержка от Рамзеса касательно работы с убеждениями, страхами, негативными паттернами в течении 6 недель</li>
             <li class="common-item">Общий чат участников</li>
             <li class="common-item">Групповые онлайн-разборы с Рамзесом раз в месяц для всех участников потока</li>
             <li class="marked">Подписка VIBE AI на 6 месяцев</li>
-            <li class="marked">Полное живое ведение Рамзесом 1 на 1 как тренером и психологом</li>
+            <li class="marked">Совместные выходы 1 на 1 днём, ночью и на мероприятиях — до 3 раз в неделю.</br></br>Индивидуальная работа доступна ограниченно и формируется под конкретный запрос.</br>Сроки и интенсивность сопровождения согласовываются персонально.</li>
             <li class="marked">Совместные выходы 1 на 1 днём, ночью и на мероприятиях 3 раза в неделю; частота подбирается индивидуально</li>
             <li class="marked">Участие — только через интервью с Рамзесом</li>
           </ul>
@@ -2487,11 +2586,12 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
             <li>Безлимитная поддержка 6 недель</li>
           </ul>
         </div>
-        <a href="#form" class="tier-cta" onclick="selectTier('Индива 1-на-1'); scrollToForm(); return false;">Узнать на созвоне</a>
+        <a href="#form" class="tier-cta" onclick="selectTier('Индива 1-на-1'); scrollToForm(); return false;">УТОЧНИТЬ ДОСТУПНОСТЬ</a>
       </div>
     </div>
 
-    <p class="scarcity">Мест немного — особенно в буткемпе (4) и индиве (1). Точное наличие уточняем на созвоне.</p>
+    <p class="scarcity">Количество мест на каждом формате ограничено. Доступность буткемпа и индивидуальной работы уточняется отдельно.</p>
+    <p class="special-formats-note">Доступность, даты и условия уточняются индивидуально</p>
     <div class="compare-row">
       <button class="btn btn-outline" onclick="openTierModal()">Сравнить тарифы</button>
     </div>
@@ -2644,7 +2744,7 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
         <tr><td>Курс по онлайн-дэйтингу и перепискам<br>Texting Ninja</td><td class="no">—</td><td class="no">—</td><td class="mark-cell s3">Курс по онлайн-дэйтингу и перепискам<br>Texting Ninja</td><td class="mark-cell s4">Курс по онлайн-дэйтингу и перепискам<br>Texting Ninja</td><td class="mark-cell s5">Курс по онлайн-дэйтингу и перепискам<br>Texting Ninja</td></tr>
         <tr><td>Дополнительные конспекты и другие материалы</td><td class="common">✓</td><td class="common">✓</td><td class="common">✓</td><td class="common">✓</td><td class="common">✓</td></tr>
         <tr><td>Фрагменты / полные видеозаписи знакомств Рамзеса:</td><td>Фрагменты<br><br>- дневная игра<br>- ночная игра<br>- свидания<br>- вызвоны<br><br>- в разных странах<br>- на русском и английском языках</td><td class="mark-cell s2">Полные видеозаписи знакомств Рамзеса с разборами:<br><br>- дневная игра<br>- ночная игра<br>- свидания<br>- вызвоны<br><br>- в разных странах<br>- на русском и английском языках<br><br>(12+ часов)</td><td class="mark-cell s3">Полные видеозаписи знакомств Рамзеса с разборами:<br><br>- дневная игра<br>- ночная игра<br>- свидания<br>- вызвоны<br><br>- в разных странах<br>- на русском и английском языках<br><br>(12+ часов)</td><td class="mark-cell s4">Полные видеозаписи знакомств Рамзеса с разборами:<br><br>- дневная игра<br>- ночная игра<br>- свидания<br>- вызвоны<br><br>- в разных странах<br>- на русском и английском языках<br><br>(12+ часов)</td><td class="mark-cell s5">Полные видеозаписи знакомств Рамзеса с разборами:<br><br>- дневная игра<br>- ночная игра<br>- свидания<br>- вызвоны<br><br>- в разных странах<br>- на русском и английском языках<br><br>(12+ часов)</td></tr>
-        <tr><td>Доступ к курсу и всем материалам</td><td class="mark-cell s1">9 месяцев</td><td class="mark-cell s2">12 месяцев</td><td class="mark-cell s3">18 месяцев</td><td class="mark-cell s4">Неограниченный доступ к курсу и всем материалам</td><td class="mark-cell s5">Неограниченный доступ к курсу и всем материалам</td></tr>
+        <tr><td>Доступ к курсу и всем материалам</td><td class="mark-cell s1">9 месяцев</td><td class="mark-cell s2">12 месяцев</td><td class="mark-cell s3">18 месяцев</td><td class="mark-cell s4"><span class="tariff-duration-red">Неограниченный доступ к курсу и всем материалам</span></td><td class="mark-cell s5"><span class="tariff-duration-red">Неограниченный доступ к курсу и всем материалам</span></td></tr>
         <tr><td>Мини-группа</td><td class="no">—</td><td class="mark-cell s2">Мини-группа (5 человек) с сопровождением тренера проекта</td><td class="mark-cell s3">Мини-группа (5 человек) с сопровождением Рамзеса</td><td class="mark-cell s4">Мини-группа (3-4 человека) с сопровождением Рамзеса вживую</td><td class="mark-cell s5">Индивидуальная работа с Рамзесом 1 на 1</td></tr>
         <tr><td>Отдельный чат</td><td class="no">—</td><td class="mark-cell s2">Отдельный чат пятёрки с тренером проекта</td><td class="mark-cell s3">Отдельный чат мастер-группы с Рамзесом</td><td class="mark-cell s4">Отдельный чат буткемпа с Рамзесом</td><td class="mark-cell s5">Отдельный чат с Рамзесом для индивидуальной работы</td></tr>
         <tr><td>Проверка домашних заданий</td><td class="no">—</td><td class="mark-cell s2">Проверка домашних заданий</td><td class="mark-cell s3">Развёрнутая обратная связь от Рамзеса по домашним заданиям</td><td class="mark-cell s4">Развёрнутая обратная связь от Рамзеса по домашним заданиям</td><td class="mark-cell s5">Развёрнутая обратная связь от Рамзеса по домашним заданиям</td></tr>
@@ -2964,28 +3064,49 @@ function alignTierDetailRows(){
   if(!window.matchMedia('(min-width:861px)').matches) return;
   const tiersWrap = document.querySelector('.tiers');
   if(!tiersWrap) return;
-  const tiers = Array.from(tiersWrap.querySelectorAll(':scope > .tier')).filter(t => getComputedStyle(t).display !== 'none');
-  if(!tiers.length) return;
-  const lists = tiers.map(t => t.querySelector('.tier-details-desktop'));
-  const maxRows = Math.max(...lists.map(list => list ? list.children.length : 0));
 
-  // Сбрасываем предыдущие высоты, затем для каждой строки берём высоту самого длинного пункта.
+  // Считаем высоту по всем 5 тарифам, даже когда 4-й и 5-й скрыты.
+  const wasExpanded = tiersWrap.classList.contains('show-all');
+  if(!wasExpanded) tiersWrap.classList.add('show-all');
+
+  const tiers = Array.from(tiersWrap.querySelectorAll(':scope > .tier'));
+  const lists = tiers.map(t => t.querySelector('.tier-details-desktop')).filter(Boolean);
+  if(!lists.length){
+    if(!wasExpanded) tiersWrap.classList.remove('show-all');
+    return;
+  }
+
+  // Убираем старые inline-высоты и даём каждой строке определить свою
+  // естественную высоту. Затем для каждой позиции берём максимум по всем тарифам.
   lists.forEach(list => {
-    if(!list) return;
-    Array.from(list.children).forEach(li => { li.style.height = ''; li.style.minHeight = ''; });
+    list.style.gridTemplateRows = 'repeat(17, auto)';
+    Array.from(list.children).forEach(li => {
+      li.style.height = '';
+      li.style.minHeight = '';
+    });
   });
+
+  const maxRows = Math.max(...lists.map(list => list.children.length));
+  const rowHeights = [];
 
   for(let row = 0; row < maxRows; row++){
     let maxHeight = 0;
-    const items = [];
     lists.forEach(list => {
-      const li = list && list.children[row];
+      const li = list.children[row];
       if(!li) return;
-      items.push(li);
       maxHeight = Math.max(maxHeight, li.getBoundingClientRect().height);
     });
-    items.forEach(li => { li.style.height = Math.ceil(maxHeight) + 'px'; });
+    rowHeights[row] = Math.ceil(maxHeight);
   }
+
+  lists.forEach(list => {
+    Array.from(list.children).forEach((li, row) => {
+      if(rowHeights[row]) li.style.height = rowHeights[row] + 'px';
+    });
+    list.style.gridTemplateRows = rowHeights.map(h => h + 'px').join(' ');
+  });
+
+  if(!wasExpanded) tiersWrap.classList.remove('show-all');
 }
 
 function toggleAllTiers(){
@@ -3459,7 +3580,7 @@ counters.forEach(c=>countIo.observe(c));
     text-align:center;
   }
   #tierModal .mc-cell.common{font-size:14px !important;color:#fff !important;}
-  #tierModal .mc-cell.no{color:#fff !important;opacity:.45;}
+  #tierModal .mc-cell.no{color:#fff !important;opacity:.3375;}
   #tierModal .mc-cell.s2,
   #tierModal .mc-cell.s3,
   #tierModal .mc-cell.s4,
@@ -3502,4 +3623,11 @@ counters.forEach(c=>countIo.observe(c));
   #tierModal .mc-label{font-size:9px !important;padding:7px 4px !important;}
   #tierModal .mc-head-label{font-size:7px !important;padding:4px 3px !important;}
 }
+    @media(min-width:861px){
+      /* Больше нижнего воздуха у каждого пункта описания тарифов на ПК,
+         чтобы текст не выглядел обрезанным и соседние строки не слипались. */
+      .tier-details-desktop li{
+        padding-bottom:26px!important;
+      }
+    }
 </style>
