@@ -749,7 +749,7 @@ box-shadow:0 0 40px var(--red-glow-soft) inset, 0 20px 40px rgba(0,0,0,.4);
 .tier:hover .tier-cta,
 .tier.featured:hover .tier-cta{border-color:var(--red);color:var(--red);}
 .tier:hover .tier-cta:hover,
-.tier.featured:hover .tier-cta:hover{background:var(--red);color:#080808;}
+.tier.featured:hover .tier-cta:hover{background:var(--red);color:var(--white)!important;}
 .tier-cta:hover{border-color:var(--red);color:var(--red);box-shadow:0 0 16px var(--red-glow-soft);}
 
 /* Desktop: full tariff breakdown. Mobile keeps the original compact card content. */
@@ -793,6 +793,7 @@ box-shadow:0 0 40px var(--red-glow-soft) inset, 0 20px 40px rgba(0,0,0,.4);
   }
   .tier-details-desktop li:first-child{border-top:0;}
   .tier-details-desktop li.marked{color:var(--red);}
+  .tier-details-desktop li.access-white{color:var(--white)!important;}
   .tier-details-desktop li.unlimited-access{color:var(--red)!important;}
   .tier-details-desktop li.muted-item{color:#d2d2d6;}
   .tier-details-desktop li.common-item::before{content:'✓';position:absolute;left:5px;top:9px;color:#eee;font-size:12px;}
@@ -2075,6 +2076,15 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
   }
 }
 </style>
+
+<style id="tariff-descriptions-white">
+/* Описание всех 5 тарифов — белым */
+.tiers .tier .tpitch,
+.tiers .tier .tpitch * {
+  color: #fff !important;
+}
+</style>
+
 </head>
 <body>
 
@@ -2169,7 +2179,7 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
       <div class="card ab-card">
         <div>
           <span class="tag">[ 01 ]</span>
-          <h3>Ступор при знакомстве </br></br></br></h3>
+          <h3>Ступор при знакомстве </br></br></h3>
           <div class="ab-block ab-now">
             <span class="ab-label"><span class="dot"></span>Сейчас</span>
             <p>Видишь девушку, которая нравится — начинаешь тупить, ждать её сигналов и искать идеальный момент.</p>
@@ -2184,7 +2194,7 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
       <div class="card ab-card">
         <div>
           <span class="tag">[ 02 ]</span>
-          <h3>Результаты есть </br> пока ты в форме </br>и от девушки не сносит голову</h3>
+          <h3>Результаты есть пока ты в форме </br>и от девушки не сносит голову</h3>
           <div class="ab-block ab-now">
             <span class="ab-label"><span class="dot"></span>Сейчас</span>
             <p>С одними всё легко, но стоит просесть по состоянию или сильно залипнуть на девушку — начинаешь сыпаться.</p>
@@ -2199,7 +2209,7 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
       <div class="card ab-card">
         <div>
           <span class="tag">[ 03 ]</span>
-          <h3>После долгих отношений / брака</br></br></br></h3>
+          <h3>После долгих отношений / брака</br></br></h3>
           <div class="ab-block ab-now">
             <span class="ab-label"><span class="dot"></span>Сейчас</span>
             <p>Отвык от общения с новыми женщинами и не понимаешь, как снова начать знакомиться без кринжа и старых сценариев.</p>
@@ -2307,7 +2317,7 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
     <div class="sec-head">
       <span class="mono eyebrow">04 // программа</span>
       <h2>6 модулей</h2>
-      <p>Более 30 часов уроков. Каждый модуль — новый уровень контроля. Нажми на модуль, чтобы увидеть подробности.</p>
+      <p>Более 30 часов уроков. Каждый модуль — новый уровень контроля. </br>Нажми на модуль, чтобы увидеть подробности.</p>
     </div>
     <div class="modules-hex-wrap">
       <svg class="hex-outline" viewBox="0 0 400 400" aria-hidden="true">
@@ -2327,36 +2337,36 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
           <div class="hex-module module m1" onclick="openPolicy('module-1')">
             <span class="mnum"><span class="mlabel">Модуль</span><span class="mnumber">01</span></span>
             <h3>Опора на себя</h3>
-            <p>Режим, дисциплина, мышление и личные цели</p><button class="hex-more" type="button" onclick="openPolicy('module-1');event.stopPropagation();">Открыть модуль</button>
+            <p>Режим, дисциплина, привычки, убеждения и личные цели</p><button class="hex-more" type="button" onclick="openPolicy('module-1');event.stopPropagation();">Открыть модуль</button>
           </div>
           <div class="hex-module module m4" onclick="openPolicy('module-4')">
             <span class="mnum"><span class="mlabel">Модуль</span><span class="mnumber">04</span></span>
             <h3>Цифровой мост</h3>
-            <p>Переписка и созвоны до реального свидания</p><button class="hex-more" type="button" onclick="openPolicy('module-4');event.stopPropagation();">Открыть модуль</button>
+            <p>Профиль, переписки, звонки и выход на свидание</p><button class="hex-more" type="button" onclick="openPolicy('module-4');event.stopPropagation();">Открыть модуль</button>
           </div>
         </div>
         <div class="hex-col offset">
           <div class="hex-module module m2" onclick="openPolicy('module-2')">
             <span class="mnum"><span class="mlabel">Модуль</span><span class="mnumber">02</span></span>
             <h3>Внутри женской головы</h3>
-            <p>Влечение, женские проверки и типы девушек</p><button class="hex-more" type="button" onclick="openPolicy('module-2');event.stopPropagation();">Открыть модуль</button>
+            <p>Женская природа и психология, типы девушек, работа с манипуляциями и структура соблазнения</p><button class="hex-more" type="button" onclick="openPolicy('module-2');event.stopPropagation();">Открыть модуль</button>
           </div>
           <div class="hex-module module m5" onclick="openPolicy('module-5')">
             <span class="mnum"><span class="mlabel">Модуль</span><span class="mnumber">05</span></span>
             <h3>Свидания как кино</h3>
-            <p>Сценарии свиданий, эмоции, близость и атмосфера</p><button class="hex-more" type="button" onclick="openPolicy('module-5');event.stopPropagation();">Открыть модуль</button>
+            <p>Сценарии свиданий, эмоции, локации и прикосновения</p><button class="hex-more" type="button" onclick="openPolicy('module-5');event.stopPropagation();">Открыть модуль</button>
           </div>
         </div>
         <div class="hex-col">
           <div class="hex-module module m3" onclick="openPolicy('module-3')">
             <span class="mnum"><span class="mlabel">Модуль</span><span class="mnumber">03</span></span>
             <h3>«Я решил — я подошёл»</h3>
-            <p>Знакомства, язык тела и уверенная подача</p><button class="hex-more" type="button" onclick="openPolicy('module-3');event.stopPropagation();">Открыть модуль</button>
+            <p>Знакомства, невербалика и развитие общения в любых ситуациях и контекстах</p><button class="hex-more" type="button" onclick="openPolicy('module-3');event.stopPropagation();">Открыть модуль</button>
           </div>
           <div class="hex-module module m6" onclick="openPolicy('module-6')">
             <span class="mnum"><span class="mlabel">Модуль</span><span class="mnumber">06</span></span>
             <h3>Уединение и секс</h3>
-            <p>Сближение, прелюдия, сомнения и забота после</p><button class="hex-more" type="button" onclick="openPolicy('module-6');event.stopPropagation();">Открыть модуль</button>
+            <p>Переход к сближению, прелюдия, секс и что делать после</p><button class="hex-more" type="button" onclick="openPolicy('module-6');event.stopPropagation();">Открыть модуль</button>
           </div>
         </div>
       </div>
@@ -2375,7 +2385,7 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
       <ul class="outcomes">
         <li><span class="idx hex-icon">01</span><span>Вернёшь опору на себя, границы и внутренний стержень</span></li>
         <li><span class="idx hex-icon">02</span><span>Сможешь знакомиться, когда сам захочешь — независимо от состояния, сигналов девушки и обстоятельств</span></li>
-        <li><span class="idx hex-icon">03</span><span>Будешь понимать, что делать на каждом этапе общения, и управлять его развитием</span></li>
+        <li><span class="idx hex-icon">03</span><span>Будешь понимать, что делать на каждом этапе общения и управлять его развитием</span></li>
         <li><span class="idx hex-icon">04</span><span>Сможешь выбирать девушек красивее, интереснее и ближе тебе — а не то, что само идёт в руки</span></li>
         <li><span class="idx hex-icon">05</span><span>Вернёшь драйв, азарт и вкус к жизни через знакомства, флирт и новые приключения</span></li>
       </ul>
@@ -2492,7 +2502,7 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
             <li class="detail-muted detail-struck">Курс по онлайн-дэйтингу и перепискам Texting Ninja</li>
             <li class="common-item">Дополнительные конспекты и другие материалы</li>
             <li>Фрагменты видеозаписей знакомств Рамзеса: </br>- дневная игра </br>- ночная игра </br>- свидания </br>- вызвоны </br></br>- в разных странах </br>- на русском и английском языках</li>
-            <li class="marked">Доступ к курсу и всем материалам на 9 месяцев</li>
+            <li class="marked access-white">Доступ к курсу и всем материалам на 9 месяцев</li>
             <li class="detail-heading">Поддержка и практика</li>
             <li class="detail-muted detail-struck">Мини-группа (5 человек) с сопровождением тренера проекта</li>
             <li class="detail-muted detail-struck">Отдельный чат пятёрки с тренером проекта</li>
@@ -2526,8 +2536,8 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
             <li class="common-item">Мини-курс по уверенности в себе I AM</li>
             <li class="detail-muted detail-struck-s2">Курс по онлайн-дэйтингу и перепискам Texting Ninja</li>
             <li class="common-item">Дополнительные конспекты и другие материалы</li>
-            <li class="marked">Полные видеозаписи знакомств Рамзеса с разборами: </br>- дневная игра </br>- ночная игра </br>- свидания </br>- вызвоны </br></br>- в разных странах </br>- на русском и английском языках (12+ часов)</li>
-            <li class="marked">Доступ к курсу и всем материалам на 12 месяцев</li>
+            <li class="marked access-white">Полные видеозаписи знакомств Рамзеса с разборами: </br>- дневная игра </br>- ночная игра </br>- свидания </br>- вызвоны </br></br>- в разных странах </br>- на русском и английском языках (12+ часов)</li>
+            <li class="marked access-white">Доступ к курсу и всем материалам на 12 месяцев</li>
             <li class="detail-heading">Поддержка и практика</li>
             <li class="marked muted-item">Мини-группа из 5 человек с сопровождением тренера проекта</li>
             <li class="marked muted-item">Отдельный чат пятёрки с тренером проекта</li>
@@ -2563,14 +2573,14 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
             <li class="common-item">Мини-курс по уверенности в себе I AM</li>
             <li class="marked">Курс по онлайн-дэйтингу и перепискам Texting Ninja</li>
             <li class="common-item">Дополнительные конспекты и другие материалы</li>
-            <li class="marked">Полные видеозаписи знакомств Рамзеса с разборами: </br>- дневная игра </br>- ночная игра </br>- свидания </br>- вызвоны </br></br>- в разных странах </br>- на русском и английском языках (12+ часов)</li>
-            <li class="marked">Доступ к курсу и всем материалам на 18 месяцев</li>
+            <li class="marked access-white">Полные видеозаписи знакомств Рамзеса с разборами: </br>- дневная игра </br>- ночная игра </br>- свидания </br>- вызвоны </br></br>- в разных странах </br>- на русском и английском языках (12+ часов)</li>
+            <li class="marked access-white">Доступ к курсу и всем материалам на 18 месяцев</li>
             <li class="detail-heading">Поддержка и практика</li>
-            <li class="marked">Мини-группа из 5 человек с сопровождением Рамзеса</li>
-            <li class="marked">Отдельный чат мастер-группы с Рамзесом</li>
-            <li class="marked">Развёрнутая обратная связь от Рамзеса по домашним заданиям</li>
-            <li class="marked">Мастермайнды раз в 2 недели с Рамзесом</li>
-            <li class="marked">1 личная сессия с Рамзесом для проработки убеждений</li>
+            <li class="marked access-white">Мини-группа из 5 человек с сопровождением Рамзеса</li>
+            <li class="marked access-white">Отдельный чат мастер-группы с Рамзесом</li>
+            <li class="marked access-white">Развёрнутая обратная связь от Рамзеса по домашним заданиям</li>
+            <li class="marked access-white">Мастермайнды раз в 2 недели с Рамзесом</li>
+            <li class="marked access-white">1 личная сессия с Рамзесом для проработки убеждений</li>
             <li class="common-item">Общий чат участников</li>
             <li class="common-item">Групповые онлайн-разборы с Рамзесом раз в месяц для всех участников потока</li>
             <li class="marked">Подписка на 6 месяцев на ИИ для переписок VIBE AI</li>
@@ -2602,20 +2612,18 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
             <li class="common-item">Мини-курс по уверенности в себе I AM</li>
             <li class="marked">Курс по онлайн-дэйтингу и перепискам Texting Ninja</li>
             <li class="common-item">Дополнительные конспекты и другие материалы</li>
-            <li class="marked">Полные видеозаписи знакомств Рамзеса с разборами: </br>- дневная игра </br>- ночная игра </br>- свидания </br>- вызвоны </br></br>- в разных странах </br>- на русском и английском языках (12+ часов)</li>
+            <li class="marked access-white">Полные видеозаписи знакомств Рамзеса с разборами: </br>- дневная игра </br>- ночная игра </br>- свидания </br>- вызвоны </br></br>- в разных странах </br>- на русском и английском языках (12+ часов)</li>
             <li class="marked unlimited-access">Неограниченный доступ к курсу и всем материалам</li>
             <li class="detail-heading">Поддержка и практика</li>
-            <li class="marked">Мини-группа из 3–4 человек с сопровождением Рамзеса вживую</li>
+            <li class="marked access-white">Мини-группа из 3–4 человек с сопровождением Рамзеса вживую</li>
             <li class="marked">Отдельный чат буткемпа с Рамзесом</li>
-            <li class="marked">Развёрнутая обратная связь от Рамзеса по домашним заданиям</li>
-            <li class="marked">Неограниченная обратная связь от Рамзеса в течение месяца</li>
+            <li class="marked access-white">Развёрнутая обратная связь от Рамзеса по домашним заданиям</li>
+            <li class="marked access-white">Неограниченная обратная связь от Рамзеса в течение месяца</li>
             <li class="marked">1 личная сессия с Рамзесом для проработки убеждений</li>
             <li class="common-item">Общий чат участников</li>
             <li class="common-item">Групповые онлайн-разборы с Рамзесом раз в месяц для всех участников потока</li>
             <li class="marked">Подписка VIBE AI на 6 месяцев</li>
-            <li class="marked">Минимум 3 групповых выхода в поля еженедельно: улицы, кафе, ночные клубы.</br> Буткемпы проходят периодически в разных городах мира.</br> Локации, даты проведения и открытие набора определяются графиком проекта и количеством запросов.</br></br>Участие — только после личного интервью с Рамзесом.</li>
-            <li class="marked">3 групповых выхода в поля еженедельно: улицы, кафе, ночные клубы</li>
-            <li class="marked">Участие — только через интервью с Рамзесом</li>
+            <li class="marked access-white">Минимум 3 групповых выхода в поля еженедельно: улицы, кафе, ночные клубы.</br> </br>Буткемпы проходят периодически в разных городах мира.</br> </br>Локации, даты проведения и открытие набора определяются графиком проекта и количеством запросов.</br></br>Участие — только после личного интервью с Рамзесом.</li>
           </ul>
           <ul>
             <li>Живое обучение, группа 3-4 человека</li>
@@ -2640,20 +2648,18 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
             <li class="common-item">Мини-курс по уверенности в себе I AM</li>
             <li class="marked">Курс по онлайн-дэйтингу и перепискам Texting Ninja</li>
             <li class="common-item">Дополнительные конспекты и другие материалы</li>
-            <li class="marked">Полные видеозаписи знакомств Рамзеса с разборами: </br>- дневная игра </br>- ночная игра </br>- свидания </br>- вызвоны </br></br>- в разных странах </br>- на русском и английском языках (12+ часов)</li>
+            <li class="marked access-white">Полные видеозаписи знакомств Рамзеса с разборами: </br>- дневная игра </br>- ночная игра </br>- свидания </br>- вызвоны </br></br>- в разных странах </br>- на русском и английском языках (12+ часов)</li>
             <li class="marked unlimited-access">Неограниченный доступ к курсу и всем материалам</li>
             <li class="detail-heading">Поддержка и практика</li>
-            <li class="marked">Индивидуальная работа с Рамзесом 1 на 1</li>
+            <li class="marked unlimited-access">Индивидуальная работа с Рамзесом 1 на 1</li>
             <li class="marked">Отдельный чат с Рамзесом для индивидуальной работы</li>
-            <li class="marked">Развёрнутая обратная связь от Рамзеса по домашним заданиям</li>
-            <li class="marked">Индивидуальная обратная связь от Рамзеса в течении 6 недель</li>
-            <li class="marked">Неограниченная поддержка от Рамзеса касательно работы с убеждениями, страхами, негативными паттернами в течении 6 недель</li>
+            <li class="marked unlimited-access">Развёрнутая обратная связь от Рамзеса по домашним заданиям</li>
+            <li class="marked unlimited-access">Индивидуальная обратная связь от Рамзеса в течении 6 недель</li>
+            <li class="marked unlimited-access">Неограниченная поддержка от Рамзеса касательно работы с убеждениями, страхами, негативными паттернами в течении 6 недель</li>
             <li class="common-item">Общий чат участников</li>
             <li class="common-item">Групповые онлайн-разборы с Рамзесом раз в месяц для всех участников потока</li>
             <li class="marked">Подписка VIBE AI на 6 месяцев</li>
-            <li class="marked">Совместные выходы 1 на 1 днём, ночью и на мероприятиях — до 3 раз в неделю.</br></br>Индивидуальная работа доступна ограниченно и формируется под конкретный запрос.</br>Сроки и интенсивность сопровождения согласовываются персонально.</li>
-            <li class="marked">Совместные выходы 1 на 1 днём, ночью и на мероприятиях 3 раза в неделю; частота подбирается индивидуально</li>
-            <li class="marked">Участие — только через интервью с Рамзесом</li>
+            <li class="marked unlimited-access">Совместные выходы 1 на 1 днём, ночью и на мероприятиях — до 3 раз в неделю.</br></br>Индивидуальная работа доступна ограниченно и формируется под конкретный запрос.</br>Сроки и интенсивность сопровождения согласовываются персонально. </br></br>Участие — только через интервью с Рамзесом</li>
           </ul>
           <ul>
             <li>Личное наставничество с Рамзесом</li>
@@ -2721,10 +2727,10 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
     <div class="mc-row">
       <div class="mc-label">Фрагменты / полные видеозаписи знакомств Рамзеса</div>
       <div class="mc-cell">Фрагменты:<br><br>– дневная игра<br>– ночная игра<br>– свидания<br>– вызвоны<br><br>– в разных странах<br>– на русском и английском языках</div>
-      <div class="mc-cell s2">Полные видеозаписи знакомств Рамзеса с разборами:<br><br>– дневная игра<br>– ночная игра<br>– свидания<br>– вызвоны<br><br>– в разных странах<br>– на русском и английском языках<br><br>(12+ часов)</div>
-      <div class="mc-cell s3">Полные видеозаписи знакомств Рамзеса с разборами:<br><br>– дневная игра<br>– ночная игра<br>– свидания<br>– вызвоны<br><br>– в разных странах<br>– на русском и английском языках<br><br>(12+ часов)</div>
-      <div class="mc-cell s4">Полные видеозаписи знакомств Рамзеса с разборами:<br><br>– дневная игра<br>– ночная игра<br>– свидания<br>– вызвоны<br><br>– в разных странах<br>– на русском и английском языках<br><br>(12+ часов)</div>
-      <div class="mc-cell s5">Полные видеозаписи знакомств Рамзеса с разборами:<br><br>– дневная игра<br>– ночная игра<br>– свидания<br>– вызвоны<br><br>– в разных странах<br>– на русском и английском языках<br><br>(12+ часов)</div>
+      <div class="mc-cell s2 access-white">Полные видеозаписи знакомств Рамзеса с разборами:<br><br>– дневная игра<br>– ночная игра<br>– свидания<br>– вызвоны<br><br>– в разных странах<br>– на русском и английском языках<br><br>(12+ часов)</div>
+      <div class="mc-cell s3 access-white">Полные видеозаписи знакомств Рамзеса с разборами:<br><br>– дневная игра<br>– ночная игра<br>– свидания<br>– вызвоны<br><br>– в разных странах<br>– на русском и английском языках<br><br>(12+ часов)</div>
+      <div class="mc-cell s4 access-white">Полные видеозаписи знакомств Рамзеса с разборами:<br><br>– дневная игра<br>– ночная игра<br>– свидания<br>– вызвоны<br><br>– в разных странах<br>– на русском и английском языках<br><br>(12+ часов)</div>
+      <div class="mc-cell s5 access-white">Полные видеозаписи знакомств Рамзеса с разборами:<br><br>– дневная игра<br>– ночная игра<br>– свидания<br>– вызвоны<br><br>– в разных странах<br>– на русском и английском языках<br><br>(12+ часов)</div>
     </div>
     <div class="mc-row">
       <div class="mc-label">Доступ к курсу и всем материалам</div>
@@ -2817,7 +2823,7 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
         <tr><td>Мини-курс по уверенности в себе I AM</td><td class="common">✓</td><td class="common">✓</td><td class="common">✓</td><td class="common">✓</td><td class="common">✓</td></tr>
         <tr><td>Курс по онлайн-дэйтингу и перепискам<br>Texting Ninja</td><td class="no">—</td><td class="no">—</td><td class="mark-cell s3">Курс по онлайн-дэйтингу и перепискам<br>Texting Ninja</td><td class="mark-cell s4">Курс по онлайн-дэйтингу и перепискам<br>Texting Ninja</td><td class="mark-cell s5">Курс по онлайн-дэйтингу и перепискам<br>Texting Ninja</td></tr>
         <tr><td>Дополнительные конспекты и другие материалы</td><td class="common">✓</td><td class="common">✓</td><td class="common">✓</td><td class="common">✓</td><td class="common">✓</td></tr>
-        <tr><td>Фрагменты / полные видеозаписи знакомств Рамзеса:</td><td>Фрагменты<br><br>- дневная игра<br>- ночная игра<br>- свидания<br>- вызвоны<br><br>- в разных странах<br>- на русском и английском языках</td><td class="mark-cell s2">Полные видеозаписи знакомств Рамзеса с разборами:<br><br>- дневная игра<br>- ночная игра<br>- свидания<br>- вызвоны<br><br>- в разных странах<br>- на русском и английском языках<br><br>(12+ часов)</td><td class="mark-cell s3">Полные видеозаписи знакомств Рамзеса с разборами:<br><br>- дневная игра<br>- ночная игра<br>- свидания<br>- вызвоны<br><br>- в разных странах<br>- на русском и английском языках<br><br>(12+ часов)</td><td class="mark-cell s4">Полные видеозаписи знакомств Рамзеса с разборами:<br><br>- дневная игра<br>- ночная игра<br>- свидания<br>- вызвоны<br><br>- в разных странах<br>- на русском и английском языках<br><br>(12+ часов)</td><td class="mark-cell s5">Полные видеозаписи знакомств Рамзеса с разборами:<br><br>- дневная игра<br>- ночная игра<br>- свидания<br>- вызвоны<br><br>- в разных странах<br>- на русском и английском языках<br><br>(12+ часов)</td></tr>
+        <tr><td>Фрагменты / полные видеозаписи знакомств Рамзеса:</td><td>Фрагменты<br><br>- дневная игра<br>- ночная игра<br>- свидания<br>- вызвоны<br><br>- в разных странах<br>- на русском и английском языках</td><td class="mark-cell s2 access-white">Полные видеозаписи знакомств Рамзеса с разборами:<br><br>- дневная игра<br>- ночная игра<br>- свидания<br>- вызвоны<br><br>- в разных странах<br>- на русском и английском языках<br><br>(12+ часов)</td><td class="mark-cell s3 access-white">Полные видеозаписи знакомств Рамзеса с разборами:<br><br>- дневная игра<br>- ночная игра<br>- свидания<br>- вызвоны<br><br>- в разных странах<br>- на русском и английском языках<br><br>(12+ часов)</td><td class="mark-cell s4 access-white">Полные видеозаписи знакомств Рамзеса с разборами:<br><br>- дневная игра<br>- ночная игра<br>- свидания<br>- вызвоны<br><br>- в разных странах<br>- на русском и английском языках<br><br>(12+ часов)</td><td class="mark-cell s5 access-white">Полные видеозаписи знакомств Рамзеса с разборами:<br><br>- дневная игра<br>- ночная игра<br>- свидания<br>- вызвоны<br><br>- в разных странах<br>- на русском и английском языках<br><br>(12+ часов)</td></tr>
         <tr><td>Доступ к курсу и всем материалам</td><td class="mark-cell s1">9 месяцев</td><td class="mark-cell s2">12 месяцев</td><td class="mark-cell s3">18 месяцев</td><td class="mark-cell s4">Неограниченный доступ к курсу и всем материалам</td><td class="mark-cell s5">Неограниченный доступ к курсу и всем материалам</td></tr>
         <tr><td>Мини-группа</td><td class="no">—</td><td class="mark-cell s2">Мини-группа (5 человек) с сопровождением тренера проекта</td><td class="mark-cell s3">Мини-группа (5 человек) с сопровождением Рамзеса</td><td class="mark-cell s4">Мини-группа (3-4 человека) с сопровождением Рамзеса вживую</td><td class="mark-cell s5">Индивидуальная работа с Рамзесом 1 на 1</td></tr>
         <tr><td>Отдельный чат</td><td class="no">—</td><td class="mark-cell s2">Отдельный чат пятёрки с тренером проекта</td><td class="mark-cell s3">Отдельный чат мастер-группы с Рамзесом</td><td class="mark-cell s4">Отдельный чат буткемпа с Рамзесом</td><td class="mark-cell s5">Отдельный чат с Рамзесом для индивидуальной работы</td></tr>
@@ -2897,8 +2903,8 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
   <div class="wrap">
     <div class="sec-head">
       <span class="mono eyebrow">09 // заявка</span>
-      <h2>Мужайся!<br>Запишись на разбор</h2>
-      <p>Бесплатный созвон, 20 минут — не продажа. Разберём твою ситуацию и подберём формат.</p>
+      <h2>РАССКАЖИ О СВОЕЙ СИТУАЦИИ</h2>
+      <p>Оставь заявку — обсудим, что сейчас не устраивает, к чему хочешь прийти и составим план следующих шагов.</p>
     </div>
     
       <script id="b401fe4e03050145f9178f5e56c6df65c907b046" src="https://manup.getcourse.ru/pl/lite/widget/script?id=1658729"></script>
@@ -2928,7 +2934,7 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
   <span class="kanji-mark" style="left:50%;top:50%;transform:translate(-50%,-50%) rotate(-2deg);font-size:340px;opacity:.06;">道</span>
   <span class="kanji-stamp red pop" style="--rot:-4deg;left:50%;top:24px;transform:translateX(-50%) rotate(-4deg);font-size:60px;">魂</span>
   <div class="wrap">
-    <h2>ВЕРНИ СЕБЕ УПРАВЛЕНИЕ НАД СВОЕЙ ЛИЧНОЙ ЖИЗНЬЮ</h2>
+    <h2>ВЕРНИ СЕБЕ УПРАВЛЕНИЕ </br> НАД СВОЕЙ ЛИЧНОЙ ЖИЗНЬЮ</h2>
     <p>Оставь заявку - разберём твою ситуацию, к чему хочешь прийти и составим план следующих шагов.</p>
     <a href="#form" class="btn" onclick="scrollToForm();return false;">ОСТАВИТЬ ЗАЯВКУ</a>
   </div>
@@ -3704,4 +3710,66 @@ counters.forEach(c=>countIo.observe(c));
         padding-bottom:26px!important;
       }
     }
-</style>
+</style><script>
+/* Финальное выравнивание строк тарифов на ПК: одинаковые категории
+   начинаются на одной высоте, а высота категории берётся по самому
+   высокому варианту среди всех тарифов. */
+(function(){
+  function alignTariffRows(){
+    if(window.innerWidth < 861) return;
+    var wrap=document.querySelector('.tiers');
+    if(!wrap) return;
+
+    var wasShown=wrap.classList.contains('show-all');
+    if(!wasShown) wrap.classList.add('show-all');
+
+    requestAnimationFrame(function(){
+      var lists=Array.prototype.slice.call(wrap.querySelectorAll(':scope > .tier .tier-details-desktop'));
+      if(!lists.length){
+        if(!wasShown) wrap.classList.remove('show-all');
+        return;
+      }
+
+      /* Сначала возвращаем естественную высоту всех строк. */
+      lists.forEach(function(list){
+        Array.prototype.forEach.call(list.children,function(li){
+          li.style.height='';
+          li.style.minHeight='';
+        });
+      });
+
+      /* Для каждой одинаковой позиции в тарифах находим максимальную высоту. */
+      var max=[];
+      lists.forEach(function(list){
+        Array.prototype.forEach.call(list.children,function(li,i){
+          var h=li.getBoundingClientRect().height;
+          max[i]=Math.max(max[i]||0,h);
+        });
+      });
+
+      /* Применяем максимум ко всем тарифам. */
+      lists.forEach(function(list){
+        Array.prototype.forEach.call(list.children,function(li,i){
+          if(max[i]) li.style.height=Math.ceil(max[i])+'px';
+        });
+      });
+
+      if(!wasShown) wrap.classList.remove('show-all');
+    });
+  }
+
+  function schedule(){
+    clearTimeout(window.__tariffRowsTimer);
+    window.__tariffRowsTimer=setTimeout(function(){
+      alignTariffRows();
+      setTimeout(alignTariffRows,120);
+    },50);
+  }
+
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',schedule);
+  else schedule();
+  window.addEventListener('load',schedule);
+  window.addEventListener('resize',schedule);
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(schedule);
+})();
+</script>
