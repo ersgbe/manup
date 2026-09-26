@@ -1430,7 +1430,8 @@ html,body{overflow-x:hidden;max-width:100vw;}
 .btn,.btn-outline{width:100%;text-align:center;padding:18px 24px;font-size:14px;}
 .hint{font-size:13px;text-align:center;}
 .sec-head{margin-bottom:36px;}
-#format .sec-head{margin-bottom:61px;}
+#format .sec-head{margin-bottom:61px;max-width:900px;}
+@media(min-width:861px){#format .sec-head p{white-space:nowrap;}}
 .sec-head h2{font-size:28px;}
 .sec-head p{font-size:var(--text-mobile-lead);}
 .grid-cards{grid-template-columns:repeat(2,1fr);}
@@ -2511,7 +2512,7 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
             <li class="detail-heading">Поддержка и практика</li>
             <li class="detail-muted detail-struck">Мини-группа (5 человек) с сопровождением тренера проекта</li>
             <li class="detail-muted detail-struck">Отдельный чат пятёрки с тренером проекта</br></br></li>
-            <li class="marked muted-item">Проверка домашних заданий</br></br></li>
+            <li class="detail-muted detail-struck">Проверка домашних заданий</br></br></li>
             <li class="detail-muted detail-struck">Мастермайнды раз в 2 недели с тренером пятёрки</br></br></li>
             <li class="detail-muted detail-struck">1 личная сессия с Рамзесом для проработки убеждений</br></br></br></br></li>
             <li class="common-item">Общий чат участников</li>
@@ -3807,4 +3808,4 @@ counters.forEach(c=>countIo.observe(c));
   window.addEventListener('resize',schedule);
   if(document.fonts && document.fonts.ready) document.fonts.ready.then(schedule);
 })();
-</script>фр
+</script>
