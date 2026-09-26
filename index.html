@@ -762,7 +762,6 @@ box-shadow:0 0 40px var(--red-glow-soft) inset, 0 20px 40px rgba(0,0,0,.4);
   /* На ПК синхронизируем вертикальные строки тарифов: места, заголовки
      разделов и соответствующие пункты стоят на одной высоте во всех карточках. */
   .tier > div > .tname{height:46px;min-height:46px;}
-  .tier > div > .tseats{height:18px;min-height:18px;margin-bottom:12px;}
   .tier > div > .tpitch{height:45px;min-height:45px;margin-bottom:20px;}
   .tier-details-desktop{
     display:grid;
@@ -1605,7 +1604,7 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
   .tiers .tier{
     /* Одинаковые строки шапки, чтобы названия/места/описания шли строго по одной линии. */
     display:grid;
-    grid-template-rows:auto auto auto 58px 1fr auto;
+    grid-template-rows:auto auto auto auto 58px 1fr auto;
   }
 
   .tiers .tier > div:first-child{
@@ -1623,19 +1622,24 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
     align-items:flex-start;
   }
 
-  .tiers .tier .tseats{
+  .tiers .tier .trequest{
     grid-row:3;
-    min-height:30px;
+    margin-bottom:0;
+    min-height:18px;
+  }
+
+  .tiers .tier .tseats{
+    grid-row:4;
   }
 
   .tiers .tier .tpitch{
-    grid-row:4;
+    grid-row:5;
     min-height:58px;
     margin-bottom:0;
   }
 
   .tiers .tier .tier-details-desktop{
-    grid-row:5;
+    grid-row:6;
     align-self:stretch;
     display:flex;
     flex-direction:column;
@@ -1667,7 +1671,7 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
   }
 
   .tiers .tier > .tier-cta{
-    grid-row:6;
+    grid-row:7;
   }
 }
 
@@ -2492,6 +2496,7 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
         <div>
           <div class="tier-index"><span class="tier-number">01</span></div>
           <div class="tname">Самостоятельный</div>
+          <div class="trequest"></div>
           <div class="tseats">20 мест</div>
           <div class="tpitch">В своём темпе, без сопровождения</div>
           <ul class="tier-details-desktop">
@@ -2501,16 +2506,17 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
             <li class="common-item">Мини-курс по уверенности в себе I AM</li>
             <li class="detail-muted detail-struck">Курс по онлайн-дэйтингу и перепискам Texting Ninja</li>
             <li class="common-item">Дополнительные конспекты и другие материалы</li>
-            <li>Фрагменты видеозаписей знакомств Рамзеса: </br>- дневная игра </br>- ночная игра </br>- свидания </br>- вызвоны </br></br>- в разных странах </br>- на русском и английском языках</li>
+            <li>Фрагменты видеозаписей знакомств Рамзеса: </br>- дневная игра </br>- ночная игра </br>- свидания </br>- вызвоны </br></br>- в разных странах </br>- на русском и английском языках</br></br></li>
             <li class="marked access-white">Доступ к курсу и всем материалам на 9 месяцев</li>
             <li class="detail-heading">Поддержка и практика</li>
             <li class="detail-muted detail-struck">Мини-группа (5 человек) с сопровождением тренера проекта</li>
-            <li class="detail-muted detail-struck">Отдельный чат пятёрки с тренером проекта</li>
-            <li class="detail-muted detail-struck">Мастермайнды раз в 2 недели с тренером пятёрки</li>
-            <li class="detail-muted detail-struck">1 личная сессия с Рамзесом для проработки убеждений</li>
+            <li class="detail-muted detail-struck">Отдельный чат пятёрки с тренером проекта</br></br></li>
+            <li class="marked muted-item">Проверка домашних заданий</br></br></li>
+            <li class="detail-muted detail-struck">Мастермайнды раз в 2 недели с тренером пятёрки</br></br></li>
+            <li class="detail-muted detail-struck">1 личная сессия с Рамзесом для проработки убеждений</br></br></br></br></li>
             <li class="common-item">Общий чат участников</li>
             <li class="common-item">Групповые онлайн-разборы с Рамзесом раз в месяц для всех участников потока</li>
-            <li class="detail-muted detail-struck">Подписка на 6 месяцев на искусственный интеллект для переписок VIBE AI</li>
+            <li class="detail-muted detail-struck">Подписка на 6 месяцев на ИИ для переписок VIBE AI</li>
             <li class="detail-meta"></li>
           </ul>
           <ul>
@@ -2527,6 +2533,7 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
         <div>
           <div class="tier-index"><span class="tier-number">02</span></div>
           <div class="tname">Сопровождение в пятёрках</div>
+          <div class="trequest"></div>
           <div class="tseats">15 мест</div>
           <div class="tpitch">С обратной связью и поддержкой тренера по ходу обучения</div>
           <ul class="tier-details-desktop">
@@ -2540,10 +2547,10 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
             <li class="marked access-white">Доступ к курсу и всем материалам на 12 месяцев</li>
             <li class="detail-heading">Поддержка и практика</li>
             <li class="marked muted-item">Мини-группа из 5 человек с сопровождением тренера проекта</li>
-            <li class="marked muted-item">Отдельный чат пятёрки с тренером проекта</li>
-            <li class="marked muted-item">Проверка домашних заданий</li>
-            <li class="marked muted-item">Мастермайнды раз в 2 недели с тренером пятёрки</li>
-            <li class="detail-muted detail-struck-s2">1 личная сессия с Рамзесом для проработки убеждений</li>
+            <li class="marked muted-item">Отдельный чат пятёрки с тренером проекта</br></br></li>
+            <li class="marked muted-item">Проверка домашних заданий</br></br></li>
+            <li class="marked muted-item">Мастермайнды раз в 2 недели с тренером пятёрки</br></br></li>
+            <li class="detail-muted detail-struck-s2">1 личная сессия с Рамзесом для проработки убеждений</br></br></br></br></li>
             <li class="common-item">Общий чат участников</li>
             <li class="common-item">Групповые онлайн-разборы с Рамзесом раз в месяц для всех участников потока</li>
             <li class="marked muted-item">Подписка на 6 месяцев на ИИ для переписок VIBE AI</li>
@@ -2564,6 +2571,7 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
         <div>
           <div class="tier-index"><span class="tier-number">03</span></div>
           <div class="tname">Мастер-группа с Рамзесом</div>
+          <div class="trequest"></div>
           <div class="tseats">10 мест</div>
           <div class="tpitch">С обратной связью и поддержкой Рамзеса по ходу обучения</div>
           <ul class="tier-details-desktop">
@@ -2577,10 +2585,10 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
             <li class="marked access-white">Доступ к курсу и всем материалам на 18 месяцев</li>
             <li class="detail-heading">Поддержка и практика</li>
             <li class="marked access-white">Мини-группа из 5 человек с сопровождением Рамзеса</li>
-            <li class="marked access-white">Отдельный чат мастер-группы с Рамзесом</li>
+            <li class="marked access-white">Отдельный чат мастер-группы с Рамзесом</br></br></li>
             <li class="marked access-white">Развёрнутая обратная связь от Рамзеса по домашним заданиям</li>
-            <li class="marked access-white">Мастермайнды раз в 2 недели с Рамзесом</li>
-            <li class="marked access-white">1 личная сессия с Рамзесом для проработки убеждений</li>
+            <li class="marked access-white" id="s3-mastermind">Мастермайнды раз в 2 недели с Рамзесом<br><br><br></li>
+            <li class="marked access-white">1 личная сессия с Рамзесом для проработки убеждений</br></br></br></br></li>
             <li class="common-item">Общий чат участников</li>
             <li class="common-item">Групповые онлайн-разборы с Рамзесом раз в месяц для всех участников потока</li>
             <li class="marked">Подписка на 6 месяцев на ИИ для переписок VIBE AI</li>
@@ -2616,10 +2624,10 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
             <li class="marked unlimited-access">Неограниченный доступ к курсу и всем материалам</li>
             <li class="detail-heading">Поддержка и практика</li>
             <li class="marked access-white">Мини-группа из 3–4 человек с сопровождением Рамзеса вживую</li>
-            <li class="marked">Отдельный чат буткемпа с Рамзесом</li>
+            <li class="marked">Отдельный чат буткемпа с Рамзесом</br></br></li>
             <li class="marked access-white">Развёрнутая обратная связь от Рамзеса по домашним заданиям</li>
             <li class="marked access-white">Неограниченная обратная связь от Рамзеса в течение месяца</li>
-            <li class="marked">1 личная сессия с Рамзесом для проработки убеждений</li>
+            <li class="marked">1 личная сессия с Рамзесом для проработки убеждений</br></br></br></br></li>
             <li class="common-item">Общий чат участников</li>
             <li class="common-item">Групповые онлайн-разборы с Рамзесом раз в месяц для всех участников потока</li>
             <li class="marked">Подписка VIBE AI на 6 месяцев</li>
@@ -2651,7 +2659,7 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
             <li class="marked access-white">Полные видеозаписи знакомств Рамзеса с разборами: </br>- дневная игра </br>- ночная игра </br>- свидания </br>- вызвоны </br></br>- в разных странах </br>- на русском и английском языках (12+ часов)</li>
             <li class="marked unlimited-access">Неограниченный доступ к курсу и всем материалам</li>
             <li class="detail-heading">Поддержка и практика</li>
-            <li class="marked unlimited-access">Индивидуальная работа с Рамзесом 1 на 1</li>
+            <li class="marked unlimited-access">Индивидуальная работа с Рамзесом 1 на 1</br></br></li>
             <li class="marked">Отдельный чат с Рамзесом для индивидуальной работы</li>
             <li class="marked unlimited-access">Развёрнутая обратная связь от Рамзеса по домашним заданиям</li>
             <li class="marked unlimited-access">Индивидуальная обратная связь от Рамзеса в течении 6 недель</li>
@@ -3189,12 +3197,29 @@ function alignTierDetailRows(){
   if(!wasExpanded) tiersWrap.classList.remove('show-all');
 }
 
+function updateMastermindBr(showAll){
+  const li = document.getElementById('s3-mastermind');
+  if(!li) return;
+  // Удаляем все <br> в конце
+  while(li.lastChild && li.lastChild.nodeName === 'BR') li.removeChild(li.lastChild);
+  const count = showAll ? 2 : 3;
+  for(let i = 0; i < count; i++) li.appendChild(document.createElement('br'));
+}
+
 function toggleAllTiers(){
   const tiers = document.querySelector('.tiers');
   if(!tiers) return;
   tiers.classList.add('show-all');
+  updateMastermindBr(true);
   // Ждём, пока 4-й и 5-й тарифы появятся в сетке, и только потом измеряем строки.
   requestAnimationFrame(() => requestAnimationFrame(alignTierDetailRows));
+}
+
+// При загрузке страницы тарифы 4–5 скрыты — используем вариант с 3 <br>
+if(document.readyState === 'loading'){
+  document.addEventListener('DOMContentLoaded', function(){ updateMastermindBr(false); });
+} else {
+  updateMastermindBr(false);
 }
 
 window.addEventListener('load', alignTierDetailRows);
@@ -3724,6 +3749,16 @@ counters.forEach(c=>countIo.observe(c));
     if(!wasShown) wrap.classList.add('show-all');
 
     requestAnimationFrame(function(){
+      /* Выравниваем шапочные элементы: trequest и tseats */
+      var selectors = ['.trequest', '.tseats'];
+      selectors.forEach(function(sel){
+        var els = Array.prototype.slice.call(wrap.querySelectorAll(':scope > .tier ' + sel));
+        els.forEach(function(el){ el.style.height = ''; });
+        var maxH = 0;
+        els.forEach(function(el){ maxH = Math.max(maxH, el.getBoundingClientRect().height); });
+        if(maxH > 0) els.forEach(function(el){ el.style.height = Math.ceil(maxH) + 'px'; });
+      });
+
       var lists=Array.prototype.slice.call(wrap.querySelectorAll(':scope > .tier .tier-details-desktop'));
       if(!lists.length){
         if(!wasShown) wrap.classList.remove('show-all');
@@ -3772,4 +3807,4 @@ counters.forEach(c=>countIo.observe(c));
   window.addEventListener('resize',schedule);
   if(document.fonts && document.fonts.ready) document.fonts.ready.then(schedule);
 })();
-</script>
+</script>фр
