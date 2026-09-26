@@ -722,6 +722,17 @@ transition:background .3s, border-color .3s, box-shadow .3s;
 .tier .tname{font-family:'Oswald',sans-serif;font-weight:600;font-size:18px;margin-bottom:6px;text-transform:uppercase;letter-spacing:.02em;min-height:46px;display:flex;align-items:flex-start;}
 .tier .tseats{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--red);margin-bottom:12px;letter-spacing:.05em;min-height:18px;}
 .tier .trequest{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gray);margin-bottom:4px;letter-spacing:.05em;line-height:1.3;}
+.tier .trequest:not(:empty){
+  display:inline-block;
+  font-size:13px;
+  font-weight:700;
+  color:#000;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  background:var(--red);
+  padding:4px 12px;
+  box-shadow:0 0 22px rgba(255,36,56,.55);
+}
 .tier .tpitch{font-size:var(--text-small);color:var(--gray);margin-bottom:20px;line-height:1.5;font-family:'Inter';transition:color .3s;}
 .tier ul{list-style:none;font-size:var(--text-small);flex-grow:1;margin-bottom:20px;font-family:'Inter';}
 .tier ul li{padding:9px 0;border-top:1px solid var(--line-soft);color:var(--gray);transition:color .3s, border-color .3s;}
@@ -917,6 +928,11 @@ background:none;border:none;cursor:pointer;color:var(--gray);line-height:1;trans
   .tiers .tier .tname::before,
   .tiers .tier .tname::after{
     color:var(--gray)!important;
+  }
+
+  /* «ПО ЗАПРОСУ» в обоих тарифах — чёрным текстом. */
+  .tiers .tier .trequest{
+    color:#000!important;
   }
 
   /* На ПК выделяем выбранные преимущества красным цветом сайта. */
@@ -2595,7 +2611,7 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
             <li class="marked access-white">Полные видеозаписи знакомств Рамзеса с разборами: </br>- дневная игра </br>- ночная игра </br>- свидания </br>- вызвоны </br></br>- в разных странах </br>- на русском и английском языках (12+ часов)</li>
             <li class="marked access-white">Доступ к курсу и всем материалам на 18 месяцев</li>
             <li class="detail-heading">Поддержка и практика</li>
-            <li class="marked access-white">Мини-группа из 5 человек с сопровождением Рамзеса</li>
+            <li class="marked access-white">Мини-группа из 5 человек с сопровождением Рамзеса</br></br></li>
             <li class="marked access-white">Отдельный чат мастер-группы с Рамзесом</br></br></li>
             <li class="marked access-white white-pc">Развёрнутая обратная связь от Рамзеса по домашним заданиям</li>
             <li class="marked access-white" id="s3-mastermind">Мастермайнды раз в 2 недели с Рамзесом<br><br><br></li>
