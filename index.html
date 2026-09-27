@@ -389,8 +389,10 @@ position:relative;border:1px solid rgba(255,36,56,.22);
 .card .tag{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--red);text-transform:uppercase;letter-spacing:.08em;}
 .ab-card .tag{display:inline-block;margin-bottom:8px;}
 .card.ab-card{cursor:default;align-items:stretch;}
+.card.ab-card{justify-content:flex-start;}
 .card.ab-card > div{display:flex;flex-direction:column;width:100%;}
 .ab-card h3{line-height:1.25;min-height:2.5em;}
+.ab-card .ab-now{flex:1 1 auto;}
 .ab-block{margin-top:16px;}
 .ab-block:first-of-type{margin-top:14px;}
 .ab-label{
@@ -540,7 +542,7 @@ box-shadow:0 0 22px var(--red-glow);
 .hex-module.module:not(.crown):hover h3{color:var(--red);}
 .hex-module.module:not(.crown):hover p{color:#efd3d5;}
 .hex-module.module .mnum{margin-bottom:8px;transition:color .25s;}
-.hex-module.module h3{margin:12px 0 8px;transition:color .25s;}
+.hex-module.module h3{margin:12px 0 18px;transition:color .25s;}
 .hex-module.module p{transition:color .25s;}
 /* Номер модуля: слово остаётся компактным, номер становится главным акцентом */
 .hex-module.module .mnum{
@@ -1456,7 +1458,7 @@ html,body{overflow-x:hidden;max-width:100vw;}
 .btn,.btn-outline{width:100%;text-align:center;padding:18px 24px;font-size:14px;}
 .hint{font-size:13px;text-align:center;}
 .sec-head{margin-bottom:36px;}
-#format .sec-head{margin-bottom:61px;max-width:900px;}
+#format .sec-head{margin-bottom:20px;max-width:900px;}
 @media(min-width:861px){#format .sec-head p{white-space:nowrap;}}
 .sec-head h2{font-size:28px;}
 .sec-head p{font-size:var(--text-mobile-lead);}
@@ -1465,11 +1467,11 @@ html,body{overflow-x:hidden;max-width:100vw;}
 .card{padding:14px 10px;min-height:0;height:auto;}
 .card.ab-card > div{height:auto;}
 .card h3{font-size:13px;margin-bottom:6px;line-height:1.2;}
-.ab-card h3{min-height:6em;}
+.ab-card h3{min-height:3.5em;}
 .card p{font-size:var(--text-label);}
 .card .tag{font-size:10px;}
 .ab-block{margin-top:12px;}
-.ab-block:first-of-type{margin-top:10px;}
+.ab-block:first-of-type{margin-top:6px;}
 .ab-now{min-height:8.3em;}
 .ab-card .ab-result{flex:none;height:auto;}
 .ab-label{font-size:9.5px;gap:6px;margin-bottom:5px;}
@@ -1531,17 +1533,17 @@ text-align:left;align-items:flex-start;
 .hex-module.module.crown h3{font-size:19px;margin:10px 0 8px;}
 .hex-module.module.crown p{display:block;font-size:14px;}
 .hex-module.module:not(.crown)::after{right:12px;top:12px;width:18px;height:18px;background-size:9px 2px,2px 9px;}
-.format-cards{display:flex;flex-direction:column;grid-template-columns:none;grid-template-rows:none;gap:42px;background:transparent;border:0;box-shadow:none;padding:34px 0 0;}
+.format-cards{display:flex;flex-direction:column;grid-template-columns:none;grid-template-rows:none;gap:60px;background:transparent;border:0;box-shadow:none;padding:16px 0 0;}
 .format-cards::before,.format-cards::after{display:none;}
-.fcard{display:flex !important;flex-direction:column;grid-template-rows:none;grid-row:auto;width:100%;min-width:0;padding:54px 18px 18px;min-height:0;border:1px solid rgba(255,36,56,.42);box-shadow:0 0 18px rgba(255,36,56,.08);}
-.fcard-icon{position:absolute;top:-30px;left:50%;transform:translateX(-50%);width:64px;height:58px;margin:0;}
+.fcard{display:flex !important;flex-direction:column;grid-template-rows:none;grid-row:auto;width:100%;min-width:0;padding:38px 18px 18px;min-height:0;border:1px solid rgba(255,36,56,.42);box-shadow:0 0 18px rgba(255,36,56,.08);}
+.fcard-icon{position:absolute;top:-22px;left:50%;transform:translateX(-50%);width:64px;height:58px;margin:0;}
 .fcard-icon svg{width:29px;height:29px;}
 .fcard .fnum{font-size:10px;margin-bottom:6px;}
 .fcard h4{font-size:15px;margin:8px 0 10px;}
 .fcard p{display:flex;width:100%;min-width:0;font-size:var(--text-label);line-height:1.5;padding:12px 0;gap:9px;}
 .fcard .ficon{width:16px;height:16px;flex-basis:16px;margin-top:1px;}
 .format-stats{grid-template-columns:repeat(3,1fr);}
-.format-stats{margin-top:14px;border:1px solid rgba(255,36,56,.35);}
+.format-stats{margin-top:48px;border:1px solid rgba(255,36,56,.35);}
 .fstat{padding:16px 5px;}
 .fstat .num{font-size:19px;}
 .fstat .lbl{font-size:9.5px;}
@@ -2184,7 +2186,10 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
       <span class="kanji-mark" style="left:24px;bottom:-18px;font-size:180px;">力</span>
       <span class="kanji-stamp red pop" style="--rot:-8deg;right:34px;top:26px;font-size:64px;transform:rotate(-8deg);">武</span>
       <div class="hero-brand">Мужайся! ⬡ Man Up! ⬡ Системная программа для мужчин<span class="cursor">_</span></div>
-      <h1><span class="glitch-wrap" data-text="Возьми свою личную жизнь&#10;под контроль">Возьми свою личную жизнь<br>под контроль</span></h1>
+      <h1>
+        <span class="hero-h1-desktop">Возьми свою личную жизнь<br>под контроль</span>
+        <span class="hero-h1-mobile">ВОЗЬМИ СВОЮ<br>ЛИЧНУЮ ЖИЗНЬ<br>ПОД КОНТРОЛЬ</span>
+      </h1>
       <p class="lead" style="margin-top:0;margin-bottom:30px;">За 6 месяцев соберёшь собственную управляемую систему общения с женщинами — от знакомств до свиданий, секса и отношений — с теми, кого выбираешь ТЫ.</p>
       <div class="btn-row">
         <a href="#form" class="btn" onclick="scrollToForm();return false;">Оставить заявку</a>
@@ -2204,7 +2209,7 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
     <div class="sec-head">
       <span class="mono eyebrow">02 // для кого эта программа</span>
       <h2>В какой ситуации ты сейчас?</h2>
-      <p>К нам приходят с разными историями. Какая из них больше похожа на твою?</p>
+      <p>К нам приходят с разными историями.<span class="portraits-newline"></span>Какая из них больше похожа на твою?</p>
     </div>
     <div class="grid-cards">
       <div class="card ab-card">
@@ -2225,7 +2230,7 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
       <div class="card ab-card">
         <div>
           <span class="tag">[ 02 ]</span>
-          <h3>Результаты есть пока ты в форме </br>и от девушки не сносит голову</h3>
+          <h3>Результаты есть<span class="portraits-newline"> </span>пока ты в форме<span class="portraits-newline"> </span><br class="portraits-desktop-br">и от девушки не сносит голову</h3>
           <div class="ab-block ab-now">
             <span class="ab-label"><span class="dot"></span>Сейчас</span>
             <p>С одними всё легко, но стоит просесть по состоянию или сильно залипнуть на девушку — начинаешь сыпаться.</p>
@@ -2323,12 +2328,16 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
         <div class="scanline"></div>
       </div>
       <div class="author-copy">
-        <div class="author-badge">ПЕДАГОГ · ПСИХОЛОГ · 10+ ЛЕТ ПРАКТИКИ В ДЕЙТИНГЕ</div>
+        <div class="author-badge"><span class="author-badge-mobile">ПЕДАГОГ · ПСИХОЛОГ<br>10+ ЛЕТ ПРАКТИКИ В ДЕЙТИНГЕ</span><span class="author-badge-desktop">ПЕДАГОГ · ПСИХОЛОГ · 10+ ЛЕТ ПРАКТИКИ В ДЕЙТИНГЕ</span></div>
         <p>Меня зовут Рамзес Кубинский. Больше 10 лет я изучаю и практикую знакомства и соблазнение — в разных странах и обстоятельствах. За это время через моё обучение прошли сотни учеников.</p>
         <p>За годы работы я видел много сильных и способных мужчин, которые в личной жизни становятся куда мягче и слабее, чем в работе, бизнесе или спорте. Они позволяют страху отказа, зависимости от конкретной женщины или привычке к комфорту сковывать их потенциал.</p>
         <p>Мужчина должен знать, чего он хочет, принимать решения, действовать в соответствии с ними и нести за них ответственность — даже когда страшно, неудобно и никто не даёт гарантий.</p>
         <div class="author-quote">«Я сам вырос без мужской ролевой модели. Характер и опору внутри себя мне пришлось взращивать самостоятельно — через собственный опыт, ошибки и испытания. Поэтому сегодня я и занимаюсь этим — чтоб помогать другим парням становиться сильнее. Становиться теми, кем они сами хотят быть.»</div>
-        <div class="stats-row">
+        <div class="stats-row stats-row-desktop">
+          <div class="stat"><div class="num">СОТНИ</div><div class="lbl">Учеников за годы работы</div></div>
+          <div class="stat"><div class="num">10+ лет</div><div class="lbl">Практики в дейтинге</div></div>
+        </div>
+        <div class="stats-row stats-row-mobile" style="display:none">
           <div class="stat"><div class="num">СОТНИ</div><div class="lbl">Учеников за годы работы</div></div>
           <div class="stat"><div class="num">10+ лет</div><div class="lbl">Практики в дейтинге</div></div>
         </div>
@@ -2343,12 +2352,13 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
     <span class="bg-photo-label">[ девушка ]</span>
   </div>
   <span class="kanji-mark" style="left:-20px;top:6%;font-size:160px;transform:rotate(-3deg);">道</span>
-  <span class="kanji-stamp white pop" style="--rot:5deg;left:30px;top:24px;font-size:56px;transform:rotate(5deg);">力</span>
+  <span class="kanji-stamp white pop kanji-stamp-sec4-chikara" style="--rot:5deg;left:30px;top:24px;font-size:56px;transform:rotate(5deg);">力</span>
   <div class="wrap">
     <div class="sec-head">
       <span class="mono eyebrow">04 // программа</span>
       <h2>6 модулей</h2>
-      <p>Более 30 часов уроков. Каждый модуль — новый уровень контроля. </br>Нажми на модуль, чтобы увидеть подробности.</p>
+      <p class="sec4-lead-desktop">Более 30 часов уроков. Каждый модуль — новый уровень контроля. Нажми на модуль, чтобы увидеть подробности.</p>
+      <p class="sec4-lead-mobile">Более 30 часов уроков.<br>Каждый модуль — новый уровень контроля.<br>Нажми на модуль, чтоб увидеть подробности.</p>
     </div>
     <div class="modules-hex-wrap">
       <svg class="hex-outline" viewBox="0 0 400 400" aria-hidden="true">
@@ -2494,7 +2504,7 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
 
     <div class="format-stats">
       <div class="fstat"><div class="num">30+ часов</div><div class="lbl">Уроков</div></div>
-      <div class="fstat"><div class="num">5 человек</div><div class="lbl">Максимум в мини-группе</div></div>
+      <div class="fstat"><div class="num">5 человек</div><div class="lbl">Максимум в </br>мини-группе</div></div>
       <div class="fstat"><div class="num">6 месяцев</div><div class="lbl">Сопровождения</div></div>
     </div>
 
@@ -2514,7 +2524,7 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
   <div class="wrap">
     <div class="sec-head">
       <span class="mono eyebrow">07 // тарифы</span>
-      <h2><span class="tiers-title-mobile">Какой формат тебя вытащит</span><span class="tiers-title-desktop">Какой формат подойдёт тебе</span></h2>
+      <h2><span class="tiers-title-mobile">КАКОЙ ФОРМАТ ПОДОЙДЁТ ТЕБЕ</span><span class="tiers-title-desktop">Какой формат подойдёт тебе</span></h2>
       <p><span class="tiers-lead-mobile">От самостоятельного темпа до личного наставничества Рамзеса.</span><span class="tiers-lead-desktop">От самостоятельного прохождения до индивидуальной работы с Рамзесом</span></p>
     </div>
 
@@ -2548,8 +2558,8 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
           </ul>
           <ul>
             <li>6 модулей + база знаний + I AM</li>
-            <li>Общий чат и разборы раз в месяц</li>
-            <li>Без проверки ДЗ и мини-группы</li>
+            <li>Фрагменты записей знакомств Рамзеса</li>
+            <li>Общий чат + разборы с Рамзесом раз в месяц</li>
           </ul>
         </div>
         <button type="button" class="tier-cta tier-compare-btn" onclick="openTierModal()">Сравнить тарифы</button>
@@ -2584,9 +2594,10 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
             <li class="detail-meta"></li>
           </ul>
           <ul>
-            <li>Мини-группа 5 человек с тренером</li>
-            <li>Проверка ДЗ + трекинг прогресса</li>
-            <li>Texting Ninja и VIBE AI в комплекте</li>
+            <li>Всё из «Самостоятельного» +</li>
+            <li>Полные видеоразборы знакомств Рамзеса — 12+ ч</li>
+            <li>Пятёрка с тренером: проверка ДЗ + мастермайнды раз в 2 недели</li>
+            <li>ИИ для переписок VIBE AI на 6 месяцев</li>
           </ul>
         </div>
         <button type="button" class="tier-cta tier-compare-btn" onclick="openTierModal()">Сравнить тарифы</button>
@@ -2611,7 +2622,7 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
             <li class="marked access-white">Полные видеозаписи знакомств Рамзеса с разборами: </br>- дневная игра </br>- ночная игра </br>- свидания </br>- вызвоны </br></br>- в разных странах </br>- на русском и английском языках (12+ часов)</li>
             <li class="marked access-white">Доступ к курсу и всем материалам на 18 месяцев</li>
             <li class="detail-heading">Поддержка и практика</li>
-            <li class="marked access-white">Мини-группа из 5 человек с сопровождением Рамзеса</br></br></li>
+            <li class="marked access-white">Мини-группа из 5 человек с сопровождением Рамзеса</br><br class="s3-minigroup-extra-br"></li>
             <li class="marked access-white">Отдельный чат мастер-группы с Рамзесом</br></br></li>
             <li class="marked access-white white-pc">Развёрнутая обратная связь от Рамзеса по домашним заданиям</li>
             <li class="marked access-white" id="s3-mastermind">Мастермайнды раз в 2 недели с Рамзесом<br><br><br></li>
@@ -2622,9 +2633,11 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
             <li class="detail-meta"></li>
           </ul>
           <ul>
-            <li>Мини-группа с Рамзесом лично</li>
-            <li>Полные разборы знакомств (12+ ч)</li>
-            <li>Сессия на проработку убеждений</li>
+            <li>Всё из «Самостоятельного» +</li>
+            <li>Полные видеоразборы знакомств Рамзеса — 12+ ч</li>
+            <li>Пятёрка с Рамзесом: развёрнутая обратная связь + мастермайнды раз в 2 недели</li>
+            <li>Курс по перепискам Texting Ninja + VIBE AI на 6 месяцев</li>
+            <li>Личная сессия 1 на 1 с Рамзесом по работе с убеждениями</li>
           </ul>
         </div>
         <button type="button" class="tier-cta tier-compare-btn" onclick="openTierModal()">Сравнить тарифы</button>
@@ -2938,12 +2951,13 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
 
 <section class="final" id="form">
   <div class="hexgrid-bg"></div>
-  <span class="kanji-mark" style="right:0;top:6%;font-size:170px;transform:rotate(-3deg);max-width:120px;overflow:hidden;display:block;position:absolute;">誓</span>
+  <span class="kanji-mark kanji-form-pledge" style="right:0;top:6%;font-size:170px;transform:rotate(-3deg);max-width:120px;overflow:hidden;display:block;position:absolute;">誓</span>
   <div class="wrap">
     <div class="sec-head">
       <span class="mono eyebrow">09 // заявка</span>
       <h2>РАССКАЖИ О СВОЕЙ СИТУАЦИИ</h2>
-      <p>Оставь заявку — обсудим, что сейчас не устраивает, к чему хочешь прийти и составим план следующих шагов.</p>
+      <p class="form-lead-desktop">Оставь заявку — обсудим, что сейчас не устраивает, к чему хочешь прийти и составим план следующих шагов.</p>
+      <p class="form-lead-mobile">Оставь заявку — обсудим, что сейчас<br>не устраивает, к чему хочешь прийти<br>и составим план следующих шагов.</p>
     </div>
     
       <script id="b401fe4e03050145f9178f5e56c6df65c907b046" src="https://manup.getcourse.ru/pl/lite/widget/script?id=1658729"></script>
@@ -2970,11 +2984,12 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
 </section>
 
 <section class="closer">
-  <span class="kanji-mark" style="left:50%;top:50%;transform:translate(-50%,-50%) rotate(-2deg);font-size:340px;opacity:.06;">道</span>
+  <span class="kanji-mark kanji-closer-dao" style="left:50%;top:50%;transform:translate(-50%,-50%) rotate(-2deg);font-size:340px;opacity:.06;">道</span>
   <span class="kanji-stamp red pop" style="--rot:-4deg;left:50%;top:24px;transform:translateX(-50%) rotate(-4deg);font-size:60px;">魂</span>
   <div class="wrap">
     <h2>ВЕРНИ СЕБЕ УПРАВЛЕНИЕ </br> НАД СВОЕЙ ЛИЧНОЙ ЖИЗНЬЮ</h2>
-    <p>Оставь заявку - разберём твою ситуацию, к чему хочешь прийти и составим план следующих шагов.</p>
+    <p class="closer-lead-desktop">Оставь заявку - разберём твою ситуацию, к чему хочешь прийти и составим план следующих шагов.</p>
+    <p class="closer-lead-mobile">Оставь заявку — разберем твою ситуацию,<br>к чему хочешь прийти<br>и составим план следующих шагов.</p>
     <a href="#form" class="btn" onclick="scrollToForm();return false;">ОСТАВИТЬ ЗАЯВКУ</a>
   </div>
 </section>
@@ -2988,7 +3003,8 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
       <a href="documents/soglasie-obrabotka-pd.docx" download>Согласие на обработку персональных данных</a>
       <a href="documents/soglasie-reklama.docx" download>Согласие на получение рассылки рекламного, информационного характера</a>
     </nav>
-    <div class="footer-requisites">ИП Акбутаев Рустам Тимурович · ИНН 770974041537 · ОГРНИП 323774600546391</div>
+    <div class="footer-requisites footer-req-desktop">ИП Акбутаев Рустам Тимурович · ИНН 770974041537 · ОГРНИП 323774600546391</div>
+    <div class="footer-requisites footer-req-mobile">ИП Акбутаев Рустам Тимурович<br>ИНН 770974041537<br>ОГРНИП 323774600546391</div>
     <div class="footer-requisites">
   <a href="https://t.me/ilinykhegor" target="_blank" rel="noopener" style="color:var(--red);transition:opacity .2s;" onmouseover="this.style.opacity='0.75'" onmouseout="this.style.opacity='1'">САЙТ РАЗРАБОТАН</a>
 </div>
@@ -3556,8 +3572,10 @@ counters.forEach(c=>countIo.observe(c));
 
     // Сбрасываем предыдущие значения перед новым замером.
     cards.forEach(card=>{
+      const h3=card.querySelector('h3');
       const now=card.querySelector('.ab-now');
       const result=card.querySelector('.ab-result');
+      if(h3) h3.style.height='';
       if(now) now.style.height='';
       if(result) result.style.height='';
     });
@@ -3571,31 +3589,34 @@ counters.forEach(c=>countIo.observe(c));
     });
 
     rows.forEach(row=>{
-      let maxNow=0;
-      row.forEach(card=>{
-        const el=card.querySelector('.ab-now');
-        if(el) maxNow=Math.max(maxNow,el.getBoundingClientRect().height);
-      });
-      row.forEach(card=>{
-        const el=card.querySelector('.ab-now');
-        if(el) el.style.height=maxNow+'px';
-      });
+      // Выравниваем h3
+      let maxH3=0;
+      row.forEach(card=>{const el=card.querySelector('h3');if(el) maxH3=Math.max(maxH3,el.getBoundingClientRect().height);});
+      row.forEach(card=>{const el=card.querySelector('h3');if(el) el.style.height=maxH3+'px';});
 
+      // Выравниваем блок "Сейчас"
+      let maxNow=0;
+      row.forEach(card=>{const el=card.querySelector('.ab-now');if(el) maxNow=Math.max(maxNow,el.getBoundingClientRect().height);});
+      row.forEach(card=>{const el=card.querySelector('.ab-now');if(el) el.style.height=maxNow+'px';});
+
+      // Выравниваем блок "Результат"
       let maxResult=0;
-      row.forEach(card=>{
-        const el=card.querySelector('.ab-result');
-        if(el) maxResult=Math.max(maxResult,el.getBoundingClientRect().height);
-      });
-      row.forEach(card=>{
-        const el=card.querySelector('.ab-result');
-        if(el) el.style.height=maxResult+'px';
-      });
+      row.forEach(card=>{const el=card.querySelector('.ab-result');if(el) maxResult=Math.max(maxResult,el.getBoundingClientRect().height);});
+      row.forEach(card=>{const el=card.querySelector('.ab-result');if(el) el.style.height=maxResult+'px';});
     });
   }
 
-  window.addEventListener('load',equalizeAudienceCards);
-  window.addEventListener('resize',equalizeAudienceCards);
-  if(document.fonts && document.fonts.ready) document.fonts.ready.then(equalizeAudienceCards);
+  function scheduleEqualize(){
+    requestAnimationFrame(function(){
+      equalizeAudienceCards();
+      setTimeout(equalizeAudienceCards, 150);
+    });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', scheduleEqualize);
+  else scheduleEqualize();
+  window.addEventListener('load', scheduleEqualize);
+  window.addEventListener('resize', scheduleEqualize);
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(scheduleEqualize);
 })();
 </script>
 </body>
@@ -3766,6 +3787,80 @@ counters.forEach(c=>countIo.observe(c));
         padding-bottom:26px!important;
       }
     }
+    /* Блок автора: мини-табличка в одну строку на мобильном */
+    .stats-row-mobile-line { display: none; }
+    .stats-row-mobile { display: none !important; }
+    @media (max-width: 860px) {
+      .stats-row-desktop { display: none !important; }
+      .stats-row-mobile {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+      }
+    }
+    /* Блок автора: перенос строки на мобильном */
+    .author-badge-mobile { display: none; }
+    .author-badge-desktop { display: inline; }
+    @media (max-width: 860px) {
+      .author-badge-mobile { display: inline !important; }
+      .author-badge-desktop { display: none; }
+    }
+    /* Hero h1: на десктопе — оригинальный перенос, на мобильном — три строки */
+    .hero-h1-mobile { display: none; }
+    .hero-h1-desktop { display: inline; }
+    @media (max-width: 860px) {
+      .hero-h1-desktop { display: none; }
+      .hero-h1-mobile { display: inline; }
+    }
+    /* Подвал: реквизиты — на мобильном каждый на отдельной строке */
+    .footer-req-mobile { display: none; }
+    .footer-req-desktop { display: block; }
+    @media (max-width: 860px) {
+      .footer-req-desktop { display: none; }
+      .footer-req-mobile { display: block; }
+    }
+    /* Портреты: перенос строки на мобильном */
+    .portraits-newline { display: inline; }
+    .portraits-desktop-br { display: inline; }
+    @media (max-width: 860px) {
+      .portraits-newline { display: block; }
+      .portraits-desktop-br { display: none; }
+    }
+    /* Последний блок (closer): переключение параграфа на мобильном */
+    .closer-lead-mobile { display: none; }
+    .closer-lead-desktop { display: block; }
+    @media (max-width: 860px) {
+      .closer-lead-desktop { display: none; }
+      .closer-lead-mobile { display: block; }
+      /* Иероглиф 道: чуть левее (компенсация смещения) и ниже */
+      .kanji-closer-dao {
+        left: 44% !important;
+        top: 56% !important;
+      }
+    }
+    /* Блок формы: переключение параграфа и иероглиф на мобильном */
+    .form-lead-mobile { display: none; }
+    .form-lead-desktop { display: block; }
+    @media (max-width: 860px) {
+      .form-lead-desktop { display: none; }
+      .form-lead-mobile { display: block; }
+      .kanji-form-pledge { font-size: 100px !important; max-width: 72px !important; }
+    }
+    /* Блок 4 (программа): перенос строк на мобильном */
+    .sec4-lead-mobile { display: none; }
+    .sec4-lead-desktop { display: block; }
+    @media (max-width: 860px) {
+      .sec4-lead-desktop { display: none; }
+      .sec4-lead-mobile { display: block; }
+      /* Иероглиф 力 в блоке 4: сдвигаем вправо, чтобы не налезал на «04» */
+      .kanji-stamp-sec4-chikara {
+        left: auto !important;
+        right: 16px !important;
+        top: 16px !important;
+      }
+    }
+    /* Дополнительный <br> в мастер-группе виден только когда показаны все 5 тарифов */
+    .s3-minigroup-extra-br { display: none; }
+    .tiers.show-all .s3-minigroup-extra-br { display: inline; }
 </style><script>
 /* Финальное выравнивание строк тарифов на ПК: одинаковые категории
    начинаются на одной высоте, а высота категории берётся по самому
