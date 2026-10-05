@@ -2134,6 +2134,19 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
   .format-stats{margin-top:35px !important;}
 }
 </style>
+<style id="mc-bottom-spacer-style">
+/* Пустой блок в цвет фона после формы сравнения тарифов (≈ высота 4 строк),
+   чтобы нижние строки не обрезались на мобильных. */
+@media (max-width:860px){
+  #tierModal .mc-bottom-spacer{
+    display:block;
+    flex:0 0 auto;
+    width:100%;
+    height:160px;
+    background:#101010;
+  }
+}
+</style>
 </head>
 <body>
 
@@ -2201,7 +2214,7 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
       </div>
       <span class="kanji-mark" style="left:24px;bottom:-18px;font-size:180px;">力</span>
       <span class="kanji-stamp red pop" style="--rot:-8deg;right:34px;top:26px;font-size:64px;transform:rotate(-8deg);">武</span>
-      <div class="hero-brand"><span class="hero-brand-text"><span class="hero-brand-line1">Мужайся! ⬡ Man Up!</span><span class="hero-brand-line2"><span class="hero-brand-separator"> ⬡ </span>Системная программа для мужчин</span></span><span class="cursor">_</span></div>
+      <div class="hero-brand"><span class="hero-brand-text"><span class="hero-brand-line1">Мужайся! ⬡ Man Up!</span><span class="hero-brand-line2"><span class="hero-brand-separator">⬡ </span>Системная программа для мужчин</span></span><span class="cursor">_</span></div>
       <h1>
         <span class="hero-h1-desktop">Возьми свою личную жизнь<br>под контроль</span>
         <span class="hero-h1-mobile">ВОЗЬМИ СВОЮ<br>ЛИЧНУЮ ЖИЗНЬ<br>ПОД КОНТРОЛЬ</span>
@@ -2588,7 +2601,7 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
           <div class="tname">Сопровождение в пятёрках</div>
           <div class="trequest"></div>
           <div class="tseats">15 мест</div>
-          <div class="tpitch">С обратной связью и поддержкой тренера по ходу обучения</div>
+          <div class="tpitch">С обратной связью и поддержкой тренера </br>по ходу обучения</div>
           <ul class="tier-details-desktop">
             <li class="detail-heading">Обучение и материалы</li>
             <li class="common-item">6 основных модулей MAN UP! — более 30 часов уроков</li>
@@ -2627,7 +2640,7 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
           <div class="tname">Мастер-группа с Рамзесом</div>
           <div class="trequest"></div>
           <div class="tseats">10 мест</div>
-          <div class="tpitch">С обратной связью и поддержкой Рамзеса по ходу обучения</div>
+          <div class="tpitch">С обратной связью и поддержкой Рамзеса </br>по ходу обучения</div>
           <ul class="tier-details-desktop">
             <li class="detail-heading">Обучение и материалы</li>
             <li class="common-item">6 основных модулей MAN UP! — более 30 часов уроков</li>
@@ -2873,6 +2886,7 @@ transform:skewX(-18deg);transition:left .55s ease;pointer-events:none;
       <div class="mc-label"></div>
       <div class="mc-cell mc-action"><button type="button" class="mc-cta " onclick="closeTierModal();selectTier('Самостоятельный');scrollToForm();return false;">ОСТАВИТЬ ЗАЯВКУ</button></div><div class="mc-cell mc-action"><button type="button" class="mc-cta " onclick="closeTierModal();selectTier('Сопровождение в пятёрках');scrollToForm();return false;">ОСТАВИТЬ ЗАЯВКУ</button></div><div class="mc-cell mc-action"><button type="button" class="mc-cta " onclick="closeTierModal();selectTier('Мастер-группа с Рамзесом');scrollToForm();return false;">ОСТАВИТЬ ЗАЯВКУ</button></div><div class="mc-cell mc-action"><button type="button" class="mc-cta alt" onclick="closeTierModal();selectTier('Буткемп в Москве');scrollToForm();return false;">УТОЧНИТЬ ДОСТУПНОСТЬ</button></div><div class="mc-cell mc-action"><button type="button" class="mc-cta alt" onclick="closeTierModal();selectTier('Индива 1-на-1');scrollToForm();return false;">УТОЧНИТЬ ДОСТУПНОСТЬ</button></div>
     </div>
+    <div class="mc-bottom-spacer" aria-hidden="true"></div>
   </div>
 </div>
     <button class="modal-close" onclick="closeTierModal()">×</button>
